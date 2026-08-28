@@ -26,7 +26,7 @@ window.MIERR = {
     email: "mierrburkinafaso@yahoo.fr",
     adresse: "Siège international — BP 01 Marcoussi, Ouagadougou, Burkina Faso",
     horaires: "Du lundi au vendredi — 9h à 17h · Cultes le dimanche",
-    facebook: "https://facebook.com/mierr",
+    facebook: "https://www.facebook.com/share/14sm9Bvu1RH/",
     youtube: "https://youtube.com/@mierr",
     instagram: "https://instagram.com/mierr",
     tiktok: "https://tiktok.com/@mierr",
