@@ -46,6 +46,14 @@
   --cadre-v:14px;
   --cadre-h:14px;
 
+  /* Palette secondaire — accents complémentaires à la palette principale,
+     utilisés pour les badges, étiquettes et petits repères visuels */
+  --azur-brant:#0A2472;
+  --sol-de-minas:#F5A800;
+  --horizon-clair:#7C90C4;
+  --horizon-pale:#E4E9F5;
+  --nuage:#F0EFEA;
+
   --texte:#252A33;
   --texte-clair:#5B6472;
   --texte-inverse:#F3EFE4;
@@ -157,8 +165,12 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 }
 .avis-provisoire strong{color:var(--bleu-nuit);}
 
-.badge{display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:99px; font-size:.78rem; font-weight:600; letter-spacing:.03em; background:var(--bleu-glace); color:var(--bleu-moyen);}
+.badge{display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:99px; font-size:.78rem; font-weight:600; letter-spacing:.03em; background:var(--horizon-pale); color:var(--azur-brant);}
 .badge--or{background:var(--or-pale); color:var(--or-fonce);}
+.badge--secondaire{background:var(--horizon-pale); color:var(--azur-brant);}
+.badge--azur{background:var(--azur-brant); color:#fff;}
+.badge--sol{background:var(--sol-de-minas); color:var(--azur-brant);}
+.badge--nuage{background:var(--nuage); color:var(--azur-brant); border:1px solid var(--bordure);}
 
 /* ---------- 4. COMPOSANTS : BOUTONS ---------- */
 .bouton{

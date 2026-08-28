@@ -41,6 +41,18 @@ changer.
 - **Couleurs** : bleu nuit (`--bleu-nuit #0B1F3A`) et or (`--or #C9A227`),
   sur fond crème/blanc — à ajuster dans `assets/css/style.css`, section
   « Variables & fondations », dès que le logo officiel de la MIERR est fourni.
+- **Fond de page** : dégradé signal rouge/orange (`--signal-1 #FF6B35` →
+  `--signal-2 #FF1840`), utilisé comme cadre continu autour des panneaux de
+  contenu sur toutes les pages (voir `body`/`.entete`/`.hero`/`.pied` dans
+  `assets/css/style.css`).
+- **Palette secondaire** (accents complémentaires) : Azur Brant
+  (`--azur-brant #0A2472`), Sol de Minas (`--sol-de-minas #F5A800`),
+  Horizonte Claro (`--horizon-clair #7C90C4`, décliné en teinte pâle
+  `--horizon-pale #E4E9F5` pour les fonds de badges) et Nuvem
+  (`--nuage #F0EFEA`). Utilisée pour les badges/étiquettes secondaires
+  (`.badge`, `.badge--azur`, `.badge--sol`, `.badge--nuage`) — disponible
+  pour différencier catégories, statuts ou départements sans toucher à la
+  palette principale.
 - **Typographies** : *Playfair Display* (titres, élégance institutionnelle) et
   *Work Sans* (texte courant, lisibilité).
 - **Logo** : `assets/img/logo-mierr-sombre.svg` (texte foncé, utilisé sur fond
