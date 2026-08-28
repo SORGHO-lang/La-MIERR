@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0b3f"/>
+      <stop offset="100%" stop-color="#12175c"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#g)"/>
+  
+        <circle cx="72.0" cy="105.0" r="350.0" fill="#c9a227" opacity="0.07"/>
+        <circle cx="855.0" cy="630.0" r="280.0" fill="#e8c766" opacity="0.08"/>
+        <circle cx="720.0" cy="70.0" r="126.0" fill="#faf7f0" opacity="0.05"/>
+        
+  <rect x="0" y="694" width="900" height="6" fill="#c9a227"/>
+  
+      <circle cx="397.64" cy="307.15999999999997" r="38.080000000000005" fill="#e8c766" opacity="0.9"/>
+      <circle cx="502.36" cy="307.15999999999997" r="38.080000000000005" fill="#e8c766" opacity="0.9"/>
+      <path d="M 340.52 440.44 Q 340.52 354.76 397.64 354.76 Q 454.76 354.76 454.76 440.44 Z" fill="#e8c766" opacity="0.9"/>
+      <path d="M 454.76 440.44 Q 454.76 354.76 502.36 354.76 Q 559.48 354.76 559.48 440.44 Z" fill="#e8c766" opacity="0.9"/>
+    
+</svg>

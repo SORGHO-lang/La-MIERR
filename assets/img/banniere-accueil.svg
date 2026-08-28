@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b223f"/>
+      <stop offset="100%" stop-color="#123a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#g)"/>
+  <line x1="0" y1="90.0" x2="1600" y2="30.0" stroke="#e8c766" stroke-width="1" opacity="0.06"/><line x1="0" y1="174.00000000000003" x2="1600" y2="114.0" stroke="#e8c766" stroke-width="1" opacity="0.06"/><line x1="0" y1="258.00000000000006" x2="1600" y2="198.0" stroke="#e8c766" stroke-width="1" opacity="0.06"/><line x1="0" y1="342.00000000000006" x2="1600" y2="282.0" stroke="#e8c766" stroke-width="1" opacity="0.06"/><line x1="0" y1="426.00000000000006" x2="1600" y2="366.00000000000006" stroke="#e8c766" stroke-width="1" opacity="0.06"/><line x1="0" y1="510.00000000000006" x2="1600" y2="450.00000000000006" stroke="#e8c766" stroke-width="1" opacity="0.06"/>
+  <rect x="0" y="594" width="1600" height="6" fill="#c9a227"/>
+  
+      <rect x="781.64" y="198.0" width="36.720000000000006" height="204.00000000000003" rx="6.120000000000001" fill="#e8c766" opacity="0.9"/>
+      <rect x="734.72" y="263.28" width="130.56000000000003" height="36.720000000000006" rx="6.120000000000001" fill="#e8c766" opacity="0.9"/>
+    
+</svg>
