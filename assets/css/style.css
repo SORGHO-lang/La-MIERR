@@ -150,7 +150,7 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 }
 .eyebrow::before{content:''; width:28px; height:2px; background:var(--or);}
 
-.section{padding:96px 0;}
+.section{padding:96px 0; background:var(--blanc);}
 .section--compact{padding:64px 0;}
 .section--alt{background:var(--creme);}
 .section--bleu{background:linear-gradient(135deg,var(--bleu-nuit),var(--bleu-profond)); color:var(--texte-inverse);}
