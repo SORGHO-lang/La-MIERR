@@ -48,7 +48,7 @@ window.MIERR = {
 
   /* Agenda — Activités de la MIERR. type sert aux filtres de la page Activités. */
   evenements: [
-    { id:"convention", type:"Convention", titre:"Convention annuelle de la MIERR", debut:"2026-07-10", fin:"2026-07-13", lieu:"[Lieu à préciser]", responsable:"Présidence de la MIERR", description:"Le grand rendez-vous annuel de toute la famille MIERR : enseignements, louange, consécration et communion fraternelle." },
+    { id:"convention", type:"Convention", titre:"9ème Convention de la MIERR — An'20", debut:"2026-07-28", fin:"2026-08-02", lieu:"Siège de l'église MIERR, Ouagadougou (Marcoussis, non loin de la SANAPOST)", responsable:"Présidence de la MIERR", description:"Le grand rendez-vous annuel de toute la famille MIERR, sur le thème « Le plan prophétique de Dieu révélé depuis son trône pour la restauration intégrale de l'homme » (Psaumes 103:19)." },
     { id:"co-semic", type:"SEMIC", titre:"CO-SEMIC — Convention des Servantes Missionnaires de Christ", debut:"2026-03-06", fin:"2026-03-08", lieu:"[Lieu à préciser]", responsable:"Coordination SEMIC", description:"Convention nationale des femmes de la MIERR autour du thème annuel du département." },
     { id:"co-jemoc", type:"JEMOC", titre:"CO-JEMOC — Convention de la Jeunesse Missionnaire et Ouvriers de Christ", debut:"2026-04-17", fin:"2026-04-19", lieu:"[Lieu à préciser]", responsable:"Coordination JEMOC", description:"Le grand rassemblement annuel de la jeunesse MIERR : formation, louange et engagement missionnaire." },
     { id:"vision-aigle", type:"Séminaire", titre:"Séminaire « Vision de l'Aigle »", debut:"2026-01-23", fin:"2026-01-25", lieu:"[Lieu à préciser]", responsable:"Département Formation", description:"Un temps fort d'enseignement sur le renouvellement spirituel, à l'image de l'aigle qui renouvelle sa jeunesse." },
@@ -73,7 +73,7 @@ window.MIERR = {
     { titre:"Presse MIERR", categorie:"Départements", url:"departements.html#presse-mierr", extrait:"Le service de presse et d'information de la mission." },
     { titre:"Maison d'édition SCHÉKINA", categorie:"Départements", url:"departements.html#schekina", extrait:"Publications, ouvrages et supports pédagogiques de la MIERR." },
     { titre:"Institut biblique de formation pastorale de Sion", categorie:"Formation", url:"institut-biblique.html", extrait:"Formations bibliques et pastorales, conditions d'admission, inscription en ligne." },
-    { titre:"Convention annuelle de la MIERR", categorie:"Activités", url:"activites.html#convention", extrait:"Le grand rendez-vous annuel de toute la famille MIERR." },
+    { titre:"9ème Convention de la MIERR — An'20", categorie:"Activités", url:"activites.html#convention", extrait:"Le grand rendez-vous annuel de toute la famille MIERR, du 28 juillet au 2 août." },
     { titre:"CO-SEMIC", categorie:"Activités", url:"activites.html#co-semic", extrait:"Convention nationale des Servantes Missionnaires de Christ." },
     { titre:"CO-JEMOC", categorie:"Activités", url:"activites.html#co-jemoc", extrait:"Convention de la jeunesse missionnaire." },
     { titre:"Vision de l'Aigle", categorie:"Activités", url:"activites.html#vision-aigle", extrait:"Séminaire de renouvellement spirituel." },
