@@ -19,17 +19,18 @@ window.MIERR = {
     nomComplet: "Mission Internationale Évangélique de Réveil et de Restauration",
     sigle: "MIERR",
     fondation: 2006,
-    telephone: "+00 000 000 000",
-    telephoneLien: "+00000000000",
-    whatsapp: "+00000000000",
-    email: "contact@mierr.org",
-    adresse: "[Adresse du siège de la MIERR], [Ville], [Pays]",
+    telephone: "+226 72 28 10 77",
+    telephoneLien: "+22672281077",
+    whatsapp: "+22658158788",
+    whatsappAffichage: "+226 58 15 87 88",
+    email: "mierrburkinafaso@yahoo.fr",
+    adresse: "Siège international — BP 01 Marcoussi, Ouagadougou, Burkina Faso",
     horaires: "Du lundi au vendredi — 9h à 17h · Cultes le dimanche",
     facebook: "https://facebook.com/mierr",
     youtube: "https://youtube.com/@mierr",
     instagram: "https://instagram.com/mierr",
     tiktok: "https://tiktok.com/@mierr",
-    mapsEmbed: "https://www.google.com/maps?q=MIERR&output=embed"
+    mapsEmbed: "https://www.google.com/maps?q=Ouagadougou,+Burkina+Faso&output=embed"
   },
 
   /* Fil du temps — La MIERR (2006 → 2026). Ajouter une étape = ajouter un objet. */
