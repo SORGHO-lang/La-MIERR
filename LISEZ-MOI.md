@@ -128,12 +128,17 @@ Le site est conçu pour être « CMS-ready » sans réécriture profonde :
   bloc HTML/CSS autonome (`.carte`, `.carte-evenement`, `.carte-dept`,
   `.carte-membre`, `.carte-publication`, `.video-tuile`…). Un back-office
   n'aurait qu'à générer ces mêmes blocs à partir d'une base de données.
-- **Formulaires prêts pour un back-end** : tous les formulaires
-  (`contact.html`, `institut-biblique.html#inscription`) sont marqués
-  `data-formulaire` et gérés par `initFormulaires()` dans `script.js`. Le
-  point d'intégration est clairement identifié par le commentaire
-  `// TODO ENVOI` : il suffit d'y ajouter un `fetch()` vers votre service
-  d'envoi (API interne, Formspree, Netlify Forms, etc.).
+- **Formulaires** : tous les formulaires (`contact.html`,
+  `institut-biblique.html#inscription`) sont marqués `data-formulaire` et
+  gérés par `initFormulaires()` dans `script.js`. En l'absence de back-end,
+  une soumission valide ouvre le client e-mail du visiteur via un lien
+  `mailto:` vers `config.email` (`assets/js/data.js`), avec l'objet et le
+  corps du message pré-remplis à partir des champs du formulaire (l'objet
+  peut être personnalisé par formulaire via l'attribut `data-mail-sujet`
+  sur la balise `<form>`). Pour brancher un vrai service d'envoi plus tard
+  (API interne, Formspree, Netlify Forms, etc.), il suffit de remplacer ce
+  bloc — clairement identifié par le commentaire « Envoi » dans
+  `initFormulaires()` — par un `fetch()` vers votre service.
 - **Modules envisagés pour l'administration** (non développés dans cette
   version statique, mais anticipés par la structure du contenu) :
   actualités, événements & calendrier, albums photos/vidéos, audios,

@@ -461,10 +461,30 @@
           return;
         }
 
-        // TODO ENVOI : brancher ici l'appel à votre back-end / service de formulaire.
+        /* ---------- Envoi : ouverture du client e-mail avec le message pré-rempli ----------
+           Aucun back-end n'étant branché sur ce site statique, le formulaire s'appuie
+           sur un lien "mailto:" vers l'adresse officielle de la MIERR (voir data.js,
+           propriété config.email). Pour brancher un vrai service d'envoi plus tard
+           (API, formspree, etc.), remplacer ce bloc par un fetch() — voir LISEZ-MOI.md,
+           section « Formulaires ». */
         var donnees = {};
         new FormData(form).forEach(function (v, k) { donnees[k] = v; });
         console.info("[MIERR] Formulaire prêt pour intégration back-end :", donnees);
+
+        if (CFG.email) {
+          var lignes = [];
+          $$("[name]", form).forEach(function (champ) {
+            if (champ.type === "checkbox" || !champ.name || !donnees[champ.name]) return;
+            var etiquette = $('label[for="' + champ.id + '"]', form);
+            var libelle = etiquette ? etiquette.textContent.replace(/\s*\*\s*$/, "").trim() : champ.name;
+            lignes.push(libelle + " : " + donnees[champ.name]);
+          });
+          var sujetChamp = donnees.sujet ? donnees.sujet + " — " : "";
+          var sujet = sujetChamp + (form.getAttribute("data-mail-sujet") || "Message depuis le site MIERR") + (donnees.nom ? " (" + donnees.nom + ")" : "");
+          var corps = lignes.join("\n") + "\n\n— Message envoyé depuis le site officiel de la MIERR.";
+          var lien = "mailto:" + CFG.email + "?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(corps);
+          window.location.href = lien;
+        }
 
         statut.textContent = form.getAttribute("data-message-succes") || "Merci ! Votre message a bien été enregistré. Notre équipe reviendra vers vous très rapidement.";
         statut.classList.add("succes", "visible");
