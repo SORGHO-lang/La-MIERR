@@ -1,0 +1,15 @@
+# Ce dossier ne reçoit que des images envoyées depuis l'administration :
+# on interdit l'exécution de scripts ici, par sécurité (même si les fichiers
+# envoyés sont déjà vérifiés côté PHP avec getimagesize()).
+Options -Indexes
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<FilesMatch "\.(php|phtml|php\d)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>

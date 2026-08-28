@@ -21,18 +21,31 @@
     initAnimationsRevelation();
     initAnneeCourante();
     initWhatsapp();
-    initLightbox();
     initModaleVideo();
     initOnglets();
     initAccordeon();
     initRetourHaut();
     initRecherche();
-    initCalendrier();
-    initFiltresAgenda();
-    initFiltresGalerie();
     initFilDuTemps();
     initFormulaires();
     initCompteurs();
+
+    /* Le calendrier, les cartes d'événements, la galerie, les actualités et
+       la lightbox dépendent potentiellement du contenu distant (content/*.json,
+       éditable depuis /admin) : on attend le résultat du chargement (succès
+       ou échec) avant de les initialiser, pour n'activer chaque fonctionnalité
+       qu'une seule fois avec des données définitives. */
+    chargerContenuDistant().then(function (etat) {
+      if (etat.evenementsChanges) {
+        actualiserListeEvenements(window.MIERR.evenements);
+        actualiserProchainsEvenements(window.MIERR.evenements);
+      }
+      initCalendrier();
+      initFiltresAgenda();
+      initFiltresGalerie();
+      initLightbox();
+      initAnimationsRevelation();
+    });
   });
 
   /* ---------- Injection des coordonnées (data-config) ----------
@@ -516,6 +529,159 @@
       });
     }, { threshold: 0.5 });
     compteurs.forEach(function (el) { observateur.observe(el); });
+  }
+
+  /* ==========================================================================
+     ESPACE D'ADMINISTRATION — contenu distant (content/*.json)
+     --------------------------------------------------------------------------
+     Ces fichiers JSON sont la source de vérité que l'espace /admin (PHP) lit
+     et modifie. Les pages sont livrées avec le contenu déjà figé dans le HTML
+     (généré au moment de la construction du site) : au chargement, ce module
+     tente de récupérer une version plus récente et remplace le contenu figé
+     si — et seulement si — la récupération réussit et que la liste n'est pas
+     vide. Sur un site sans serveur (aperçu Artifact, ouverture du fichier en
+     local), le fetch échoue silencieusement et la page garde son contenu
+     d'origine : aucune régression, amélioration progressive uniquement.
+     ========================================================================== */
+
+  function chargerJSON(chemin) {
+    return fetch(chemin, { cache: "no-store" })
+      .then(function (reponse) { return reponse.ok ? reponse.json() : null; })
+      .catch(function () { return null; });
+  }
+
+  function echapperHtml(valeur) {
+    return String(valeur == null ? "" : valeur).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  var NOMS_MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+
+  function analyserDateISO(iso) {
+    var p = (iso || "").split("-").map(Number);
+    return { j: p[2], m: p[1] - 1, a: p[0] };
+  }
+
+  function formaterPlageDate(debutISO, finISO) {
+    if (!debutISO) return "";
+    var d = analyserDateISO(debutISO);
+    if (!finISO || finISO === debutISO) return d.j + " " + NOMS_MOIS[d.m] + " " + d.a;
+    var f = analyserDateISO(finISO);
+    if (d.m === f.m && d.a === f.a) return d.j + " – " + f.j + " " + NOMS_MOIS[f.m] + " " + f.a;
+    if (d.a === f.a) return d.j + " " + NOMS_MOIS[d.m] + " – " + f.j + " " + NOMS_MOIS[f.m] + " " + f.a;
+    return d.j + " " + NOMS_MOIS[d.m] + " " + d.a + " – " + f.j + " " + NOMS_MOIS[f.m] + " " + f.a;
+  }
+
+  /* ---------- Agenda : cartes détaillées (page Activités) ---------- */
+  function construireCarteEvenement(ev) {
+    var image = ev.image || "assets/img/banniere-activites.svg";
+    var plein = !!ev.image;
+    var badge = ev.badge ? '<span class="badge badge--or" style="margin-bottom:14px;">' + echapperHtml(ev.badge) + "</span>" : "";
+    var boutons = "";
+    if (ev.boutons && ev.boutons.length) {
+      boutons = '<div class="bouton-groupe" style="margin-top:20px;">' + ev.boutons.map(function (b) {
+        return '<a href="' + echapperHtml(b.url) + '" class="bouton ' + echapperHtml(b.style || "bouton--bleu bouton--petit") + '">' + echapperHtml(b.texte) + "</a>";
+      }).join("") + "</div>";
+    }
+    return '<article class="carte-evenement" id="' + echapperHtml(ev.id) + '" data-type-evenement="' + echapperHtml(ev.type) + '"' + (plein ? ' style="grid-template-columns:1fr;"' : "") + ">" +
+      '<div class="carte-image"' + (plein ? ' style="aspect-ratio:auto; height:auto;"' : "") + '><img src="' + echapperHtml(image) + '" alt="' + echapperHtml(ev.titre) + '"' + (plein ? ' style="width:100%; height:auto; object-fit:contain; display:block;"' : "") + "></div>" +
+      '<div class="carte-evenement-corps">' + badge +
+      '<span class="carte-etiquette">' + echapperHtml(ev.type) + "</span>" +
+      "<h3>" + echapperHtml(ev.titre) + "</h3>" +
+      '<div class="evenement-meta"><span>📅 ' + formaterPlageDate(ev.debut, ev.fin) + '</span><span>📍 ' + echapperHtml(ev.lieu) + '</span><span>👤 ' + echapperHtml(ev.responsable) + "</span></div>" +
+      "<p>" + echapperHtml(ev.description) + "</p>" +
+      boutons +
+      "</div></article>";
+  }
+
+  function actualiserListeEvenements(evenements) {
+    var conteneur = $("#evenements-liste");
+    if (!conteneur || !evenements || !evenements.length) return;
+    conteneur.innerHTML = evenements.map(construireCarteEvenement).join("");
+  }
+
+  /* ---------- Agenda : rappel des prochains événements (accueil) ---------- */
+  function construireLigneEvenement(ev) {
+    var d = analyserDateISO(ev.debut);
+    var moisAbrege = ["Jan", "Fév", "Mar", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"];
+    return '<div class="evenement-ligne" data-anim>' +
+      '<div class="evenement-date"><span class="jour">' + d.j + '</span><br><span class="mois">' + moisAbrege[d.m] + "</span></div>" +
+      '<div class="evenement-detail"><h4>' + echapperHtml(ev.titre) + '</h4><div class="evenement-meta"><span>📍 ' + echapperHtml(ev.lieu) + "</span></div></div>" +
+      '<a href="activites.html#' + echapperHtml(ev.id) + '" class="bouton bouton--petit bouton--ligne">Détails</a>' +
+      "</div>";
+  }
+
+  function actualiserProchainsEvenements(evenements) {
+    var conteneur = $("#prochains-evenements");
+    if (!conteneur || !evenements || !evenements.length) return;
+    var aujourdhui = new Date().toISOString().slice(0, 10);
+    var avenir = evenements
+      .filter(function (e) { return (e.fin || e.debut) >= aujourdhui; })
+      .sort(function (a, b) { return a.debut < b.debut ? -1 : 1; })
+      .slice(0, 4);
+    if (!avenir.length) return;
+    conteneur.innerHTML = avenir.map(construireLigneEvenement).join("");
+  }
+
+  /* ---------- Actualités ---------- */
+  function construireCarteActualite(a) {
+    return '<article class="carte" data-type-evenement="' + echapperHtml(a.categorie) + '" data-anim>' +
+      '<div class="carte-image"><img src="' + echapperHtml(a.image || "assets/img/histoire-01.svg") + '" alt="' + echapperHtml(a.categorie) + '"></div>' +
+      '<div class="carte-corps"><span class="carte-etiquette">' + echapperHtml(a.categorie) + "</span>" +
+      "<h3>" + echapperHtml(a.titre) + "</h3><p>" + echapperHtml(a.resume) + "</p>" +
+      '<div class="carte-meta"><span>' + formaterPlageDate(a.date, a.date) + "</span></div></div></article>";
+  }
+
+  function actualiserActualites(liste) {
+    var conteneur = $("#actualites-grille");
+    if (!conteneur || !liste || !liste.length) return;
+    liste = liste.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    conteneur.innerHTML = liste.map(construireCarteActualite).join("");
+  }
+
+  /* ---------- Galerie ---------- */
+  function construireItemGalerie(g) {
+    return '<div class="galerie-item" data-album="' + echapperHtml(g.album) + '" data-anim><img src="' + echapperHtml(g.image) + '" alt="' + echapperHtml(g.legende) + '"></div>';
+  }
+
+  function actualiserGalerie(liste) {
+    var conteneur = $("#galerie-grille-auto");
+    if (!conteneur || !liste || !liste.length) return;
+    conteneur.innerHTML = liste.map(construireItemGalerie).join("");
+  }
+
+  /* ---------- Direction (portraits des responsables) ---------- */
+  function construireCarteDirection(m) {
+    return '<div style="display:flex; flex-direction:column; gap:18px;">' +
+      '<div style="border-radius:var(--rayon-lg); overflow:hidden; box-shadow:var(--ombre); aspect-ratio:3/4;"><img src="' + echapperHtml(m.image) + '" alt="' + echapperHtml(m.nom) + ", " + echapperHtml(m.fonction) + '" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;"></div>' +
+      "<div><h4 style=\"margin-bottom:2px;\">" + echapperHtml(m.nom) + '</h4><p class="lead" style="margin-bottom:0;">' + echapperHtml(m.fonction) + "</p></div></div>";
+  }
+
+  function actualiserDirection(liste) {
+    var conteneur = $("#direction-grille");
+    if (!conteneur || !liste || !liste.length) return;
+    conteneur.innerHTML = liste.map(construireCarteDirection).join("");
+  }
+
+  /* ---------- Orchestrateur : tente tous les chargements, attend le résultat ---------- */
+  function chargerContenuDistant() {
+    var etat = { evenementsChanges: false };
+    var taches = [
+      chargerJSON("content/coordonnees.json").then(function (d) {
+        if (d) { Object.assign(CFG, d); injecterConfig(); initWhatsapp(); }
+      }),
+      chargerJSON("content/evenements.json").then(function (d) {
+        if (d && d.length) { window.MIERR.evenements = d; etat.evenementsChanges = true; }
+      }),
+      chargerJSON("content/actualites.json").then(function (d) { if (d && d.length) actualiserActualites(d); }),
+      chargerJSON("content/galerie.json").then(function (d) { if (d && d.length) actualiserGalerie(d); }),
+      chargerJSON("content/direction.json").then(function (d) { if (d && d.length) actualiserDirection(d); })
+    ];
+    var attendreToutes = window.Promise && Promise.allSettled
+      ? Promise.allSettled(taches)
+      : Promise.all(taches.map(function (p) { return p.catch(function () {}); }));
+    return attendreToutes.then(function () { return etat; });
   }
 
 })();

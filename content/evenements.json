@@ -1,0 +1,117 @@
+[
+  {
+    "id": "convention",
+    "type": "Convention",
+    "titre": "9ème Convention de la MIERR — An'20",
+    "debut": "2026-07-28",
+    "fin": "2026-08-02",
+    "lieu": "Siège de l'église MIERR, Ouagadougou (Marcoussis, non loin de la SANAPOST)",
+    "responsable": "Présidence de la MIERR",
+    "description": "Thème : « Le plan prophétique de Dieu révélé depuis son trône pour la restauration intégrale de l'homme » (Psaumes 103:19). Sous le parrainage du Dr Abel SANKARA, le co-parrainage du Dr Marc NABIE, avec pour hôte le Couple SAVADOGO et pour orateur principal le Dr Dénis KOUDA. Prédications également assurées par le Rév. Pasteur Jude SAWADOGO et plusieurs prophètes et apôtres invités.",
+    "image": "assets/img/convention-9-flyer.jpg",
+    "badge": "",
+    "boutons": [
+      {
+        "texte": "S'inscrire / se renseigner",
+        "url": "contact.html",
+        "style": "bouton--bleu bouton--petit"
+      },
+      {
+        "texte": "Photos des éditions précédentes",
+        "url": "galerie.html",
+        "style": "bouton--ligne bouton--petit"
+      }
+    ]
+  },
+  {
+    "id": "co-semic",
+    "type": "SEMIC",
+    "titre": "CO-SEMIC — Convention des Servantes Missionnaires de Christ",
+    "debut": "2026-03-06",
+    "fin": "2026-03-08",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Coordination SEMIC",
+    "description": "Convention nationale des femmes de la MIERR autour du thème annuel du département.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "co-jemoc",
+    "type": "JEMOC",
+    "titre": "CO-JEMOC — Convention de la Jeunesse Missionnaire et Ouvriers de Christ",
+    "debut": "2026-04-17",
+    "fin": "2026-04-19",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Coordination JEMOC",
+    "description": "Le grand rassemblement annuel de la jeunesse MIERR : formation, louange et engagement missionnaire.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "vision-aigle",
+    "type": "Séminaire",
+    "titre": "Séminaire « Vision de l'Aigle »",
+    "debut": "2026-01-23",
+    "fin": "2026-01-25",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Département Formation",
+    "description": "Un temps fort d'enseignement sur le renouvellement spirituel, à l'image de l'aigle qui renouvelle sa jeunesse.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "seminaire-pentecote",
+    "type": "Séminaire",
+    "titre": "Séminaire de Pentecôte",
+    "debut": "2026-05-22",
+    "fin": "2026-05-24",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Présidence de la MIERR",
+    "description": "Trois jours de consécration et d'attente de la puissance du Saint-Esprit, en mémoire de la Pentecôte.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "seminaire-discipolat",
+    "type": "Séminaire",
+    "titre": "Séminaire sur le discipolat",
+    "debut": "2026-09-11",
+    "fin": "2026-09-13",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Institut biblique de Sion",
+    "description": "Formation pratique sur la marche du disciple et l'accompagnement spirituel des nouveaux convertis.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "co-semifig",
+    "type": "SEMIFIG",
+    "titre": "Camp SEMIFIG des Filles Glorieuses",
+    "debut": "2026-08-07",
+    "fin": "2026-08-09",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Coordination SEMIFIG",
+    "description": "Un temps de retraite, d'enseignement et de communion pour les jeunes filles de la mission.",
+    "image": "",
+    "badge": "",
+    "boutons": []
+  },
+  {
+    "id": "20-ans",
+    "type": "Convention",
+    "titre": "Jubilé — 20 ans de la MIERR",
+    "debut": "2026-11-06",
+    "fin": "2026-11-08",
+    "lieu": "[Lieu à préciser]",
+    "responsable": "Présidence de la MIERR",
+    "description": "Célébration officielle des vingt années de la MIERR : culte d'actions de grâces, gala et témoignages.",
+    "image": "",
+    "badge": "Édition spéciale jubilé",
+    "boutons": []
+  }
+]

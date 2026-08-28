@@ -1,0 +1,8 @@
+# Ce dossier ne contient que des fichiers PHP inclus par les pages de
+# l'administration : il n'a pas besoin d'être accessible directement.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Deny from all
+</IfModule>

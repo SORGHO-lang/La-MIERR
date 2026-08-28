@@ -1,0 +1,48 @@
+/* Espace d'administration MIERR — mise en page.
+   S'appuie sur assets/css/style.css (variables, boutons, cartes) pour rester
+   visuellement cohérent avec le site public ; ce fichier ne couvre que la
+   disposition propre à l'admin (connexion, tableau de bord, formulaires). */
+
+body.admin-corps{
+  background:var(--degrade-signal);
+  min-height:100vh;
+  padding:24px;
+}
+.admin-carte{
+  background:#fff; border-radius:var(--rayon-lg); box-shadow:var(--ombre);
+  max-width:1080px; margin:0 auto; overflow:hidden;
+}
+.admin-entete{
+  background:var(--bleu-nuit); color:#fff; padding:22px 32px;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.admin-entete a{color:rgba(255,255,255,.85); font-size:.85rem;}
+.admin-entete a:hover{color:#fff; text-decoration:underline;}
+.admin-entete h1{color:#fff; font-size:1.3rem; margin:0;}
+.admin-corps-interieur{padding:32px;}
+.admin-connexion{max-width:420px; margin:8vh auto; padding:40px;}
+.admin-connexion h1{font-size:1.5rem; text-align:center;}
+.admin-connexion p{text-align:center;}
+.admin-nav{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px;}
+.admin-nav a{
+  padding:10px 18px; border-radius:99px; border:1.5px solid var(--bordure); font-size:.88rem; font-weight:600;
+  color:var(--texte); transition:background .2s, border-color .2s;
+}
+.admin-nav a.actif, .admin-nav a:hover{background:var(--bleu-nuit); border-color:var(--bleu-nuit); color:#fff;}
+.admin-tableau{width:100%; border-collapse:collapse; font-size:.92rem;}
+.admin-tableau th, .admin-tableau td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--bordure); vertical-align:middle;}
+.admin-tableau th{background:var(--bleu-glace); font-weight:700; font-size:.78rem; text-transform:uppercase; letter-spacing:.03em;}
+.admin-tableau img{width:56px; height:56px; object-fit:cover; border-radius:8px; display:block;}
+.admin-actions{display:flex; gap:8px; flex-wrap:wrap;}
+.admin-actions .bouton{padding:8px 14px; font-size:.8rem;}
+.admin-message{padding:14px 18px; border-radius:var(--rayon); margin-bottom:24px; font-size:.92rem;}
+.admin-message--succes{background:#EAF5EE; color:var(--succes); border:1px solid #C6E5D2;}
+.admin-message--erreur{background:#FBEAE5; color:var(--erreur); border:1px solid #F0C9BC;}
+.admin-vide{padding:40px 20px; text-align:center; color:var(--texte-clair); background:var(--creme); border-radius:var(--rayon);}
+.admin-apercu-image{max-width:220px; border-radius:var(--rayon); margin:10px 0; display:block;}
+.admin-fil{font-size:.85rem; color:var(--texte-clair); margin-bottom:18px;}
+.admin-fil a{color:var(--bleu-moyen); font-weight:600;}
+@media (max-width:640px){
+  .admin-corps-interieur{padding:20px;}
+  .admin-tableau{display:block; overflow-x:auto;}
+}

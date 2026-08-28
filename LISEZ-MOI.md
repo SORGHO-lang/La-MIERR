@@ -3,8 +3,12 @@
 Site officiel de la **Mission Internationale Évangélique de Réveil et de Restauration**
 (MIERR), fondée en 2006. Célébration des 20 ans en 2026.
 
-Site statique en **HTML5 / CSS3 / JavaScript natif**, sans dépendance ni étape de
+Site public en **HTML5 / CSS3 / JavaScript natif**, sans dépendance ni étape de
 build : il s'ouvre et se déploie tel quel sur n'importe quel hébergement web.
+Un espace d'administration en **PHP** (`admin/`, voir **ADMIN.md**) permet de
+modifier le contenu sans toucher au code ; il demande un hébergement avec PHP
+(la plupart des hébergements mutualisés, dont Hostinger, en fournissent par
+défaut).
 
 ## 1. Structure du projet
 
@@ -23,9 +27,14 @@ La-MIERR/
 ├── robots.txt / sitemap.xml      SEO
 ├── assets/
 │   ├── css/style.css             Système de design complet (variables, composants, pages)
-│   ├── js/data.js                Contenu structuré (coordonnées, agenda, timeline, recherche)
-│   ├── js/script.js              Comportements (nav, animations, lightbox, calendrier, formulaires…)
-│   └── img/*.svg                 Visuels de substitution (logo, bannières, cartes, portraits…)
+│   ├── js/data.js                Contenu statique de secours (timeline, recherche, valeurs par défaut)
+│   ├── js/script.js              Comportements (nav, animations, lightbox, calendrier, formulaires,
+│   │                              chargement du contenu distant content/*.json…)
+│   └── img/*.svg, *.jpg, *.png   Visuels (logo, bannières, cartes, portraits, photos envoyées…)
+├── content/*.json                Contenu modifiable sans coder (actualités, agenda, galerie,
+│                                  direction, coordonnées) — lu par le site, écrit par /admin
+├── admin/                        Espace d'administration PHP (voir ADMIN.md)
+├── ADMIN.md                      Guide d'utilisation de l'espace d'administration
 └── scripts/generer_visuels.py    Générateur des visuels de substitution SVG
 ```
 
@@ -113,37 +122,34 @@ responsable, description) alimente à la fois le calendrier et les filtres.
 L'index de recherche globale (`window.MIERR.recherche`, raccourci clavier
 `Ctrl/Cmd + K`) référence les pages et sections clés du site.
 
-## 5. Évolution vers un CMS / back-office
+## 5. Espace d'administration (`/admin`)
 
-Le site est conçu pour être « CMS-ready » sans réécriture profonde :
+Le site inclut un vrai espace d'administration en PHP — sans base de données,
+sans build, adapté à un hébergement mutualisé classique (Hostinger, OVH,
+cPanel…). Voir **ADMIN.md** pour le guide d'utilisation complet (connexion,
+mot de passe, sections éditables, déploiement). En résumé :
 
-- **Contenu structuré séparé du HTML** : `assets/js/data.js` joue déjà le
-  rôle de couche de données pour les blocs dynamiques (agenda, timeline,
-  recherche, coordonnées). Il peut être remplacé par un ou plusieurs appels
-  `fetch()` vers une API (ex. `/api/evenements`, `/api/actualites`) sans
-  changer la structure des composants qui les consomment
-  (`initCalendrier`, `initFilDuTemps`… dans `assets/js/script.js`).
-- **Composants réutilisables** : chaque type de contenu (actualité, carte
-  événement, carte département, carte membre, publication, vidéo…) est un
-  bloc HTML/CSS autonome (`.carte`, `.carte-evenement`, `.carte-dept`,
-  `.carte-membre`, `.carte-publication`, `.video-tuile`…). Un back-office
-  n'aurait qu'à générer ces mêmes blocs à partir d'une base de données.
-- **Formulaires** : tous les formulaires (`contact.html`,
-  `institut-biblique.html#inscription`) sont marqués `data-formulaire` et
-  gérés par `initFormulaires()` dans `script.js`. En l'absence de back-end,
-  une soumission valide ouvre le client e-mail du visiteur via un lien
-  `mailto:` vers `config.email` (`assets/js/data.js`), avec l'objet et le
-  corps du message pré-remplis à partir des champs du formulaire (l'objet
-  peut être personnalisé par formulaire via l'attribut `data-mail-sujet`
-  sur la balise `<form>`). Pour brancher un vrai service d'envoi plus tard
-  (API interne, Formspree, Netlify Forms, etc.), il suffit de remplacer ce
-  bloc — clairement identifié par le commentaire « Envoi » dans
-  `initFormulaires()` — par un `fetch()` vers votre service.
-- **Modules envisagés pour l'administration** (non développés dans cette
-  version statique, mais anticipés par la structure du contenu) :
-  actualités, événements & calendrier, albums photos/vidéos, audios,
-  documents/publications, départements & responsables, formations &
-  inscriptions à l'Institut biblique.
+- Le contenu modifiable (actualités, agenda/événements, galerie photos,
+  responsables « Direction », coordonnées & réseaux sociaux) vit dans des
+  fichiers JSON du dossier `content/` — pas dans le HTML.
+- `admin/` est une petite application PHP (connexion par mot de passe,
+  formulaires d'ajout/modification/suppression, envoi de photos) qui lit et
+  réécrit ces fichiers JSON.
+- Les pages publiques chargent ces fichiers en JavaScript au chargement
+  (`chargerContenuDistant()` dans `assets/js/script.js`) et remplacent le
+  contenu de démonstration dès qu'un contenu réel existe. Si le fichier est
+  vide ou inaccessible (aperçu hors serveur, par exemple), la page garde
+  simplement son contenu déjà présent dans le HTML : aucune casse possible.
+- **Formulaires** : `contact.html` et `institut-biblique.html#inscription`
+  sont marqués `data-formulaire` et gérés par `initFormulaires()` dans
+  `script.js`. En l'absence de service d'envoi dédié, une soumission valide
+  ouvre le client e-mail du visiteur via un lien `mailto:` vers
+  `config.email`, avec l'objet et le corps du message pré-remplis à partir
+  des champs du formulaire (personnalisable par formulaire via l'attribut
+  `data-mail-sujet` sur la balise `<form>`). Pour brancher un vrai service
+  d'envoi plus tard (API interne, Formspree, Netlify Forms, etc.), il
+  suffit de remplacer ce bloc — clairement identifié par le commentaire
+  « Envoi » dans `initFormulaires()` — par un `fetch()` vers votre service.
 
 ## 6. Départements : d'une page unique vers des pages dédiées
 
