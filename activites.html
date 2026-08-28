@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activités — Agenda &amp; grands événements de la MIERR</title>
+<meta name="description" content="Convention annuelle, CO-SEMIC, CO-JEMOC, Vision de l'Aigle, Séminaire de Pentecôte, Séminaire sur le discipolat : découvrez l'agenda complet et le calendrier interactif de la MIERR.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="canonical" href="https://www.mierr.org/activites.html">
+<meta name="theme-color" content="#0B1F3A">
+<meta property="og:title" content="Activités — Agenda &amp; grands événements de la MIERR">
+<meta property="og:description" content="Convention annuelle, CO-SEMIC, CO-JEMOC, Vision de l'Aigle et bien plus.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/banniere-activites.svg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<a href="#contenu-principal" class="lien-evitement">Aller au contenu principal</a>
+
+<div class="barre-progression"></div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a href="index.html" class="logo"><img src="assets/img/logo-mierr-sombre.svg" alt="MIERR"></a>
+    <nav class="nav-principale">
+      <a href="index.html">Accueil</a>
+      <a href="la-mierr.html">La MIERR</a>
+      <a href="departements.html">Départements</a>
+      <a href="activites.html" aria-current="page">Activités</a>
+      <a href="institut-biblique.html">Institut biblique</a>
+      <a href="presse.html">Presse</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="entete-actions">
+      <button class="bouton-recherche" data-recherche-ouvrir aria-label="Rechercher sur le site">🔍</button>
+      <a href="contact.html" class="bouton bouton--or">Nous contacter</a>
+      <button class="bouton-menu" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-mobile">
+  <button class="fermer-menu" aria-label="Fermer le menu">&times;</button>
+  <button data-recherche-ouvrir style="display:flex; align-items:center; gap:10px; color:var(--or-clair); font-size:1rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:16px;">🔍 Rechercher</button>
+  <a href="index.html">Accueil</a>
+  <a href="la-mierr.html">La MIERR</a>
+  <a href="departements.html">Départements</a>
+  <a href="activites.html">Activités</a>
+  <a href="institut-biblique.html">Institut biblique</a>
+  <a href="presse.html">Presse</a>
+  <a href="galerie.html">Galerie</a>
+  <a href="actualites.html">Actualités</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main id="contenu-principal">
+
+  <section class="bandeau-page">
+    <div class="conteneur">
+      <div class="fil-ariane"><a href="index.html">Accueil</a><span>/</span>Activités</div>
+      <span class="eyebrow">Agenda de la mission</span>
+      <h1>Conventions, séminaires &amp; grands rendez-vous</h1>
+      <p>Toute l'année, la MIERR rassemble sa communauté autour de temps forts spirituels : conventions départementales, séminaires de formation et célébrations. Retrouvez ici l'agenda complet, dates, lieux et responsables.</p>
+    </div>
+  </section>
+
+  <!-- CALENDRIER -->
+  <section class="section" id="calendrier">
+    <div class="conteneur">
+      <div class="grille grille--2" style="gap:48px; align-items:flex-start;">
+        <div data-anim data-calendrier>
+          <div class="calendrier">
+            <div class="calendrier-entete">
+              <h3>Calendrier</h3>
+              <div class="calendrier-nav">
+                <button data-mois-precedent aria-label="Mois précédent">‹</button>
+                <button data-mois-suivant aria-label="Mois suivant">›</button>
+              </div>
+            </div>
+            <div class="calendrier-grille"></div>
+          </div>
+          <p style="font-size:.82rem; margin-top:14px;">Cliquez sur une date marquée pour accéder directement à l'événement correspondant.</p>
+        </div>
+        <div data-anim>
+          <span class="eyebrow">Filtrer l'agenda</span>
+          <h2>Tous nos événements</h2>
+          <p class="lead">Utilisez les filtres pour afficher les événements par département ou par type de rencontre.</p>
+          <div class="agenda-filtres">
+            <button class="filtre-tag actif" data-filtre="tous">Tous</button>
+            <button class="filtre-tag" data-filtre="Convention">Conventions</button>
+            <button class="filtre-tag" data-filtre="SEMIC">SEMIC</button>
+            <button class="filtre-tag" data-filtre="JEMOC">JEMOC</button>
+            <button class="filtre-tag" data-filtre="SEMIFIG">SEMIFIG</button>
+            <button class="filtre-tag" data-filtre="Séminaire">Séminaires</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTE DES EVENEMENTS -->
+  <section class="section section--alt">
+    <div class="conteneur">
+
+      <article class="carte-evenement" id="convention" data-type-evenement="Convention" data-anim>
+        <div class="carte-image"><img src="assets/img/galerie-01.svg" alt="Convention annuelle de la MIERR"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">Convention</span>
+          <h3>Convention annuelle de la MIERR</h3>
+          <div class="evenement-meta"><span>📅 10 – 13 juillet 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Présidence de la MIERR</span></div>
+          <p>Le grand rendez-vous annuel de toute la famille MIERR : enseignements, louange, consécration et communion fraternelle.</p>
+          <div class="programme-liste">
+            <div class="programme-item"><span class="heure">Jour 1</span><span>Ouverture &amp; culte d'accueil</span></div>
+            <div class="programme-item"><span class="heure">Jour 2</span><span>Enseignements thématiques &amp; ateliers</span></div>
+            <div class="programme-item"><span class="heure">Jour 3</span><span>Consécration &amp; nuit de prière</span></div>
+            <div class="programme-item"><span class="heure">Jour 4</span><span>Culte de clôture &amp; envoi</span></div>
+          </div>
+          <div class="bouton-groupe" style="margin-top:20px;">
+            <a href="contact.html" class="bouton bouton--bleu bouton--petit">S'inscrire / se renseigner</a>
+            <a href="galerie.html" class="bouton bouton--ligne bouton--petit">Photos des éditions précédentes</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="co-semic" data-type-evenement="SEMIC" data-anim>
+        <div class="carte-image"><img src="assets/img/galerie-03.svg" alt="CO-SEMIC"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">SEMIC</span>
+          <h3>CO-SEMIC — Convention des Servantes Missionnaires de Christ</h3>
+          <div class="evenement-meta"><span>📅 6 – 8 mars 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Coordination SEMIC</span></div>
+          <p>Convention nationale des femmes de la MIERR autour du thème annuel du département : enseignement, louange et communion.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="co-jemoc" data-type-evenement="JEMOC" data-anim>
+        <div class="carte-image"><img src="assets/img/galerie-05.svg" alt="CO-JEMOC"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">JEMOC</span>
+          <h3>CO-JEMOC — Convention de la Jeunesse Missionnaire et Ouvriers de Christ</h3>
+          <div class="evenement-meta"><span>📅 17 – 19 avril 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Coordination JEMOC</span></div>
+          <p>Le grand rassemblement annuel de la jeunesse MIERR : formation, louange et engagement missionnaire.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="vision-aigle" data-type-evenement="Séminaire" data-anim>
+        <div class="carte-image"><img src="assets/img/video-05.svg" alt="Vision de l'Aigle"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">Séminaire</span>
+          <h3>Séminaire « Vision de l'Aigle »</h3>
+          <div class="evenement-meta"><span>📅 23 – 25 janvier 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Département Formation</span></div>
+          <p>Un temps fort d'enseignement sur le renouvellement spirituel, à l'image de l'aigle qui renouvelle sa jeunesse.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="seminaire-pentecote" data-type-evenement="Séminaire" data-anim>
+        <div class="carte-image"><img src="assets/img/video-06.svg" alt="Séminaire de Pentecôte"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">Séminaire</span>
+          <h3>Séminaire de Pentecôte</h3>
+          <div class="evenement-meta"><span>📅 22 – 24 mai 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Présidence de la MIERR</span></div>
+          <p>Trois jours de consécration et d'attente de la puissance du Saint-Esprit, en mémoire de la Pentecôte biblique.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="seminaire-discipolat" data-type-evenement="Séminaire" data-anim>
+        <div class="carte-image"><img src="assets/img/video-07.svg" alt="Séminaire sur le discipolat"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">Séminaire</span>
+          <h3>Séminaire sur le discipolat</h3>
+          <div class="evenement-meta"><span>📅 11 – 13 septembre 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Institut biblique de Sion</span></div>
+          <p>Formation pratique sur la marche du disciple et l'accompagnement spirituel des nouveaux convertis.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="co-semifig" data-type-evenement="SEMIFIG" data-anim>
+        <div class="carte-image"><img src="assets/img/galerie-07.svg" alt="Camp SEMIFIG"></div>
+        <div class="carte-evenement-corps">
+          <span class="carte-etiquette">SEMIFIG</span>
+          <h3>Camp SEMIFIG des Filles Glorieuses</h3>
+          <div class="evenement-meta"><span>📅 7 – 9 août 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Coordination SEMIFIG</span></div>
+          <p>Un temps de retraite, d'enseignement et de communion pour les jeunes filles de la mission.</p>
+        </div>
+      </article>
+
+      <article class="carte-evenement" id="20-ans" data-type-evenement="Convention" data-anim>
+        <div class="carte-image"><img src="assets/img/galerie-12.svg" alt="Jubilé 20 ans de la MIERR"></div>
+        <div class="carte-evenement-corps">
+          <span class="badge badge--or" style="margin-bottom:14px;">Édition spéciale jubilé</span>
+          <h3>Jubilé — 20 ans de la MIERR</h3>
+          <div class="evenement-meta"><span>📅 6 – 8 novembre 2026</span><span>📍 [Lieu à préciser]</span><span>👤 Présidence de la MIERR</span></div>
+          <p>Célébration officielle des vingt années de la MIERR : culte d'actions de grâces, gala et témoignages de toute une génération.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ARCHIVES -->
+  <section class="section" id="archives">
+    <div class="conteneur">
+      <div class="section-tete" data-anim>
+        <span class="eyebrow">Mémoire de la mission</span>
+        <h2>Archives des éditions précédentes</h2>
+        <p class="lead">Retrouvez les temps forts des années passées : photos, vidéos et comptes-rendus des conventions et séminaires déjà organisés.</p>
+      </div>
+      <div class="accordeon">
+        <div class="accordeon-item">
+          <button class="accordeon-entete">Convention annuelle 2025<span class="plus">+</span></button>
+          <div class="accordeon-corps"><div class="accordeon-corps-inner">Compte-rendu, photos et enregistrements de la convention annuelle 2025 — contenu à publier via le back-office (module Archives).</div></div>
+        </div>
+        <div class="accordeon-item">
+          <button class="accordeon-entete">CO-SEMIC 2025<span class="plus">+</span></button>
+          <div class="accordeon-corps"><div class="accordeon-corps-inner">Compte-rendu, photos et enregistrements de la CO-SEMIC 2025 — contenu à publier via le back-office.</div></div>
+        </div>
+        <div class="accordeon-item">
+          <button class="accordeon-entete">CO-JEMOC 2025<span class="plus">+</span></button>
+          <div class="accordeon-corps"><div class="accordeon-corps-inner">Compte-rendu, photos et enregistrements de la CO-JEMOC 2025 — contenu à publier via le back-office.</div></div>
+        </div>
+      </div>
+      <div class="texte-centre" style="margin-top:2.5rem;">
+        <a href="galerie.html" class="bouton bouton--ligne">Consulter la galerie complète</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<a href="#" class="whatsapp-flottant" data-whatsapp aria-label="Contacter la MIERR sur WhatsApp">💬</a>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div>
+        <div class="pied-logo"><img src="assets/img/logo-mierr.svg" alt="MIERR"></div>
+        <p>La Mission Internationale Évangélique de Réveil et de Restauration (MIERR), fondée en 2006, est engagée dans l'annonce de l'Évangile, la formation des croyants et la restauration des vies.</p>
+        <div class="pied-reseaux">
+          <a href="#" data-config-href="facebook" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="#" data-config-href="youtube" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+          <a href="#" data-whatsapp aria-label="WhatsApp">w</a>
+          <a href="#" data-config-href="instagram" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="#" data-config-href="tiktok" target="_blank" rel="noopener" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="la-mierr.html">La MIERR</a></li>
+          <li><a href="activites.html">Activités &amp; événements</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="presse.html">Presse</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Départements</h4>
+        <ul>
+          <li><a href="departements.html#semic">SEMIC</a></li>
+          <li><a href="departements.html#jemoc">JEMOC</a></li>
+          <li><a href="departements.html#semifig">SEMIFIG</a></li>
+          <li><a href="departements.html#schekina">Maison d'édition SCHÉKINA</a></li>
+          <li><a href="institut-biblique.html">Institut biblique de Sion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li data-config="adresse">[Adresse de la MIERR]</li>
+          <li><a data-config-href="telephone" data-config="telephone">[Téléphone]</a></li>
+          <li><a data-config-href="email" data-config="email">[E-mail]</a></li>
+          <li><a href="contact.html">Voir la page contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <span>© <span data-annee></span> MIERR — Tous droits réservés.</span>
+      <a href="contact.html#mentions">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox">
+  <button class="lightbox-fermer" aria-label="Fermer">&times;</button>
+  <button class="lightbox-precedent" aria-label="Précédent">‹</button>
+  <img src="" alt="">
+  <button class="lightbox-suivant" aria-label="Suivant">›</button>
+  <div class="lightbox-legende"></div>
+</div>
+
+<div class="modale-video">
+  <button class="lightbox-fermer" aria-label="Fermer la vidéo">&times;</button>
+  <div class="modale-video-cadre"></div>
+</div>
+
+<div class="recherche-superposition">
+  <div class="recherche-boite">
+    <div class="recherche-champ">
+      <span class="icone">🔍</span>
+      <input type="search" placeholder="Rechercher : SEMIC, institut biblique, convention…" aria-label="Rechercher sur le site">
+      <button data-recherche-fermer aria-label="Fermer la recherche">&times;</button>
+    </div>
+    <div class="recherche-resultats"></div>
+  </div>
+</div>
+
+<button class="retour-haut" aria-label="Retour en haut de page">↑</button>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

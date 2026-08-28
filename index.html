@@ -10,17 +10,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="canonical" href="https://www.mierr.org/index.html">
+<meta name="theme-color" content="#0B1F3A">
 <meta property="og:title" content="MIERR — Mission Internationale Évangélique de Réveil et de Restauration">
 <meta property="og:description" content="20 ans de réveil et de restauration — 2006-2026.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/banniere-accueil.svg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Mission Internationale Évangélique de Réveil et de Restauration",
+  "alternateName": "MIERR",
+  "url": "https://www.mierr.org/",
+  "logo": "https://www.mierr.org/assets/img/logo-mierr-sombre.svg",
+  "foundingDate": "2006",
+  "description": "Mission chrétienne évangélique fondée en 2006, engagée dans le réveil spirituel, la formation des croyants et la restauration des vies.",
+  "sameAs": [
+    "https://facebook.com/mierr",
+    "https://youtube.com/@mierr",
+    "https://instagram.com/mierr",
+    "https://tiktok.com/@mierr"
+  ]
+}
+</script>
 </head>
 <body>
+
+<a href="#contenu-principal" class="lien-evitement">Aller au contenu principal</a>
 
 <div class="barre-progression"></div>
 
 <header class="entete">
   <div class="conteneur">
-    <a href="index.html" class="logo"><img src="assets/img/logo-mierr.svg" alt="MIERR"></a>
+    <a href="index.html" class="logo"><img src="assets/img/logo-mierr-sombre.svg" alt="MIERR"></a>
     <nav class="nav-principale">
       <a href="index.html" aria-current="page">Accueil</a>
       <a href="la-mierr.html">La MIERR</a>
@@ -32,14 +57,16 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="entete-actions">
+      <button class="bouton-recherche" data-recherche-ouvrir aria-label="Rechercher sur le site">🔍</button>
       <a href="contact.html" class="bouton bouton--or">Nous contacter</a>
-      <button class="bouton-menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <button class="bouton-menu" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <div class="menu-mobile">
   <button class="fermer-menu" aria-label="Fermer le menu">&times;</button>
+  <button data-recherche-ouvrir style="display:flex; align-items:center; gap:10px; color:var(--or-clair); font-size:1rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; margin-bottom:16px;">🔍 Rechercher</button>
   <a href="index.html">Accueil</a>
   <a href="la-mierr.html">La MIERR</a>
   <a href="departements.html">Départements</a>
@@ -51,7 +78,7 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<main>
+<main id="contenu-principal">
 
   <!-- 1.1 BANNIERE PRINCIPALE -->
   <section class="hero">
@@ -64,6 +91,19 @@
       <div class="bouton-groupe">
         <a href="la-mierr.html" class="bouton bouton--or">Découvrir la MIERR</a>
         <a href="activites.html" class="bouton bouton--contour">Nos activités</a>
+      </div>
+    </div>
+    <div class="hero-defilement">Découvrir</div>
+  </section>
+
+  <!-- BANDE STATISTIQUES -->
+  <section class="section--bleu" style="padding:52px 0;">
+    <div class="conteneur">
+      <div class="statistiques">
+        <div class="stat" data-anim><b><span data-compteur="20">0</span> ans</b><span>De réveil et de restauration</span></div>
+        <div class="stat" data-anim><b><span data-compteur="3">0</span></b><span>Grands départements</span></div>
+        <div class="stat" data-anim><b><span data-compteur="1">0</span></b><span>Institut biblique de formation</span></div>
+        <div class="stat" data-anim><b><span data-compteur="9">0</span></b><span>Services, sections &amp; ministères</span></div>
       </div>
     </div>
   </section>
@@ -333,11 +373,11 @@
         <div class="pied-logo"><img src="assets/img/logo-mierr.svg" alt="MIERR"></div>
         <p>La Mission Internationale Évangélique de Réveil et de Restauration (MIERR), fondée en 2006, est engagée dans l'annonce de l'Évangile, la formation des croyants et la restauration des vies.</p>
         <div class="pied-reseaux">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" data-config-href="facebook" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="#" data-config-href="youtube" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
           <a href="#" data-whatsapp aria-label="WhatsApp">w</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="TikTok">tt</a>
+          <a href="#" data-config-href="instagram" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="#" data-config-href="tiktok" target="_blank" rel="noopener" aria-label="TikTok">tt</a>
         </div>
       </div>
       <div>
@@ -363,9 +403,9 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li>[Adresse de la MIERR]</li>
-          <li>[Téléphone]</li>
-          <li>[E-mail]</li>
+          <li data-config="adresse">[Adresse de la MIERR]</li>
+          <li><a data-config-href="telephone" data-config="telephone">[Téléphone]</a></li>
+          <li><a data-config-href="email" data-config="email">[E-mail]</a></li>
           <li><a href="contact.html">Voir la page contact</a></li>
         </ul>
       </div>
@@ -385,6 +425,25 @@
   <div class="lightbox-legende"></div>
 </div>
 
+<div class="modale-video">
+  <button class="lightbox-fermer" aria-label="Fermer la vidéo">&times;</button>
+  <div class="modale-video-cadre"></div>
+</div>
+
+<div class="recherche-superposition">
+  <div class="recherche-boite">
+    <div class="recherche-champ">
+      <span class="icone">🔍</span>
+      <input type="search" placeholder="Rechercher : SEMIC, institut biblique, convention…" aria-label="Rechercher sur le site">
+      <button data-recherche-fermer aria-label="Fermer la recherche">&times;</button>
+    </div>
+    <div class="recherche-resultats"></div>
+  </div>
+</div>
+
+<button class="retour-haut" aria-label="Retour en haut de page">↑</button>
+
+<script src="assets/js/data.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
