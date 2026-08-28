@@ -38,21 +38,34 @@ changer.
 
 ## 2. Identité visuelle
 
-- **Couleurs** : bleu nuit (`--bleu-nuit #0B1F3A`) et or (`--or #C9A227`),
-  sur fond crème/blanc — à ajuster dans `assets/css/style.css`, section
-  « Variables & fondations », dès que le logo officiel de la MIERR est fourni.
-- **Fond de page** : dégradé signal rouge/orange (`--signal-1 #FF6B35` →
-  `--signal-2 #FF1840`), utilisé comme cadre continu autour des panneaux de
-  contenu sur toutes les pages (voir `body`/`.entete`/`.hero`/`.pied` dans
-  `assets/css/style.css`).
-- **Palette secondaire** (accents complémentaires) : Azur Brant
-  (`--azur-brant #0A2472`), Sol de Minas (`--sol-de-minas #F5A800`),
-  Horizonte Claro (`--horizon-clair #7C90C4`, décliné en teinte pâle
-  `--horizon-pale #E4E9F5` pour les fonds de badges) et Nuvem
-  (`--nuage #F0EFEA`). Utilisée pour les badges/étiquettes secondaires
-  (`.badge`, `.badge--azur`, `.badge--sol`, `.badge--nuage`) — disponible
-  pour différencier catégories, statuts ou départements sans toucher à la
-  palette principale.
+- **Couleurs** : la charte graphique tient en **trois couleurs de marque**,
+  définies dans `assets/css/style.css`, section « Variables & fondations » :
+  1. **Couleur principale** — dégradé Signal rouge/orange
+     (`--signal-1 #FF6B35` → `--signal-2 #FF1840`,
+     `linear-gradient(90deg, ...)`), utilisé comme cadre continu autour des
+     panneaux de contenu sur toutes les pages (voir `body`/`.entete`/`.hero`/
+     `.pied`) ;
+  2. **Golden Yellow** (`--or #FFDD00`, avec ses déclinaisons
+     `--or-clair #FFE74D`, `--or-pale #FFF6B8` et une version assombrie
+     `--or-fonce #7A6200` réservée au texte pour rester lisible sur fond
+     clair) — couleur des boutons, accents et petits repères visuels ;
+  3. **Dark Purple** (`--bleu-nuit #3D0B37`, avec ses déclinaisons
+     `--bleu-profond #2B0826`, `--bleu-moyen #54104A`, `--bleu-clair` et
+     `--bleu-glace` pour les fonds très pâles) — couleur des bandeaux de
+     page, de l'en-tête sombre, du pied de page et des titres. Les noms de
+     variables `--bleu-*`/`--or-*` sont historiques (héritage de la première
+     charte bleu nuit/or) mais pointent désormais vers le violet et le jaune
+     doré ci-dessus.
+  Le blanc, le crème et quelques neutres (gris, bordures) complètent la
+  palette pour la lisibilité du texte ; les couleurs sémantiques
+  (succès/erreur) restent inchangées.
+- **Palette secondaire** (badges/étiquettes) : repliée sur les trois
+  couleurs de marque — `--azur-brant` et `--sol-de-minas` pointent
+  respectivement vers le Dark Purple et le Golden Yellow, `--horizon-clair`/
+  `--horizon-pale` vers des teintes de violet, `--nuage` vers un neutre pâle
+  — utilisée par `.badge`, `.badge--azur`, `.badge--sol`, `.badge--nuage`
+  pour différencier catégories, statuts ou départements sans introduire de
+  nouvelle teinte.
 - **Typographies** : *Playfair Display* (titres, élégance institutionnelle) et
   *Work Sans* (texte courant, lisibilité).
 - **Logo** : `assets/img/logo-mierr-sombre.svg` (texte foncé, utilisé sur fond
