@@ -23,23 +23,26 @@ def lire(chemin):
     with open(chemin, encoding="utf-8") as f:
         return f.read()
 
-def data_uri_svg(chemin):
+MIME = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
+
+def data_uri(chemin):
+    ext = os.path.splitext(chemin)[1].lower()
     with open(chemin, "rb") as f:
         b = f.read()
-    return "data:image/svg+xml;base64," + base64.b64encode(b).decode("ascii")
+    return f"data:{MIME.get(ext, 'application/octet-stream')};base64," + base64.b64encode(b).decode("ascii")
 
-# Carte de toutes les images assets/img/*.svg -> data URI
+# Carte de toutes les images assets/img/* -> data URI
 dossier_img = os.path.join(RACINE, "assets", "img")
 images = {}
 for nom in os.listdir(dossier_img):
-    if nom.endswith(".svg"):
-        images[nom] = data_uri_svg(os.path.join(dossier_img, nom))
+    if os.path.splitext(nom)[1].lower() in MIME:
+        images[nom] = data_uri(os.path.join(dossier_img, nom))
 
 def inliner_images(texte):
     def remplace(m):
         nom = m.group(1)
         return images.get(nom, "assets/img/" + nom)
-    return re.sub(r'assets/img/([A-Za-z0-9_.-]+\.svg)', remplace, texte)
+    return re.sub(r'assets/img/([A-Za-z0-9_.-]+\.(?:svg|png|jpe?g))', remplace, texte)
 
 css = lire(os.path.join(RACINE, "assets", "css", "style.css"))
 css = inliner_images(css)
