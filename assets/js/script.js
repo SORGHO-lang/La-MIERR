@@ -653,9 +653,11 @@
 
   /* ---------- Direction (portraits des responsables) ---------- */
   function construireCarteDirection(m) {
+    var alt = m.fonction ? echapperHtml(m.nom) + ", " + echapperHtml(m.fonction) : echapperHtml(m.nom);
+    var fonction = m.fonction ? '<p class="lead" style="margin-bottom:0;">' + echapperHtml(m.fonction) + "</p>" : "";
     return '<div style="display:flex; flex-direction:column; gap:18px;">' +
-      '<div style="border-radius:var(--rayon-lg); overflow:hidden; box-shadow:var(--ombre); aspect-ratio:3/4;"><img src="' + echapperHtml(m.image) + '" alt="' + echapperHtml(m.nom) + ", " + echapperHtml(m.fonction) + '" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;"></div>' +
-      "<div><h4 style=\"margin-bottom:2px;\">" + echapperHtml(m.nom) + '</h4><p class="lead" style="margin-bottom:0;">' + echapperHtml(m.fonction) + "</p></div></div>";
+      '<div style="border-radius:var(--rayon-lg); overflow:hidden; box-shadow:var(--ombre); aspect-ratio:3/4;"><img src="' + echapperHtml(m.image) + '" alt="' + alt + '" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;"></div>' +
+      "<div><h4 style=\"margin-bottom:2px;\">" + echapperHtml(m.nom) + "</h4>" + fonction + "</div></div>";
   }
 
   function actualiserDirection(liste) {

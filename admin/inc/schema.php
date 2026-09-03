@@ -69,7 +69,7 @@ return [
         'titre_affiche' => 'nom',
         'champs' => [
             'nom'      => ['label' => 'Nom et titre (ex. Pasteur Jean OUEDRAOGO)', 'type' => 'text', 'requis' => true],
-            'fonction' => ['label' => 'Fonction',   'type' => 'text',  'requis' => true],
+            'fonction' => ['label' => 'Fonction (facultatif, ex. pour une fiche « Couple pastoral »)', 'type' => 'text', 'requis' => false],
             'groupe'   => ['label' => 'Groupe',     'type' => 'select', 'requis' => true,
                             'options' => ['Garants de la Vision', 'Les Pasteurs']],
             'image'    => ['label' => 'Portrait',    'type' => 'image', 'requis' => true],
