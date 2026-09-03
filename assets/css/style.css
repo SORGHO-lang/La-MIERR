@@ -243,7 +243,7 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .barre-progression{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--or-fonce),var(--or-clair)); z-index:1000; transition:width .1s linear;}
 
 .entete{
-  position:sticky; top:0; z-index:500; background:rgba(25,11,70,.96); backdrop-filter:blur(10px);
+  position:sticky; top:0; z-index:500; background:rgba(75,22,252,.96); backdrop-filter:blur(10px);
   border-bottom:1px solid transparent; transition:box-shadow var(--transition), border-color var(--transition), background var(--transition);
   height:var(--entete-hauteur);
   /* Ramène l'en-tête plein-bleed malgré le cadre de dégradé du <body> */
