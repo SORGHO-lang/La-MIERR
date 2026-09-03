@@ -3,36 +3,42 @@
     "id": "apotre-jean-marie-savadogo",
     "nom": "Apôtre Jean-Marie SAVADOGO",
     "fonction": "Principal des églises MIERR",
+    "groupe": "Garants de la Vision",
     "image": "assets/img/apotre-jean-marie-savadogo.jpg"
   },
   {
     "id": "pasteur-assana-savadogo",
     "nom": "Pasteur Assana SAVADOGO",
     "fonction": "Pasteur au siège de la MIERR",
+    "groupe": "Garants de la Vision",
     "image": "assets/img/pasteur-assana-savadogo.jpg"
   },
   {
     "id": "pasteur-elyse-kaba",
     "nom": "Pasteur Elyse KABA",
     "fonction": "Pasteur au siège de la MIERR",
+    "groupe": "Garants de la Vision",
     "image": "assets/img/pasteur-elyse-kaba.jpg"
   },
   {
     "id": "pasteur-alexis-savadogo",
     "nom": "Pasteur Alexis SAVADOGO",
     "fonction": "Pasteur de l'annexe de la MIERR à Yagma",
+    "groupe": "Les Pasteurs",
     "image": "assets/img/pasteur-alexis-savadogo.jpg"
   },
   {
     "id": "missionnaire-konan-ferdinand",
     "nom": "Missionnaire KONAN Konan Ferdinand",
     "fonction": "Pasteur Assistant Confirmé en République de la Côte d'Ivoire",
+    "groupe": "Les Pasteurs",
     "image": "assets/img/missionnaire-konan-ferdinand.jpg"
   },
   {
     "id": "pasteur-somda-charles",
     "nom": "Pasteur SOMDA Charles",
     "fonction": "Pasteur Assistant à Boromo",
+    "groupe": "Les Pasteurs",
     "image": "assets/img/pasteur-somda-charles.jpg"
   }
 ]

@@ -70,6 +70,8 @@ return [
         'champs' => [
             'nom'      => ['label' => 'Nom et titre (ex. Pasteur Jean OUEDRAOGO)', 'type' => 'text', 'requis' => true],
             'fonction' => ['label' => 'Fonction',   'type' => 'text',  'requis' => true],
+            'groupe'   => ['label' => 'Groupe',     'type' => 'select', 'requis' => true,
+                            'options' => ['Garants de la Vision', 'Les Pasteurs']],
             'image'    => ['label' => 'Portrait',    'type' => 'image', 'requis' => true],
         ],
     ],

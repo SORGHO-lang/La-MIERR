@@ -659,9 +659,13 @@
   }
 
   function actualiserDirection(liste) {
-    var conteneur = $("#direction-grille");
-    if (!conteneur || !liste || !liste.length) return;
-    conteneur.innerHTML = liste.map(construireCarteDirection).join("");
+    var conteneurs = $$("[data-direction-auto]");
+    if (!conteneurs.length || !liste || !liste.length) return;
+    conteneurs.forEach(function (conteneur) {
+      var groupe = conteneur.getAttribute("data-direction-auto");
+      var membres = liste.filter(function (m) { return m.groupe === groupe; });
+      if (membres.length) conteneur.innerHTML = membres.map(construireCarteDirection).join("");
+    });
   }
 
   /* ---------- Orchestrateur : tente tous les chargements, attend le résultat ---------- */
