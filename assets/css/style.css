@@ -38,6 +38,7 @@
   --bleu-moyen:#2C147B;
   --bleu-clair:#7459CF;
   --bleu-glace:#EFEBF9;
+  --bleu-logo:#4B16FC;
 
   /* Golden Yellow — déclinaisons pour accents et texte lisible */
   --or:#FFDD00;
@@ -520,8 +521,12 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .organigramme-niveau{display:flex; flex-direction:column; align-items:center; gap:20px; position:relative; padding:30px 0;}
 .organigramme-noeud{background:#fff; border:1.5px solid var(--bordure); border-radius:var(--rayon); padding:16px 24px; text-align:center; font-size:.88rem; font-weight:600; color:var(--bleu-nuit); box-shadow:var(--ombre-douce); min-width:180px; max-width:420px;}
 .organigramme-noeud.principal{background:var(--bleu-nuit); color:#fff; border-color:var(--bleu-nuit);}
+.organigramme-noeud.organigramme-noeud--bleu{background:var(--bleu-logo); color:#fff; border-color:var(--bleu-logo);}
+.organigramme-noeud.organigramme-noeud--orange{background:var(--signal-1); color:#fff; border-color:var(--signal-1);}
 .organigramme-noeud span{display:block; font-weight:400; font-size:.78rem; color:var(--texte-clair); margin-top:4px;}
-.organigramme-noeud.principal span{color:rgba(255,255,255,.7);}
+.organigramme-noeud.principal span,
+.organigramme-noeud--bleu span,
+.organigramme-noeud--orange span{color:rgba(255,255,255,.75);}
 .organigramme-niveau:not(:first-child)::before{content:''; position:absolute; top:0; left:50%; width:1px; height:30px; background:var(--bordure);}
 /* Niveau en grille rectangulaire (ex. tous les services sous le Secrétariat Général) */
 .organigramme-niveau--grille{flex-direction:row; flex-wrap:wrap; justify-content:center; max-width:1000px;}
