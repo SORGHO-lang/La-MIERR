@@ -523,6 +523,9 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .organigramme-noeud span{display:block; font-weight:400; font-size:.78rem; color:var(--texte-clair); margin-top:4px;}
 .organigramme-noeud.principal span{color:rgba(255,255,255,.7);}
 .organigramme-niveau:not(:first-child)::before{content:''; position:absolute; top:0; left:50%; width:1px; height:30px; background:var(--bordure);}
+/* Niveau en grille rectangulaire (ex. tous les services sous le Secrétariat Général) */
+.organigramme-niveau--grille{flex-direction:row; flex-wrap:wrap; justify-content:center; max-width:1000px;}
+.organigramme-niveau--grille .organigramme-noeud{flex:1 1 220px;}
 
 /* Institut biblique — formations */
 .tableau-programme{width:100%; border-collapse:collapse; font-size:.92rem;}
