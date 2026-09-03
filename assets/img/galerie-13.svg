@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img" aria-label="Baptêmes">
   <defs>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2B0826"/>
-      <stop offset="100%" stop-color="#54104A"/>
+      <stop offset="0%" stop-color="#10082B"/>
+      <stop offset="100%" stop-color="#2C147B"/>
     </linearGradient>
     <radialGradient id="r" cx="78%" cy="18%" r="60%">
       <stop offset="0%" stop-color="#FFDD00" stop-opacity=".35"/>
@@ -27,7 +27,7 @@
 <line x1="499.2" y1="105.6" x2="637.6" y2="39.0" stroke="#FFDD00" stroke-width="1.4" opacity="0.22"/>
   <circle cx="499.2" cy="105.6" r="43.2" fill="none" stroke="#FFDD00" stroke-width="1.6" opacity=".55"/>
   <circle cx="499.2" cy="105.6" r="76.8" fill="none" stroke="#FFDD00" stroke-width="1" opacity=".3"/>
-  <rect x="0" y="416" width="640" height="64" fill="#3D0B37" opacity=".38"/>
+  <rect x="0" y="416" width="640" height="64" fill="#190B46" opacity=".38"/>
   <text x="24" y="448" font-family="Georgia, serif" font-size="13" fill="#FFF6B8" opacity=".92">Baptêmes</text>
   <text x="24" y="466" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="#FAF7F0" opacity=".55">PHOTO À INTÉGRER</text>
 </svg>

@@ -26,18 +26,18 @@
      1) Dégradé Signal (rouge/orange) — couleur principale, fond de toutes
         les pages ;
      2) Golden Yellow #FFDD00 — couleur secondaire (accents, boutons) ;
-     3) Dark Purple #3D0B37 — couleur secondaire (fonds sombres, titres).
+     3) Bleu du logo #190B46 — couleur secondaire (fonds sombres, titres).
      Les variables --bleu-* et --or-* conservent leurs noms historiques
-     pour ne rien casser dans le HTML, mais pointent désormais vers le
-     violet et le jaune doré. Seuls des neutres (blanc/crème/gris) et les
-     couleurs sémantiques (succès/erreur) complètent la charte. */
+     et pointent désormais vers le bleu du logo officiel et le jaune doré.
+     Seuls des neutres (blanc/crème/gris) et les couleurs sémantiques
+     (succès/erreur) complètent la charte. */
 
-  /* Dark Purple — déclinaisons pour fonds, titres, texte */
-  --bleu-nuit:#3D0B37;
-  --bleu-profond:#2B0826;
-  --bleu-moyen:#54104A;
-  --bleu-clair:#8C5382;
-  --bleu-glace:#F5EDF3;
+  /* Bleu du logo — déclinaisons pour fonds, titres, texte */
+  --bleu-nuit:#190B46;
+  --bleu-profond:#10082B;
+  --bleu-moyen:#2C147B;
+  --bleu-clair:#7459CF;
+  --bleu-glace:#EFEBF9;
 
   /* Golden Yellow — déclinaisons pour accents et texte lisible */
   --or:#FFDD00;
@@ -52,7 +52,7 @@
 
   --creme:#FAF7F0;
   --blanc:#FFFFFF;
-  --encre:#3D0B37;
+  --encre:#190B46;
 
   /* Fond de page — dégradé Signal (couleur principale) */
   --signal-1:#FF6B35;
@@ -62,12 +62,12 @@
   --cadre-h:14px;
 
   /* Palette secondaire (badges/étiquettes) — repliée sur les 3 couleurs de
-     marque : violet (Dark Purple) et jaune (Golden Yellow), plus un neutre
-     pâle pour les fonds discrets. */
-  --azur-brant:#3D0B37;
+     marque : bleu (logo) et jaune (Golden Yellow), plus un neutre pâle
+     pour les fonds discrets. */
+  --azur-brant:#190B46;
   --sol-de-minas:#FFDD00;
-  --horizon-clair:#8C5382;
-  --horizon-pale:#F5EDF3;
+  --horizon-clair:#7459CF;
+  --horizon-pale:#EFEBF9;
   --nuage:#F3F0F0;
 
   --texte:#241220;
@@ -80,8 +80,8 @@
   --succes:#2E7D4F;
   --erreur:#B3432B;
 
-  --ombre:0 24px 60px -24px rgba(61,11,55,.28);
-  --ombre-douce:0 12px 30px -16px rgba(61,11,55,.18);
+  --ombre:0 24px 60px -24px rgba(25,11,70,.28);
+  --ombre-douce:0 12px 30px -16px rgba(25,11,70,.18);
   --ombre-or:0 14px 34px -14px rgba(255,221,0,.45);
 
   --rayon:6px;
@@ -318,9 +318,9 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .hero{position:relative; min-height:92vh; display:flex; align-items:center; color:#fff; overflow:hidden; background:var(--bleu-nuit); border-radius:20px 20px 0 0;}
 .hero-fond{position:absolute; inset:0; z-index:0;}
 .hero-fond img{width:100%; height:100%; object-fit:cover; opacity:.55;}
-.hero-fond::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(61,11,55,.55) 0%, rgba(61,11,55,.78) 55%, rgba(61,11,55,.96) 100%);}
+.hero-fond::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(25,11,70,.55) 0%, rgba(25,11,70,.78) 55%, rgba(25,11,70,.96) 100%);}
 .hero-contenu{position:relative; z-index:1; max-width:780px; padding-top:var(--entete-hauteur);}
-.hero-badge{display:inline-flex; align-items:center; gap:10px; padding:8px 18px; border:1px solid rgba(255,231,77,.5); border-radius:99px; font-size:.82rem; font-weight:600; color:var(--or-clair); margin-bottom:22px; background:rgba(61,11,55,.4); backdrop-filter:blur(4px);}
+.hero-badge{display:inline-flex; align-items:center; gap:10px; padding:8px 18px; border:1px solid rgba(255,231,77,.5); border-radius:99px; font-size:.82rem; font-weight:600; color:var(--or-clair); margin-bottom:22px; background:rgba(25,11,70,.4); backdrop-filter:blur(4px);}
 .hero .eyebrow{color:var(--or-clair);}
 .hero .eyebrow::before{background:var(--or-clair);}
 .hero h1{color:#fff; margin-bottom:22px;}
@@ -454,7 +454,7 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .galerie-item{position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:var(--rayon); cursor:pointer; background:var(--bleu-glace);}
 .galerie-item img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}
 .galerie-item:hover img{transform:scale(1.08);}
-.galerie-item::after{content:'⤢'; position:absolute; top:10px; right:10px; width:32px; height:32px; background:rgba(61,11,55,.6); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity var(--transition); font-size:.9rem;}
+.galerie-item::after{content:'⤢'; position:absolute; top:10px; right:10px; width:32px; height:32px; background:rgba(25,11,70,.6); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity var(--transition); font-size:.9rem;}
 .galerie-item:hover::after{opacity:1;}
 .video-tuile{position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:var(--rayon); cursor:pointer;}
 .video-tuile img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}

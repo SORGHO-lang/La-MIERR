@@ -58,20 +58,21 @@ changer.
      `--or-clair #FFE74D`, `--or-pale #FFF6B8` et une version assombrie
      `--or-fonce #7A6200` réservée au texte pour rester lisible sur fond
      clair) — couleur des boutons, accents et petits repères visuels ;
-  3. **Dark Purple** (`--bleu-nuit #3D0B37`, avec ses déclinaisons
-     `--bleu-profond #2B0826`, `--bleu-moyen #54104A`, `--bleu-clair` et
+  3. **Bleu du logo** (`--bleu-nuit #190B46`, avec ses déclinaisons
+     `--bleu-profond #10082B`, `--bleu-moyen #2C147B`, `--bleu-clair` et
      `--bleu-glace` pour les fonds très pâles) — couleur des bandeaux de
-     page, de l'en-tête sombre, du pied de page et des titres. Les noms de
-     variables `--bleu-*`/`--or-*` sont historiques (héritage de la première
-     charte bleu nuit/or) mais pointent désormais vers le violet et le jaune
+     page, de l'en-tête sombre, du pied de page et des titres, reprise
+     directement de la couleur bleue du logo officiel MIERR (anneau,
+     rayons, sigle « M.I.E.R.R »). Les noms de variables `--bleu-*`/`--or-*`
+     sont historiques mais pointent désormais vers ce bleu et le jaune
      doré ci-dessus.
   Le blanc, le crème et quelques neutres (gris, bordures) complètent la
   palette pour la lisibilité du texte ; les couleurs sémantiques
   (succès/erreur) restent inchangées.
 - **Palette secondaire** (badges/étiquettes) : repliée sur les trois
   couleurs de marque — `--azur-brant` et `--sol-de-minas` pointent
-  respectivement vers le Dark Purple et le Golden Yellow, `--horizon-clair`/
-  `--horizon-pale` vers des teintes de violet, `--nuage` vers un neutre pâle
+  respectivement vers le bleu du logo et le Golden Yellow, `--horizon-clair`/
+  `--horizon-pale` vers des teintes de bleu, `--nuage` vers un neutre pâle
   — utilisée par `.badge`, `.badge--azur`, `.badge--sol`, `.badge--nuage`
   pour différencier catégories, statuts ou départements sans introduire de
   nouvelle teinte.

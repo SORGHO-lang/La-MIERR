@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" width="480" height="640" role="img" aria-label="SCHÉKINA — Publication 2">
   <defs>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3D0B37"/>
-      <stop offset="100%" stop-color="#54104A"/>
+      <stop offset="0%" stop-color="#190B46"/>
+      <stop offset="100%" stop-color="#2C147B"/>
     </linearGradient>
     <radialGradient id="r" cx="78%" cy="18%" r="60%">
       <stop offset="0%" stop-color="#FFF6B8" stop-opacity=".35"/>
@@ -27,7 +27,7 @@
 <line x1="374.4" y1="140.8" x2="512.8" y2="74.2" stroke="#FFF6B8" stroke-width="1.4" opacity="0.22"/>
   <circle cx="374.4" cy="140.8" r="43.2" fill="none" stroke="#FFF6B8" stroke-width="1.6" opacity=".55"/>
   <circle cx="374.4" cy="140.8" r="76.8" fill="none" stroke="#FFF6B8" stroke-width="1" opacity=".3"/>
-  <rect x="0" y="576" width="480" height="64" fill="#3D0B37" opacity=".38"/>
+  <rect x="0" y="576" width="480" height="64" fill="#190B46" opacity=".38"/>
   <text x="24" y="608" font-family="Georgia, serif" font-size="13" fill="#FFF6B8" opacity=".92">SCHÉKINA — Publication 2</text>
   <text x="24" y="626" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="#FAF7F0" opacity=".55">COUVERTURE À INTÉGRER</text>
 </svg>

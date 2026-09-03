@@ -20,9 +20,9 @@ import os
 DOSSIER = os.path.join(os.path.dirname(__file__), "..", "assets", "img")
 os.makedirs(DOSSIER, exist_ok=True)
 
-BLEU_NUIT = "#3D0B37"      # Dark Purple — couleur secondaire de marque
-BLEU_PROFOND = "#2B0826"
-BLEU_MOYEN = "#54104A"
+BLEU_NUIT = "#190B46"      # Bleu du logo — couleur secondaire de marque
+BLEU_PROFOND = "#10082B"
+BLEU_MOYEN = "#2C147B"
 OR = "#FFDD00"             # Golden Yellow — couleur secondaire de marque
 OR_CLAIR = "#FFE74D"
 OR_PALE = "#FFF6B8"
