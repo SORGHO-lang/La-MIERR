@@ -347,9 +347,15 @@ hr{border:none; border-top:1px solid var(--bordure); margin:2.5rem 0;}
 .acces-rapide{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
 @media(min-width:760px){.acces-rapide{grid-template-columns:repeat(3,1fr);}}
 @media(min-width:1080px){.acces-rapide{grid-template-columns:repeat(6,1fr);}}
-.acces-item{display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center; background:#fff; border:1px solid var(--bordure); border-radius:var(--rayon-lg); padding:28px 14px; font-weight:600; font-size:.9rem; color:var(--bleu-nuit); transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);}
+.acces-item{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; background:#fff; border:1px solid var(--bordure); border-radius:var(--rayon-lg); padding:28px 14px; font-weight:600; font-size:.9rem; color:var(--bleu-nuit); transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);}
 .acces-item:hover{transform:translateY(-6px); box-shadow:var(--ombre-douce); border-color:var(--or);}
-.acces-item .icone{font-size:1.6rem;}
+.acces-item .icone{
+  width:52px; height:52px; border-radius:50%; background:var(--or-pale); color:var(--or-fonce);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  transition:background var(--transition), color var(--transition);
+}
+.acces-item .icone svg{width:24px; height:24px;}
+.acces-item:hover .icone{background:var(--bleu-nuit); color:var(--or-clair);}
 
 /* Liste d'événements (accueil) */
 .liste-evenements{display:flex; flex-direction:column; gap:14px;}
