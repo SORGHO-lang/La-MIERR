@@ -31,19 +31,21 @@ stocké dans de simples fichiers `.json` du dossier `content/`.
 
 ## 3. Ce que tu peux modifier
 
-Le tableau de bord (`/admin/dashboard.php`) donne accès à cinq sections :
+Le tableau de bord (`/admin/dashboard.php`) donne accès à six sections :
 
 | Section | Ce qu'elle modifie sur le site |
 |---|---|
 | **Actualités** | Les cartes de la page *Actualités* (titre, catégorie, date, résumé, image) |
 | **Agenda / Événements** | Les cartes de la page *Activités*, le calendrier interactif, et le rappel « Prochains événements » de l'accueil |
 | **Galerie** | Les photos de la page *Galerie*, classées par album |
-| **Direction** | Les portraits des responsables sur la page *La MIERR* (photo, nom, fonction) |
+| **Direction** | Les portraits des responsables sur la page *La MIERR* (photo, nom, fonction, groupe) |
+| **Parole du jour** | Le verset affiché dans la section « Parole du jour » de la page d'accueil (texte + référence) |
 | **Coordonnées** | Téléphone, WhatsApp, e-mail, adresse, horaires, Facebook, YouTube, Instagram, TikTok, carte Google Maps — utilisés partout sur le site (en-tête, pied de page, page Contact) |
 
-Pour chaque section (sauf Coordonnées, qui est unique) : une liste des
-éléments existants, avec des boutons **Modifier** et **Supprimer**, et un
-bouton **+ Ajouter** en haut à droite pour créer un nouvel élément.
+Pour chaque section (sauf Parole du jour et Coordonnées, qui sont
+uniques) : une liste des éléments existants, avec des boutons
+**Modifier** et **Supprimer**, et un bouton **+ Ajouter** en haut à
+droite pour créer un nouvel élément.
 
 **Important — événements avec affiche** : si tu ajoutes une image à un
 événement (dans « Agenda / Événements »), elle s'affiche en pleine largeur

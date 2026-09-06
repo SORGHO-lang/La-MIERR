@@ -32,7 +32,8 @@ La-MIERR/
 │   │                              chargement du contenu distant content/*.json…)
 │   └── img/*.svg, *.jpg, *.png   Visuels (logo, bannières, cartes, portraits, photos envoyées…)
 ├── content/*.json                Contenu modifiable sans coder (actualités, agenda, galerie,
-│                                  direction, coordonnées) — lu par le site, écrit par /admin
+│                                  direction, parole du jour, coordonnées) — lu par le site,
+│                                  écrit par /admin
 ├── admin/                        Espace d'administration PHP (voir ADMIN.md)
 ├── ADMIN.md                      Guide d'utilisation de l'espace d'administration
 └── scripts/generer_visuels.py    Générateur des visuels de substitution SVG
@@ -131,8 +132,8 @@ cPanel…). Voir **ADMIN.md** pour le guide d'utilisation complet (connexion,
 mot de passe, sections éditables, déploiement). En résumé :
 
 - Le contenu modifiable (actualités, agenda/événements, galerie photos,
-  responsables « Direction », coordonnées & réseaux sociaux) vit dans des
-  fichiers JSON du dossier `content/` — pas dans le HTML.
+  responsables « Direction », parole du jour, coordonnées & réseaux sociaux)
+  vit dans des fichiers JSON du dossier `content/` — pas dans le HTML.
 - `admin/` est une petite application PHP (connexion par mot de passe,
   formulaires d'ajout/modification/suppression, envoi de photos) qui lit et
   réécrit ces fichiers JSON.

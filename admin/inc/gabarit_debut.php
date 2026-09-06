@@ -31,5 +31,6 @@ $sectionActive = $sectionActive ?? '';
         <a href="editer.php?section=evenements" class="<?= $sectionActive === 'evenements' ? 'actif' : '' ?>">Agenda</a>
         <a href="editer.php?section=galerie" class="<?= $sectionActive === 'galerie' ? 'actif' : '' ?>">Galerie</a>
         <a href="editer.php?section=direction" class="<?= $sectionActive === 'direction' ? 'actif' : '' ?>">Direction</a>
+        <a href="verset.php" class="<?= $sectionActive === 'verset' ? 'actif' : '' ?>">Parole du jour</a>
         <a href="coordonnees.php" class="<?= $sectionActive === 'coordonnees' ? 'actif' : '' ?>">Coordonnées</a>
       </nav>

@@ -25,6 +25,12 @@ require __DIR__ . '/inc/gabarit_debut.php';
           </a>
         <?php endforeach; ?>
 
+        <a href="verset.php" class="carte-dept" style="text-decoration:none; display:block;">
+          <span class="sigle">✦</span>
+          <h3>Parole du jour</h3>
+          <p>Le verset affiché sur la page d'accueil, à changer aussi souvent que nécessaire.</p>
+        </a>
+
         <a href="coordonnees.php" class="carte-dept" style="text-decoration:none; display:block;">
           <span class="sigle">☎</span>
           <h3>Coordonnées &amp; réseaux sociaux</h3>

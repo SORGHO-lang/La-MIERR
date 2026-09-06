@@ -677,6 +677,12 @@
       chargerJSON("content/coordonnees.json").then(function (d) {
         if (d) { Object.assign(CFG, d); injecterConfig(); initWhatsapp(); }
       }),
+      chargerJSON("content/verset.json").then(function (d) {
+        if (d && (d.texte || d.reference)) {
+          Object.assign(CFG, { verset_texte: d.texte, verset_reference: d.reference });
+          injecterConfig();
+        }
+      }),
       chargerJSON("content/evenements.json").then(function (d) {
         if (d && d.length) { window.MIERR.evenements = d; etat.evenementsChanges = true; }
       }),
