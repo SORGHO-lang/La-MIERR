@@ -9,6 +9,7 @@
     "build": "node build.mjs",
     "serve": "php -S localhost:8080 -t dist",
     "test": "node build.mjs && node tests/check.mjs",
+    "preview": "node build.mjs && node tools/build-preview.mjs",
     "illustrations": "node tools/generate-illustrations.mjs"
   }
 }

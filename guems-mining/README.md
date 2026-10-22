@@ -57,6 +57,9 @@ npm test           # génère puis vérifie liens, H1, SEO, hreflang, alt, tradu
 npm run serve      # http://localhost:8080 (serveur PHP intégré)
 ```
 
+Pour obtenir **un seul fichier HTML** à ouvrir directement dans un navigateur (sans serveur) :
+`npm run preview` → `preview/guems-mining-apercu.html`. Dans cet aperçu, le formulaire n'envoie rien.
+
 Pour générer avec le domaine définitif sans modifier le fichier : `SITE_URL=https://www.mon-domaine.bf npm run build`.
 
 ## Mise en ligne (hébergement mutualisé PHP / Apache)
