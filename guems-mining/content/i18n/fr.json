@@ -38,7 +38,8 @@
     "allCategories": "Toutes",
     "illustration": "Illustration",
     "englishUnavailable": "",
-    "frenchUnavailable": "Cet article n'est disponible qu'en anglais."
+    "frenchUnavailable": "Cet article n'est disponible qu'en anglais.",
+    "backToTop": "Retour en haut de page"
   },
   "categories": {
     "entreprise": "Entreprise",

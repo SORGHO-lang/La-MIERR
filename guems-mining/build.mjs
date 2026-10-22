@@ -135,6 +135,7 @@ ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(
 </head>
 <body>
 <a class="skip-link" href="#contenu">${esc(t.skip)}</a>
+<div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
 <div class="topbar">
   <div class="container topbar-inner">
     <p class="topbar-tagline">${esc(t.topbar.tagline)}</p>
@@ -182,6 +183,7 @@ ${crumbs ? `<nav class="breadcrumbs container" aria-label="${esc(t.nav.breadcrum
 ${body}
 </main>
 ${footer(lang)}
+<a class="to-top" href="#contenu" data-to-top aria-label="${esc(t.common.backToTop)}">${icon('arrow', 'icon icon-up')}</a>
 <script src="${JS}" defer></script>
 </body>
 </html>
@@ -237,13 +239,16 @@ const orgLd = () => ({
   ...(Object.values(C.social || {}).some(Boolean) ? { sameAs: Object.values(C.social).filter(Boolean) } : {}),
 });
 
+// Titre découpé en mots pour l'animation d'entrée (texte intact pour les lecteurs d'écran).
+const splitTitle = (text) => esc(text).split(/\s+/).map((w, i) => `<span class="w"><span style="--i:${i}">${w}</span></span>`).join(' ');
+
 // ---------------------------------------------------------------- blocs
 const pageHero = (eyebrow, title, lead, extra = '') => `
 <section class="page-hero">
   <div class="page-hero-bg">${img(site.images.hero, 'terrain.svg', '', '', true)}</div>
   <div class="container page-hero-inner">
     <p class="eyebrow">${esc(eyebrow)}</p>
-    <h1>${esc(title)}</h1>
+    <h1 class="title-split" aria-label="${esc(title)}"><span aria-hidden="true">${splitTitle(title)}</span></h1>
     ${lead ? `<p class="lead">${esc(lead)}</p>` : ''}
     ${extra}
   </div>
@@ -281,7 +286,7 @@ const ctaBand = (lang) => {
 };
 
 const activityCard = (lang, a, headingLevel = 3) => `
-<article class="activity-card reveal" id="${esc(a.id)}">
+<article class="activity-card reveal" data-reveal="zoom" id="${esc(a.id)}">
   <div class="activity-media">${img(site.images[a.imageKey], a.fallback, '')}</div>
   <div class="activity-body">
     <p class="tag">${esc(a.tag)}</p>
@@ -301,7 +306,7 @@ function pageHome(lang) {
   <div class="container hero-inner">
     <div class="hero-text">
       <p class="eyebrow">${esc(h.eyebrow)}</p>
-      <h1>${esc(h.title)}</h1>
+      <h1 class="title-split" aria-label="${esc(h.title)}"><span aria-hidden="true">${splitTitle(h.title)}</span></h1>
       <p class="lead">${esc(h.subtitle)}</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg btn-square" href="${pagePath(lang, 'activities')}">${esc(h.ctaPrimary)}</a>
@@ -331,14 +336,14 @@ function pageHome(lang) {
 
 <section class="section">
   <div class="container about-split">
-    <div class="reveal">
+    <div class="reveal" data-reveal="left">
       <p class="eyebrow">${esc(h.intro.eyebrow)}</p>
       <h2>${esc(h.intro.title)}</h2>
       <blockquote class="quote">${esc(h.intro.text[0])}</blockquote>
       <p class="muted">${esc(h.intro.text[1])}</p>
       <a class="btn btn-primary btn-square" href="${pagePath(lang, 'about')}">${esc(h.intro.link)}</a>
     </div>
-    <div class="about-media reveal">
+    <div class="about-media reveal" data-reveal="right">
       <span class="vertical-badge">${esc(h.aboutBadge)}</span>
       <div class="about-media-img">${img(site.images.about, 'strates.svg', '')}</div>
     </div>
@@ -347,12 +352,12 @@ function pageHome(lang) {
 
 <section class="why-band">
   <div class="why-inner">
-    <div class="why-media">${img(site.images.activityMining, 'gradins.svg', '')}</div>
-    <div class="why-panel reveal">
+    <div class="why-media reveal" data-reveal="left">${img(site.images.activityMining, 'gradins.svg', '')}</div>
+    <div class="why-panel reveal" data-reveal="right">
       <p class="eyebrow">${esc(h.positioning.eyebrow)}</p>
       <h2>${esc(h.positioning.title)}</h2>
       <p class="muted">${esc(h.positioning.text)}</p>
-      <div class="why-facts">${h.whyFacts.map((f) => `<p><strong>${esc(f.value)}</strong><span>${esc(f.label)}</span></p>`).join('')}</div>
+      <div class="why-facts">${h.whyFacts.map((f) => `<p><strong${/^\d+$/.test(f.value) ? ` data-count="${esc(f.value)}"` : ''}>${esc(f.value)}</strong><span>${esc(f.label)}</span></p>`).join('')}</div>
       <ul class="why-points">${h.positioning.points.map((pt) => `<li>${icon('check')}<span>${esc(pt)}</span></li>`).join('')}</ul>
     </div>
   </div>
@@ -603,7 +608,7 @@ function pageProject(lang, p) {
   const path = pagePath(lang, 'projects', p.slug);
   const images = (p.images || []).filter((i) => i.src);
   const body = `
-${pageHero(t.projects.eyebrow, name.value, '', `<p class="meta on-dark">${p.location ? `${icon('pin')} ${esc(p.location)}` : ''}${p.period ? ` <span>${icon('calendar')} ${esc(p.period)}</span>` : ''}</p>`).replace('<h1>', `<h1 lang="${name.lang}">`)}
+${pageHero(t.projects.eyebrow, name.value, '', `<p class="meta on-dark">${p.location ? `${icon('pin')} ${esc(p.location)}` : ''}${p.period ? ` <span>${icon('calendar')} ${esc(p.period)}</span>` : ''}</p>`).replace('<h1 class="title-split"', `<h1 lang="${name.lang}" class="title-split"`)}
 <section class="section">
   <div class="container narrow">
     <dl class="id-table compact">
@@ -730,7 +735,7 @@ function pageContact(lang) {
 ${pageHero(c.eyebrow, c.title, c.lead)}
 <section class="section">
   <div class="container contact-grid">
-    <aside class="contact-aside reveal">
+    <aside class="contact-aside reveal" data-reveal="left">
       <h2 class="h3">${esc(c.coordsTitle)}</h2>
       <address>
         <p class="contact-line">${icon('building')}<span><strong>${esc(C.legalName)}</strong></span></p>
@@ -745,7 +750,7 @@ ${pageHero(c.eyebrow, c.title, c.lead)}
       </div>
       ${map ? `<h2 class="h3">${esc(c.mapTitle)}</h2><div class="map"><iframe src="${esc(map)}" title="${esc(c.mapTitle)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>` : ''}
     </aside>
-    <div class="contact-form-wrap reveal">
+    <div class="contact-form-wrap reveal" data-reveal="right">
       <h2 class="h3">${esc(c.formTitle)}</h2>
       <p class="form-note">${esc(f.required)}</p>
       <div class="form-status" role="status" aria-live="polite" tabindex="-1" data-form-status hidden></div>

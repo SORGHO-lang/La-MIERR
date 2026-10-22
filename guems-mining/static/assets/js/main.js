@@ -6,13 +6,27 @@
     set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) { /* stockage indisponible */ } }
   };
 
-  /* ------------------------------------------------ En-tête au défilement */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ------------------------------------------------ Défilement : en-tête, progression, retour en haut, parallaxe */
   var header = document.querySelector('[data-header]');
-  if (header) {
-    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
+  var progress = document.querySelector('[data-progress]');
+  var toTop = document.querySelector('[data-to-top]');
+  var heroBg = document.querySelector('.hero-bg, .page-hero-bg');
+  var ticking = false;
+  var onScroll = function () {
+    ticking = false;
+    var y = window.scrollY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (header) header.classList.toggle('is-scrolled', y > 8);
+    if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+    if (toTop) toTop.classList.toggle('is-shown', y > 600);
+    if (heroBg && !reduceMotion && y < window.innerHeight * 1.2) heroBg.style.transform = 'translateY(' + (y * 0.3).toFixed(1) + 'px)';
+  };
+  onScroll();
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
+  }, { passive: true });
 
   /* ------------------------------------------------ Menu mobile */
   var toggle = document.querySelector('[data-menu-toggle]');
@@ -50,17 +64,45 @@
     a.addEventListener('click', function () { store.set('gm-lang', a.getAttribute('data-lang')); });
   });
 
-  /* ------------------------------------------------ Apparition au défilement */
+  /* ------------------------------------------------ Apparition au défilement (en cascade) */
   var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var countUp = function (el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (reduceMotion || !target) return;
+    var start = null;
+    var step = function (ts) {
+      if (start === null) start = ts;
+      var k = Math.min((ts - start) / 1200, 1);
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - k, 3))));
+      if (k < 1) window.requestAnimationFrame(step);
+    };
+    el.textContent = '0';
+    window.requestAnimationFrame(step);
+  };
+  var show = function (el) {
+    el.classList.add('is-visible');
+    el.querySelectorAll('[data-count]').forEach(countUp);
+    // Une fois l'apparition terminée, l'élément retrouve ses propres transitions (survol…).
+    var delay = parseInt(el.style.getPropertyValue('--d'), 10) || 0;
+    setTimeout(function () {
+      el.classList.remove('reveal', 'is-visible');
+      el.style.removeProperty('--d');
+    }, delay + 1700);
+  };
+  reveals.forEach(function (el) {
+    var siblings = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.classList.contains('reveal'); });
+    var i = siblings.indexOf(el);
+    if (i > 0) el.style.setProperty('--d', Math.min(i * 120, 600) + 'ms');
+  });
+  if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+        if (en.isIntersecting) { show(en.target); io.unobserve(en.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
     reveals.forEach(function (el) { io.observe(el); });
   } else {
-    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+    reveals.forEach(function (el) { el.classList.remove('reveal'); });
   }
 
   /* ------------------------------------------------ Filtres des actualités */
