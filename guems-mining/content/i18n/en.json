@@ -402,7 +402,7 @@
       "The website does not use advertising cookies or audience measurement tools. Your language preference is stored locally in your browser. Fonts are loaded from the Google Fonts service."
     ],
     "ipTitle": "Intellectual property",
-    "ip": "The GUEM'S MINING name and logo are the property of GUEM'S MINING SARL. The illustrations on this website are abstract graphic creations and do not depict actual sites or operations of the company."
+    "ip": "The GUEM'S MINING name and logo are the property of GUEM'S MINING SARL. The photographs and illustrations on this website are used for illustrative purposes and do not necessarily depict the company's equipment, sites or operations. Brands visible in some photographs belong to their respective owners."
   },
   "footer": {
     "tagline": "Burkinabe mining company based in Ouagadougou.",
@@ -420,5 +420,12 @@
     "tagline": "Burkinabe mining company — Ouagadougou, Burkina Faso",
     "ask": "Any questions?",
     "contactBar": "Contact bar"
+  },
+  "photoAlt": {
+    "hero": "Mining haul truck loaded with ore (illustrative photo)",
+    "about": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
+    "why": "Crawler hydraulic excavator (illustrative photo)",
+    "activityMining": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
+    "activityExtraction": "Backhoe loader (illustrative photo)"
   }
 }

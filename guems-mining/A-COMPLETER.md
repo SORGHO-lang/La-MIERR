@@ -29,7 +29,7 @@ sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du
 | 2 | **Nom de domaine** définitif | Canoniques, sitemap et partages utilisent un domaine provisoire | `content/site.json` → `siteUrl` |
 | 3 | Confirmation que le **+226 76 32 87 49 est actif sur WhatsApp** | Le bouton WhatsApp pointe vers ce numéro | `content/site.json` → `company.whatsapp` |
 | 4 | **Adresse exacte / coordonnées GPS** du siège | Pas de carte affichée tant que l'adresse n'est pas confirmée | `content/site.json` → `features.mapEmbedUrl` |
-| 5 | **Photographies authentiques** (sites, équipements, équipes) ou photos sous licence choisies par l'entreprise | Des illustrations abstraites noir et or sont utilisées à la place | `content/site.json` → `images` |
+| 5 | **Photographies** : 4 photos d'engins fournies et intégrées comme images d'illustration (marques JCB et CAT visibles). Vérifier les **droits d'utilisation** et, idéalement, les remplacer par des photos **propres à l'entreprise**, en meilleure résolution (≥ 1600 px de large pour la bannière) | Les mentions légales précisent qu'il s'agit d'illustrations | `static/assets/img/photos/` et `content/site.json` → `images` |
 | 6 | Validation des textes **vision, mission et valeurs** (proposés à titre éditorial) | Publiés comme propositions ; à valider ou modifier | `content/i18n/fr.json` et `en.json` (`about`, `home.values`) |
 | 7 | **Minerais / substances** effectivement exploités, sites, équipements, prestations | Les pages Activités restent générales | `content/i18n/*.json` → `activities.items` |
 | 8 | **Permis ou autorisations** minières (le cas échéant, avec justificatifs) | Aucune mention de permis sur le site | À ajouter dans À propos après validation |
@@ -43,5 +43,5 @@ sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du
 ## 3. Points d'attention
 
 - Aucune statistique, certification, badge ISO, partenariat ou promesse commerciale n'a été ajouté.
-- Les illustrations sont des créations graphiques abstraites ; les mentions légales le précisent.
+- Les photos d'engins sont présentées comme illustrations, jamais comme du matériel ou des réalisations de l'entreprise ; les mentions légales le précisent.
 - Le site ne promet aucun classement dans les moteurs de recherche.

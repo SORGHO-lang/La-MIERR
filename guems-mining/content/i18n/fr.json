@@ -402,7 +402,7 @@
       "Le site n'utilise pas de cookies publicitaires ni d'outil de mesure d'audience. Votre préférence de langue est enregistrée localement dans votre navigateur. Les polices de caractères sont chargées depuis le service Google Fonts."
     ],
     "ipTitle": "Propriété intellectuelle",
-    "ip": "Le nom et le logo GUEM'S MINING sont la propriété de GUEM'S MINING SARL. Les illustrations du site sont des créations graphiques abstraites et ne représentent pas des sites ou opérations réels de l'entreprise."
+    "ip": "Le nom et le logo GUEM'S MINING sont la propriété de GUEM'S MINING SARL. Les photographies et illustrations du site sont utilisées à titre d'illustration et ne représentent pas nécessairement le matériel, les sites ou les opérations de l'entreprise. Les marques visibles sur certaines photographies appartiennent à leurs propriétaires respectifs."
   },
   "footer": {
     "tagline": "Société minière burkinabè basée à Ouagadougou.",
@@ -420,5 +420,12 @@
     "tagline": "Société minière burkinabè — Ouagadougou, Burkina Faso",
     "ask": "Une question ?",
     "contactBar": "Barre de contact"
+  },
+  "photoAlt": {
+    "hero": "Camion de transport minier chargé de minerai (photo d'illustration)",
+    "about": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
+    "why": "Pelle hydraulique sur chenilles (photo d'illustration)",
+    "activityMining": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
+    "activityExtraction": "Tractopelle (photo d'illustration)"
   }
 }

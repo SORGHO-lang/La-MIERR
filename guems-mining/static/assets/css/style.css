@@ -370,7 +370,7 @@ p { margin: 0 0 1.1em; }
   background: radial-gradient(circle at 85% 20%, rgba(249, 106, 0, .22), transparent 55%), var(--black);
   color: var(--on-dark); padding: clamp(56px, 8vw, 88px) 0; border-top: 1px solid rgba(249, 106, 0, .3);
 }
-.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.cta-inner { display: grid; grid-template-columns: 220px 1fr auto; align-items: center; gap: 32px; }
 .cta-inner h2 { color: var(--white); max-width: 22ch; }
 .cta-inner p { margin: 0; color: var(--on-dark-muted); max-width: 56ch; }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
@@ -602,6 +602,27 @@ p { margin: 0 0 1.1em; }
   .hero-visual { display: none; }
   .vertical-badge { margin-top: 16px; padding: 16px 8px; font-size: .7rem; }
   .why-inner { padding-inline: 16px; }
+}
+
+/* ----------------------------------------------------------------- Photos */
+img.is-cutout { object-fit: contain !important; background: var(--white); padding: 4%; }
+.why-media:has(.is-cutout), .activity-media:has(.is-cutout), .about-media-img:has(.is-cutout) { background: var(--white); }
+.hero-bg img, .page-hero-bg img { object-position: 70% center; }
+.hero-bg::after, .page-hero-bg::after {
+  background: linear-gradient(95deg, rgba(10, 10, 10, .94) 0%, rgba(10, 10, 10, .8) 40%, rgba(10, 10, 10, .35) 75%, rgba(10, 10, 10, .2) 100%);
+}
+.hero-bg picture, .page-hero-bg picture, .about-media-img picture, .why-media picture, .activity-media picture { display: contents; }
+@media (max-width: 860px) {
+  .hero-bg::after, .page-hero-bg::after { background: linear-gradient(180deg, rgba(10, 10, 10, .88), rgba(10, 10, 10, .72)); }
+}
+.about-media-img { aspect-ratio: 4 / 5; max-height: 560px; }
+.about-media-img img { object-position: center 40%; }
+
+/* Bandeau final : pelleteuse animée */
+.cta-visual img { width: 100%; }
+@media (max-width: 860px) {
+  .cta-inner { grid-template-columns: 1fr; }
+  .cta-visual { max-width: 200px; }
 }
 
 /* ----------------------------------------------------------------- Animations */

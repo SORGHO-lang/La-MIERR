@@ -72,10 +72,20 @@ const describe = (text, lang) => {
 const telHref = `tel:${C.phoneE164}`;
 const waHref = (lang) => `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(T[lang].contact.whatsappText)}`;
 
+// Image avec repli sur une illustration ; version WebP servie en priorité lorsqu'elle existe.
+// Les photos détourées (site.images.cutouts) sont affichées entières sur fond blanc.
 function img(path, fallback, alt = '', cls = '', eager = false) {
   const src = path ? asset(path) : asset(`assets/img/illustrations/${fallback}`);
-  return `<img src="${esc(src)}" alt="${esc(alt)}"${cls ? ` class="${cls}"` : ''} ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  const cutout = path && (site.images.cutouts || []).includes(path);
+  const classes = [cls, cutout ? 'is-cutout' : ''].filter(Boolean).join(' ');
+  const tag = `<img src="${esc(src)}" alt="${esc(alt)}"${classes ? ` class="${classes}"` : ''} ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  const webp = path && /\.jpe?g$/i.test(path) ? path.replace(/\.jpe?g$/i, '.webp') : '';
+  if (webp && existsSync(join(ROOT, 'static', webp.replace(/^\/+/, '')))) {
+    return `<picture><source srcset="${esc(asset(webp))}" type="image/webp">${tag}</picture>`;
+  }
+  return tag;
 }
+const photoAlt = (lang, key) => (site.images[key] ? T[lang].photoAlt[key] : '');
 
 // ---------------------------------------------------------------- gabarit
 const NAV = ['home', 'about', 'activities', 'expertise', 'projects', 'news', 'contact'];
@@ -273,7 +283,8 @@ const ctaBand = (lang) => {
   return `
 <section class="cta-band">
   <div class="container cta-inner reveal">
-    <div>
+    <div class="cta-visual" aria-hidden="true"><img src="${asset('assets/img/illustrations/pelleteuse.svg')}" alt="" loading="lazy"></div>
+    <div class="cta-text">
       <h2>${esc(t.home.finalCta.title)}</h2>
       <p>${esc(t.home.finalCta.text)}</p>
     </div>
@@ -287,7 +298,7 @@ const ctaBand = (lang) => {
 
 const activityCard = (lang, a, headingLevel = 3) => `
 <article class="activity-card reveal" data-reveal="zoom" id="${esc(a.id)}">
-  <div class="activity-media">${img(site.images[a.imageKey], a.fallback, '')}</div>
+  <div class="activity-media">${img(site.images[a.imageKey], a.fallback, photoAlt(lang, a.imageKey))}</div>
   <div class="activity-body">
     <p class="tag">${esc(a.tag)}</p>
     <h${headingLevel}>${esc(a.title)}</h${headingLevel}>
@@ -345,14 +356,14 @@ function pageHome(lang) {
     </div>
     <div class="about-media reveal" data-reveal="right">
       <span class="vertical-badge">${esc(h.aboutBadge)}</span>
-      <div class="about-media-img">${img(site.images.about, 'strates.svg', '')}</div>
+      <div class="about-media-img">${img(site.images.about, 'strates.svg', photoAlt(lang, 'about'))}</div>
     </div>
   </div>
 </section>
 
 <section class="why-band">
   <div class="why-inner">
-    <div class="why-media reveal" data-reveal="left">${img(site.images.activityMining, 'gradins.svg', '')}</div>
+    <div class="why-media reveal" data-reveal="left">${img(site.images.why, 'gradins.svg', photoAlt(lang, 'why'))}</div>
     <div class="why-panel reveal" data-reveal="right">
       <p class="eyebrow">${esc(h.positioning.eyebrow)}</p>
       <h2>${esc(h.positioning.title)}</h2>

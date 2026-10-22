@@ -9,14 +9,29 @@
       "fr": "Société à responsabilité limitée unipersonnelle (SARL unipersonnelle)",
       "en": "Single-member limited liability company (SARL unipersonnelle)"
     },
-    "sector": { "fr": "Exploitation minière", "en": "Mining" },
-    "mainActivity": { "fr": "Autres extractions", "en": "Other extraction activities" },
-    "secondaryActivity": { "fr": "Exploitation minière", "en": "Mining operations" },
-    "capital": { "fr": "3 000 000 FCFA", "en": "XOF 3,000,000" },
+    "sector": {
+      "fr": "Exploitation minière",
+      "en": "Mining"
+    },
+    "mainActivity": {
+      "fr": "Autres extractions",
+      "en": "Other extraction activities"
+    },
+    "secondaryActivity": {
+      "fr": "Exploitation minière",
+      "en": "Mining operations"
+    },
+    "capital": {
+      "fr": "3 000 000 FCFA",
+      "en": "XOF 3,000,000"
+    },
     "address": {
       "street": "Nouveau Secteur 37",
       "city": "Ouagadougou",
-      "country": { "fr": "Burkina Faso", "en": "Burkina Faso" },
+      "country": {
+        "fr": "Burkina Faso",
+        "en": "Burkina Faso"
+      },
       "countryCode": "BF"
     },
     "phone": "+226 76 32 87 49",
@@ -39,10 +54,16 @@
     "mapEmbedUrl": ""
   },
   "images": {
-    "_comment": "Chemins vers des photographies authentiques ou sous licence (dans static/assets/…). Vide = illustration vectorielle abstraite.",
-    "hero": "",
-    "about": "",
-    "activityMining": "",
-    "activityExtraction": ""
+    "_comment": "Chemins vers les photographies (dans static/assets/…). Vide = illustration vectorielle. Les photos actuelles ont été fournies par l'entreprise comme images d'illustration.",
+    "hero": "assets/img/photos/camion-minier.jpg",
+    "about": "assets/img/photos/pelle-chargement-carriere.jpg",
+    "why": "assets/img/photos/pelle-hydraulique.jpg",
+    "activityMining": "assets/img/photos/pelle-chargement-carriere.jpg",
+    "activityExtraction": "assets/img/photos/tractopelle.jpg",
+    "_cutouts": "Photos détourées sur fond blanc : affichées en entier sur fond blanc, sans recadrage.",
+    "cutouts": [
+      "assets/img/photos/pelle-hydraulique.jpg",
+      "assets/img/photos/tractopelle.jpg"
+    ]
   }
 }
