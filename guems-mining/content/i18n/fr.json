@@ -125,7 +125,7 @@
       "link": "Voir nos activités"
     },
     "positioning": {
-      "eyebrow": "Positionnement",
+      "eyebrow": "Pourquoi nous choisir",
       "title": "Un acteur du secteur minier burkinabè",
       "text": "Le secteur minier occupe une place importante dans l'économie du Burkina Faso. GUEM'S MINING SARL s'inscrit dans ce secteur en tant qu'entreprise locale, et souhaite construire des relations de travail durables avec ses clients et partenaires, au niveau national comme international.",
       "points": [
@@ -185,6 +185,35 @@
       "title": "Un projet, une question, une proposition de partenariat ?",
       "text": "Notre équipe est joignable à Ouagadougou par téléphone, WhatsApp ou via le formulaire de contact.",
       "button": "Nous contacter"
+    },
+    "readMore": "En savoir plus",
+    "heroBox": {
+      "title": "Société minière burkinabè",
+      "text": "Exploitation minière et activités d'extraction, depuis Ouagadougou."
+    },
+    "strip": {
+      "quick": "Contact rapide",
+      "location": "Notre localisation"
+    },
+    "aboutBadge": "Ouagadougou · Burkina Faso",
+    "whyFacts": [
+      {
+        "value": "2",
+        "label": "activités déclarées"
+      },
+      {
+        "value": "SARL",
+        "label": "société de droit burkinabè"
+      }
+    ],
+    "services": {
+      "eyebrow": "Nos activités",
+      "title": "Des activités minières clairement définies",
+      "extra": {
+        "tag": "Partenaires",
+        "title": "Partenariats et demandes",
+        "text": "Une proposition de collaboration ou une demande précise ? Notre équipe vous répond directement."
+      }
     }
   },
   "about": {
@@ -385,5 +414,10 @@
     "title": "Page introuvable",
     "text": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "button": "Retour à l'accueil"
+  },
+  "topbar": {
+    "tagline": "Société minière burkinabè — Ouagadougou, Burkina Faso",
+    "ask": "Une question ?",
+    "contactBar": "Barre de contact"
   }
 }

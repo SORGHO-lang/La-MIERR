@@ -78,3 +78,38 @@ writeFileSync(new URL('gradins.svg', out), svg(1200, 800, pit));
 writeFileSync(new URL('motif-clair.svg', out), svg(1600, 600, `<rect width="1600" height="600" fill="#F4F4F4"/>${contours({ w: 1600, h: 600, lines: 18, amp: 18, seed: 4.2, opacity: 0.35 })}`));
 
 console.log('Illustrations générées.');
+
+// 5. Pelleteuse (trait or) — visuel de bannière, en attendant des photographies réelles.
+const exc = `
+<defs>
+ <linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D77A"/><stop offset="1" stop-color="#B8932A"/></linearGradient>
+ <radialGradient id="glow" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#D4AF37" stop-opacity=".22"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="430" cy="430" rx="400" ry="240" fill="url(#glow)"/>
+<g fill="none" stroke="url(#gb)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+ <!-- chenilles -->
+ <rect x="250" y="470" width="420" height="80" rx="40"/>
+ <circle cx="292" cy="510" r="26"/><circle cx="628" cy="510" r="26"/>
+ <circle cx="375" cy="522" r="14"/><circle cx="460" cy="522" r="14"/><circle cx="545" cy="522" r="14"/>
+ <!-- tourelle -->
+ <path d="M290 470 L300 400 L660 400 L680 470 Z"/>
+ <path d="M560 400 L560 290 Q560 270 580 270 L650 270 Q668 270 672 288 L690 400"/>
+ <path d="M585 300 L645 300 L655 370 L585 370 Z" stroke-width="4"/>
+ <path d="M300 430 L660 430" stroke-width="3" opacity=".6"/>
+ <!-- flèche et balancier -->
+ <path d="M520 400 L470 250 Q460 215 425 205 L230 160"/>
+ <path d="M500 395 L455 265 Q445 240 420 232 L240 190"/>
+ <path d="M230 160 L240 190"/>
+ <path d="M235 175 L170 330"/>
+ <path d="M258 182 L195 335"/>
+ <!-- vérins -->
+ <path d="M540 330 L470 235" stroke-width="10" opacity=".85"/>
+ <path d="M410 215 L255 150" stroke-width="8" opacity=".85"/>
+ <!-- godet -->
+ <path d="M160 325 Q120 345 125 395 L150 420 L210 380 L205 335 Z"/>
+ <path d="M150 420 L140 440 M170 407 L162 430 M190 394 L184 418" stroke-width="5"/>
+</g>
+<!-- sol -->
+<path d="M40 560 L820 560" stroke="#D4AF37" stroke-width="3" opacity=".5"/>
+<path d="M40 575 L760 575" stroke="#D4AF37" stroke-width="1.5" opacity=".3"/>`;
+writeFileSync(new URL('pelleteuse.svg', out), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 620">${exc}</svg>\n`);

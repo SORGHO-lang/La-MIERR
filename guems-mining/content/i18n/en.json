@@ -125,7 +125,7 @@
       "link": "See our activities"
     },
     "positioning": {
-      "eyebrow": "Positioning",
+      "eyebrow": "Why choose us",
       "title": "A player in Burkina Faso's mining sector",
       "text": "Mining plays an important role in Burkina Faso's economy. GUEM'S MINING SARL operates in this sector as a local company and aims to build lasting working relationships with its clients and partners, both nationally and internationally.",
       "points": [
@@ -185,6 +185,35 @@
       "title": "A project, a question, a partnership proposal?",
       "text": "Our team in Ouagadougou can be reached by phone, WhatsApp or through the contact form.",
       "button": "Get in Touch"
+    },
+    "readMore": "Learn more",
+    "heroBox": {
+      "title": "Burkinabe mining company",
+      "text": "Mining operations and extraction activities, from Ouagadougou."
+    },
+    "strip": {
+      "quick": "Quick contact",
+      "location": "Our location"
+    },
+    "aboutBadge": "Ouagadougou · Burkina Faso",
+    "whyFacts": [
+      {
+        "value": "2",
+        "label": "registered activities"
+      },
+      {
+        "value": "SARL",
+        "label": "company incorporated under Burkinabe law"
+      }
+    ],
+    "services": {
+      "eyebrow": "Our activities",
+      "title": "Clearly defined mining activities",
+      "extra": {
+        "tag": "Partners",
+        "title": "Partnerships and enquiries",
+        "text": "A collaboration proposal or a specific request? Our team will answer you directly."
+      }
     }
   },
   "about": {
@@ -385,5 +414,10 @@
     "title": "Page not found",
     "text": "The page you are looking for does not exist or has been moved.",
     "button": "Back to home"
+  },
+  "topbar": {
+    "tagline": "Burkinabe mining company — Ouagadougou, Burkina Faso",
+    "ask": "Any questions?",
+    "contactBar": "Contact bar"
   }
 }

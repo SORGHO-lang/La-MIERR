@@ -135,6 +135,21 @@ ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(
 </head>
 <body>
 <a class="skip-link" href="#contenu">${esc(t.skip)}</a>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <p class="topbar-tagline">${esc(t.topbar.tagline)}</p>
+    <div class="topbar-right">
+    <ul class="topbar-links" aria-label="${esc(t.topbar.contactBar)}">
+      <li><a href="${telHref}">${icon('phone')}<span>${esc(C.phone)}</span></a></li>
+      <li><a href="${waHref(lang)}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')}<span>WhatsApp</span></a></li>
+      ${C.email ? `<li><a href="mailto:${esc(C.email)}">${icon('mail')}<span>${esc(C.email)}</span></a></li>` : ''}
+    </ul>
+    <a class="lang-switch" href="${alt[other] || pagePath(other, 'home')}" hreflang="${other}" lang="${other}" data-lang="${other}" title="${esc(t.switchLabel)}">
+        <span aria-hidden="true">${icon('globe')}</span><span class="lang-current" aria-hidden="true">${lang.toUpperCase()}</span><span aria-hidden="true">/</span><span class="lang-other">${other.toUpperCase()}</span><span class="sr-only">${esc(t.switchLabel)}</span>
+      </a>
+    </div>
+  </div>
+</div>
 <header class="site-header" data-header>
   <div class="container header-inner">
     <a class="brand" href="${pagePath(lang, 'home')}" aria-label="${esc(C.tradeName)} — ${esc(t.nav.home)}">
@@ -151,10 +166,11 @@ ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(
       </div>
     </nav>
     <div class="header-actions">
-      <a class="lang-switch" href="${alt[other] || pagePath(other, 'home')}" hreflang="${other}" lang="${other}" data-lang="${other}" title="${esc(t.switchLabel)}">
+      <a class="lang-switch lang-switch-mobile" href="${alt[other] || pagePath(other, 'home')}" hreflang="${other}" lang="${other}" data-lang="${other}" title="${esc(t.switchLabel)}">
         <span aria-hidden="true">${icon('globe')}</span><span class="lang-current" aria-hidden="true">${lang.toUpperCase()}</span><span aria-hidden="true">/</span><span class="lang-other">${other.toUpperCase()}</span><span class="sr-only">${esc(t.switchLabel)}</span>
       </a>
-      <a class="btn btn-gold header-cta" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
+      <a class="header-phone" href="${telHref}"><span class="header-phone-icon">${icon('phone')}</span><span class="sr-only">${esc(t.topbar.ask)} ${esc(C.phone)}</span></a>
+      <a class="btn btn-gold btn-square header-cta" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-toggle data-label-open="${esc(t.nav.openMenu)}" data-label-close="${esc(t.nav.closeMenu)}">
         <span class="sr-only">${esc(t.nav.openMenu)}</span>${icon('menu', 'icon icon-open')}${icon('close', 'icon icon-close')}
       </button>
@@ -283,57 +299,92 @@ function pageHome(lang) {
 <section class="hero">
   <div class="hero-bg">${img(site.images.hero, 'terrain.svg', '', '', true)}</div>
   <div class="container hero-inner">
-    <p class="eyebrow">${esc(h.eyebrow)}</p>
-    <h1>${esc(h.title)}</h1>
-    <p class="lead">${esc(h.subtitle)}</p>
-    <div class="hero-actions">
-      <a class="btn btn-gold btn-lg" href="${pagePath(lang, 'activities')}">${esc(h.ctaPrimary)} ${icon('arrow')}</a>
-      <a class="btn btn-outline-light btn-lg" href="${pagePath(lang, 'contact')}">${esc(h.ctaSecondary)}</a>
+    <div class="hero-text">
+      <p class="eyebrow">${esc(h.eyebrow)}</p>
+      <h1>${esc(h.title)}</h1>
+      <p class="lead">${esc(h.subtitle)}</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold btn-lg btn-square" href="${pagePath(lang, 'activities')}">${esc(h.ctaPrimary)}</a>
+        <a class="link-plain" href="${pagePath(lang, 'about')}">${esc(h.readMore)} ${icon('arrow')}</a>
+      </div>
     </div>
+    ${site.images.hero ? '' : `<div class="hero-visual" aria-hidden="true"><img src="${asset('assets/img/illustrations/pelleteuse.svg')}" alt="" fetchpriority="high"></div>`}
   </div>
-  <div class="container">
-    <dl class="hero-facts">${h.facts.map((f) => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join('')}</dl>
+</section>
+
+<section class="hero-strip">
+  <div class="container hero-strip-inner">
+    <div class="strip-item">
+      <span class="strip-icon">${icon('phone')}</span>
+      <div><h2>${esc(h.strip.quick)}</h2><p>${esc(t.common.phone)} : <a href="${telHref}">${esc(C.phone)}</a><br>WhatsApp : <a href="${waHref(lang)}" target="_blank" rel="noopener noreferrer">${esc(C.phone)}</a></p></div>
+    </div>
+    <div class="strip-item">
+      <span class="strip-icon">${icon('pin')}</span>
+      <div><h2>${esc(h.strip.location)}</h2><p>${esc(C.address.street)}<br>${esc(C.address.city)}, ${esc(C.address.country[lang])}</p></div>
+    </div>
+    <div class="hero-box">
+      <p class="hero-box-title">${esc(h.heroBox.title)}</p>
+      <p>${esc(h.heroBox.text)}</p>
+    </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container split">
+  <div class="container about-split">
     <div class="reveal">
       <p class="eyebrow">${esc(h.intro.eyebrow)}</p>
       <h2>${esc(h.intro.title)}</h2>
-      ${h.intro.text.map((p) => `<p>${esc(p)}</p>`).join('')}
-      <a class="link-arrow" href="${pagePath(lang, 'about')}">${esc(h.intro.link)} ${icon('arrow')}</a>
+      <blockquote class="quote">${esc(h.intro.text[0])}</blockquote>
+      <p class="muted">${esc(h.intro.text[1])}</p>
+      <a class="btn btn-gold btn-square" href="${pagePath(lang, 'about')}">${esc(h.intro.link)}</a>
     </div>
-    <div class="split-media reveal">
-      ${img(site.images.about, 'strates.svg', '')}
-      <div class="split-badge"><span>${icon('pin')}</span><p><strong>${esc(C.address.city)}</strong>${esc(C.address.country[lang])}</p></div>
+    <div class="about-media reveal">
+      <span class="vertical-badge">${esc(h.aboutBadge)}</span>
+      <div class="about-media-img">${img(site.images.about, 'strates.svg', '')}</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-band">
+  <div class="why-inner">
+    <div class="why-media">${img(site.images.activityMining, 'gradins.svg', '')}</div>
+    <div class="why-panel reveal">
+      <p class="eyebrow">${esc(h.positioning.eyebrow)}</p>
+      <h2>${esc(h.positioning.title)}</h2>
+      <p class="muted">${esc(h.positioning.text)}</p>
+      <div class="why-facts">${h.whyFacts.map((f) => `<p><strong>${esc(f.value)}</strong><span>${esc(f.label)}</span></p>`).join('')}</div>
+      <ul class="why-points">${h.positioning.points.map((pt) => `<li>${icon('check')}<span>${esc(pt)}</span></li>`).join('')}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    ${sectionHead(h.services.eyebrow, h.services.title, '', 'h2', true)}
+    <div class="service-grid">
+      ${t.activities.items.map((a) => `
+      <article class="service reveal">
+        <span class="service-icon">${icon(a.fallback === 'gradins.svg' ? 'pickaxe' : 'layers')}</span>
+        <p class="tag">${esc(a.tag)}</p>
+        <h3>${esc(a.title)}</h3>
+        <p>${esc(truncate(a.text, 150))}</p>
+        <a class="link-plain" href="${pagePath(lang, 'activities')}#${esc(a.id)}">${esc(h.readMore)} ${icon('arrow')}</a>
+      </article>`).join('')}
+      <article class="service reveal">
+        <span class="service-icon">${icon('handshake')}</span>
+        <p class="tag">${esc(h.services.extra.tag)}</p>
+        <h3>${esc(h.services.extra.title)}</h3>
+        <p>${esc(h.services.extra.text)}</p>
+        <a class="link-plain" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section section-dark">
   <div class="container">
-    ${sectionHead(h.activities.eyebrow, h.activities.title, h.activities.text)}
-    <div class="activity-grid">${t.activities.items.map((a) => activityCard(lang, a)).join('')}</div>
-    <p class="section-link reveal"><a class="link-arrow on-dark" href="${pagePath(lang, 'activities')}">${esc(h.activities.link)} ${icon('arrow')}</a></p>
-  </div>
-</section>
-
-<section class="section section-pattern">
-  <div class="container split split-center">
-    <div class="reveal">
-      <p class="eyebrow">${esc(h.positioning.eyebrow)}</p>
-      <h2>${esc(h.positioning.title)}</h2>
-      <p>${esc(h.positioning.text)}</p>
-    </div>
-    <ul class="checklist reveal">${h.positioning.points.map((p) => `<li>${icon('check')}<span>${esc(p)}</span></li>`).join('')}</ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     ${sectionHead(h.why.eyebrow, h.why.title, '', 'h2', true)}
-    ${featureCards(h.why.items)}
+    ${featureCards(h.why.items, 'cards-dark')}
   </div>
 </section>
 
