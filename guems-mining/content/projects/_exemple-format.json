@@ -1,0 +1,15 @@
+{
+  "_comment": "Fichier d'exemple ignoré par le générateur. Ne publier que des projets réels, avec l'autorisation de l'entreprise.",
+  "slug": "nom-du-projet",
+  "name_fr": "Nom du projet",
+  "name_en": "",
+  "location": "",
+  "period": "",
+  "order": 1,
+  "description_fr": "Description du projet.",
+  "description_en": "",
+  "results_fr": "",
+  "results_en": "",
+  "images": [{ "src": "assets/uploads/photo.jpg", "alt_fr": "Description de la photo", "alt_en": "" }],
+  "draft": true
+}

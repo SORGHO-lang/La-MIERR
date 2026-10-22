@@ -1,0 +1,389 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "langLabel": "English",
+  "switchLabel": "Passer en français",
+  "skip": "Skip to main content",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "activities": "Activities",
+    "expertise": "Expertise",
+    "projects": "Projects",
+    "news": "News",
+    "contact": "Contact Us",
+    "cta": "Get in Touch",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "breadcrumb": "Breadcrumb"
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "phone": "Phone",
+    "address": "Address",
+    "backToNews": "Back to news",
+    "backToProjects": "Back to projects",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "publishedOn": "Published on",
+    "location": "Location",
+    "period": "Period",
+    "results": "Results",
+    "allCategories": "All",
+    "illustration": "Illustration",
+    "englishUnavailable": "This article is only available in French.",
+    "frenchUnavailable": ""
+  },
+  "categories": {
+    "entreprise": "Company",
+    "annonces": "Official announcements",
+    "evenements": "Activities & events",
+    "secteur": "Mining sector",
+    "communiques": "Press releases"
+  },
+  "pages": {
+    "home": {
+      "slug": "",
+      "title": "GUEM'S MINING SARL — Mining company in Ouagadougou, Burkina Faso",
+      "description": "GUEM'S MINING SARL is a Burkinabe company based in Ouagadougou, active in mining and extraction. Discover the company and get in touch with our team."
+    },
+    "about": {
+      "slug": "about",
+      "title": "About GUEM'S MINING SARL | Burkinabe mining company",
+      "description": "About GUEM'S MINING SARL: company identity, field of activity, vision, mission and corporate information of this mining company based in Ouagadougou."
+    },
+    "activities": {
+      "slug": "activities",
+      "title": "Our mining activities | GUEM'S MINING SARL",
+      "description": "The registered activities of GUEM'S MINING SARL in Burkina Faso: mining operations and extraction activities."
+    },
+    "expertise": {
+      "slug": "expertise",
+      "title": "Expertise and commitments | GUEM'S MINING SARL",
+      "description": "The professional approach of GUEM'S MINING SARL: organisation of activities, quality, safety, environment and collaboration with partners."
+    },
+    "projects": {
+      "slug": "projects",
+      "title": "Projects | GUEM'S MINING SARL",
+      "description": "Projects carried out by GUEM'S MINING SARL, a mining company based in Ouagadougou, Burkina Faso."
+    },
+    "news": {
+      "slug": "news",
+      "title": "News | GUEM'S MINING SARL",
+      "description": "News, official announcements, events and press releases from GUEM'S MINING SARL."
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact Us | GUEM'S MINING SARL — Ouagadougou",
+      "description": "Contact GUEM'S MINING SARL in Ouagadougou (Nouveau Secteur 37): phone +226 76 32 87 49, WhatsApp or contact form."
+    },
+    "legal": {
+      "slug": "legal",
+      "title": "Legal notice and privacy | GUEM'S MINING SARL",
+      "description": "Legal notice of GUEM'S MINING SARL and policy on personal data collected through the website."
+    }
+  },
+  "home": {
+    "eyebrow": "Burkinabe mining company · Ouagadougou",
+    "title": "GUEM'S MINING SARL — Mining expertise for the future.",
+    "subtitle": "A Burkinabe company committed to the mining sector, with an ambition focused on development and the opportunities the sector offers.",
+    "ctaPrimary": "Discover our activities",
+    "ctaSecondary": "Contact our team",
+    "facts": [
+      {
+        "label": "Head office",
+        "value": "Ouagadougou, Burkina Faso"
+      },
+      {
+        "label": "Sector",
+        "value": "Mining"
+      },
+      {
+        "label": "Legal form",
+        "value": "Single-member SARL"
+      }
+    ],
+    "intro": {
+      "eyebrow": "The company",
+      "title": "A mining company rooted in the heart of Burkina Faso",
+      "text": [
+        "GUEM'S MINING SARL is a single-member limited liability company incorporated under Burkinabe law, with its principal place of business in Ouagadougou, Nouveau Secteur 37.",
+        "According to its official documents, the company belongs to the mining sector, with “other extraction activities” as its main registered activity and mining operations as its secondary activity."
+      ],
+      "link": "About the company"
+    },
+    "activities": {
+      "eyebrow": "Registered activities",
+      "title": "Two fields of activity",
+      "text": "The activities presented below are those stated in the company's official documents.",
+      "link": "See our activities"
+    },
+    "positioning": {
+      "eyebrow": "Positioning",
+      "title": "A player in Burkina Faso's mining sector",
+      "text": "Mining plays an important role in Burkina Faso's economy. GUEM'S MINING SARL operates in this sector as a local company and aims to build lasting working relationships with its clients and partners, both nationally and internationally.",
+      "points": [
+        "A company incorporated under Burkinabe law, registered in Ouagadougou",
+        "A clearly defined field of activity: mining and extraction",
+        "A contact you can reach directly by phone and WhatsApp"
+      ]
+    },
+    "why": {
+      "eyebrow": "Why contact us?",
+      "title": "Let's discuss your needs",
+      "items": [
+        {
+          "icon": "handshake",
+          "title": "Partnerships",
+          "text": "You are a company or institution in the mining sector and would like to explore a collaboration."
+        },
+        {
+          "icon": "search",
+          "title": "Information",
+          "text": "You would like to know more about the company, its activities or its projects."
+        },
+        {
+          "icon": "message",
+          "title": "Business enquiries",
+          "text": "You have a specific request and would like to speak directly with our team."
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "Our values",
+      "title": "The principles that guide our work",
+      "items": [
+        {
+          "icon": "briefcase",
+          "title": "Professionalism",
+          "text": "Approaching every assignment with rigour, method and a sense of responsibility."
+        },
+        {
+          "icon": "eye",
+          "title": "Transparency",
+          "text": "Maintaining clear and honest relationships with our clients, partners and stakeholders."
+        },
+        {
+          "icon": "shield",
+          "title": "Responsibility",
+          "text": "Taking into account the impact of our activities on people and on the environment."
+        }
+      ]
+    },
+    "hse": {
+      "eyebrow": "Safety and environment",
+      "title": "Safety and environment",
+      "text": ""
+    },
+    "finalCta": {
+      "title": "A project, a question, a partnership proposal?",
+      "text": "Our team in Ouagadougou can be reached by phone, WhatsApp or through the contact form.",
+      "button": "Get in Touch"
+    }
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Discover GUEM'S MINING SARL",
+    "lead": "A Burkinabe mining company based in Ouagadougou.",
+    "overview": {
+      "title": "Overview",
+      "text": [
+        "GUEM'S MINING SARL is a Burkinabe company headquartered in Ouagadougou. It trades under the name GUEM'S MINING.",
+        "Its field of activity, as stated in its official documents, covers mining operations and extraction activities."
+      ]
+    },
+    "identity": {
+      "title": "Company identity",
+      "rows": {
+        "legalName": "Company name",
+        "tradeName": "Trade name",
+        "legalForm": "Legal form",
+        "sector": "Sector",
+        "seat": "Principal place of business",
+        "capital": "Share capital",
+        "phone": "Phone"
+      }
+    },
+    "purpose": {
+      "title": "Corporate purpose and field of activity",
+      "text": "The company's registered activities are as follows:",
+      "main": "Main activity",
+      "secondary": "Secondary activity"
+    },
+    "vision": {
+      "title": "Vision and ambition",
+      "text": "To become a recognised and reliable player in Burkina Faso's mining sector, contributing to the development of the sector and seizing the opportunities it offers."
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "To carry out our mining and extraction activities professionally and in compliance with applicable regulations, and to offer our clients and partners a serious and responsive point of contact."
+    },
+    "values": {
+      "title": "Values"
+    },
+    "institutional": {
+      "title": "Corporate information",
+      "text": "The information above is taken from the company's administrative documents. For any further corporate information, please contact the company directly."
+    }
+  },
+  "activities": {
+    "eyebrow": "Activities",
+    "title": "Our mining activities",
+    "lead": "The activities presented here are those stated in the official documents of GUEM'S MINING SARL.",
+    "items": [
+      {
+        "id": "exploitation-miniere",
+        "imageKey": "activityMining",
+        "fallback": "gradins.svg",
+        "tag": "Registered secondary activity",
+        "title": "Mining operations",
+        "text": "Mining is the sector to which GUEM'S MINING SARL belongs. It covers all operations aimed at extracting mineral substances from a deposit, within the framework set by mining regulations."
+      },
+      {
+        "id": "autres-extractions",
+        "imageKey": "activityExtraction",
+        "fallback": "strates.svg",
+        "tag": "Registered main activity",
+        "title": "Other extraction activities",
+        "text": "The company's main registered activity falls under the “other extraction activities” category, which covers the extraction of materials and substances outside the major specialised industries."
+      }
+    ],
+    "more": {
+      "title": "Would you like to know more?",
+      "text": "For detailed information about our activities, resources and terms of engagement, our team will answer you directly."
+    }
+  },
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Expertise and commitments",
+    "lead": "Our professional approach is built on organisation, rigour and dialogue with our partners.",
+    "sections": [
+      {
+        "icon": "layers",
+        "title": "Organisation of activities",
+        "text": "Preparing each assignment methodically: defining needs, planning and regular follow-up with the parties involved."
+      },
+      {
+        "icon": "award",
+        "title": "Quality and professionalism",
+        "text": "Striving for careful work that meets the agreed expectations, with clear communication throughout the collaboration."
+      },
+      {
+        "icon": "handshake",
+        "title": "Collaboration with partners",
+        "text": "Building relationships of trust with our clients, partners and institutional stakeholders, based on listening and transparency."
+      }
+    ],
+    "safety": {
+      "icon": "hardhat",
+      "title": "Operational safety",
+      "text": ""
+    },
+    "environment": {
+      "icon": "leaf",
+      "title": "Environmental responsibility",
+      "text": ""
+    },
+    "hseTitle": "Operational safety and environmental responsibility",
+    "hseFallback": "For any question about our operational safety and environmental practices, please contact the company directly."
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Projects",
+    "lead": "This page presents the projects of GUEM'S MINING SARL that the company has authorised for publication.",
+    "empty": {
+      "title": "No projects published yet",
+      "text": "The company's projects will be presented here soon. For information about our activities and references, please contact our team directly."
+    }
+  },
+  "news": {
+    "eyebrow": "News",
+    "title": "News",
+    "lead": "Company news, official announcements, events and press releases.",
+    "filterLabel": "Filter by category",
+    "empty": {
+      "title": "No news published yet",
+      "text": "News and press releases from GUEM'S MINING SARL will be published on this page."
+    },
+    "noneInCategory": "No articles in this category."
+  },
+  "contact": {
+    "eyebrow": "Contact Us",
+    "title": "Let's talk about your project",
+    "lead": "Contact GUEM'S MINING SARL by phone, on WhatsApp or using the form below.",
+    "coordsTitle": "Our details",
+    "quickTitle": "Direct contact",
+    "formTitle": "Send a message",
+    "mapTitle": "Location",
+    "form": {
+      "name": "Full name",
+      "company": "Company",
+      "optional": "optional",
+      "email": "Email address",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectPlaceholder": "Choose a subject",
+      "subjects": [
+        "Information request",
+        "Partnership proposal",
+        "Business enquiry",
+        "Other request"
+      ],
+      "message": "Message",
+      "consent": "I agree that the information I provide may be used by GUEM'S MINING SARL to respond to my request, in accordance with the",
+      "consentLink": "privacy policy",
+      "required": "Fields marked with an asterisk (*) are required.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "honeypot": "Leave this field empty"
+    },
+    "errors": {
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number.",
+      "subject": "Please choose the subject of your request.",
+      "message": "Please enter a message of at least 10 characters.",
+      "consent": "Your consent is required to process your request.",
+      "summary": "The form contains errors. Please correct them."
+    },
+    "status": {
+      "sent": "Thank you, your message has been sent. Our team will get back to you as soon as possible.",
+      "error": "Your message could not be sent. Please try again or call us on +226 76 32 87 49.",
+      "unavailable": "The messaging service is not available yet. Please contact us by phone or WhatsApp on +226 76 32 87 49.",
+      "spam": "Your message could not be sent. Please try again in a few moments.",
+      "rate": "Too many messages have been sent from your connection. Please try again later or call us."
+    },
+    "whatsappText": "Hello GUEM'S MINING, I am contacting you from your website."
+  },
+  "legal": {
+    "title": "Legal notice and privacy",
+    "publisherTitle": "Website publisher",
+    "privacyTitle": "Personal data protection",
+    "privacy": [
+      "The data sent through the contact form (name, company, email address, phone, subject and message) is used solely to respond to your request. It is neither sold nor transferred to third parties for commercial purposes.",
+      "The website does not store messages in a database: they are forwarded by email to the company's business address and kept only for as long as needed to handle your request. To protect against abuse, a non-reversible fingerprint of the sender's IP address is temporarily kept on the server (one hour at most).",
+      "In accordance with the applicable Burkinabe regulations on personal data protection, you may request access to, correction or deletion of your data by contacting the company using the details on the Contact page.",
+      "The website does not use advertising cookies or audience measurement tools. Your language preference is stored locally in your browser. Fonts are loaded from the Google Fonts service."
+    ],
+    "ipTitle": "Intellectual property",
+    "ip": "The GUEM'S MINING name and logo are the property of GUEM'S MINING SARL. The illustrations on this website are abstract graphic creations and do not depict actual sites or operations of the company."
+  },
+  "footer": {
+    "tagline": "Burkinabe mining company based in Ouagadougou.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "legal": "Legal notice and privacy",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has been moved.",
+    "button": "Back to home"
+  }
+}

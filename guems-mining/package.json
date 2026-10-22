@@ -1,0 +1,14 @@
+{
+  "name": "guems-mining-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine bilingue (FR/EN) de GUEM'S MINING SARL",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "php -S localhost:8080 -t dist",
+    "test": "node build.mjs && node tests/check.mjs",
+    "illustrations": "node tools/generate-illustrations.mjs"
+  }
+}

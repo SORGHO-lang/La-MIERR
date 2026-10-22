@@ -1,0 +1,48 @@
+{
+  "_comment": "Configuration centrale. Les champs vides sont volontairement omis de la version publique (voir A-COMPLETER.md).",
+  "siteUrl": "https://www.example.com",
+  "basePath": "/",
+  "company": {
+    "legalName": "GUEM'S MINING SARL",
+    "tradeName": "GUEM'S MINING",
+    "legalForm": {
+      "fr": "Société à responsabilité limitée unipersonnelle (SARL unipersonnelle)",
+      "en": "Single-member limited liability company (SARL unipersonnelle)"
+    },
+    "sector": { "fr": "Exploitation minière", "en": "Mining" },
+    "mainActivity": { "fr": "Autres extractions", "en": "Other extraction activities" },
+    "secondaryActivity": { "fr": "Exploitation minière", "en": "Mining operations" },
+    "capital": { "fr": "3 000 000 FCFA", "en": "XOF 3,000,000" },
+    "address": {
+      "street": "Nouveau Secteur 37",
+      "city": "Ouagadougou",
+      "country": { "fr": "Burkina Faso", "en": "Burkina Faso" },
+      "countryCode": "BF"
+    },
+    "phone": "+226 76 32 87 49",
+    "phoneE164": "+22676328749",
+    "whatsapp": "22676328749",
+    "email": "",
+    "foundingDate": "",
+    "social": {
+      "facebook": "",
+      "linkedin": ""
+    }
+  },
+  "contact": {
+    "_comment": "Point de réception du formulaire. Par défaut : script PHP fourni (contact.php). Peut être remplacé par l'URL d'un service tiers (ex. Formspree).",
+    "endpoint": "contact.php"
+  },
+  "features": {
+    "_comment": "Ne passer à true qu'après validation écrite de l'entreprise.",
+    "showHsePolicy": false,
+    "mapEmbedUrl": ""
+  },
+  "images": {
+    "_comment": "Chemins vers des photographies authentiques ou sous licence (dans static/assets/…). Vide = illustration vectorielle abstraite.",
+    "hero": "",
+    "about": "",
+    "activityMining": "",
+    "activityExtraction": ""
+  }
+}

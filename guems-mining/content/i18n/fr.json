@@ -1,0 +1,389 @@
+{
+  "lang": "fr",
+  "locale": "fr_BF",
+  "langLabel": "Français",
+  "switchLabel": "Switch to English",
+  "skip": "Aller au contenu principal",
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "activities": "Activités",
+    "expertise": "Expertise",
+    "projects": "Réalisations",
+    "news": "Actualités",
+    "contact": "Contact",
+    "cta": "Nous contacter",
+    "menu": "Menu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "mainNav": "Navigation principale",
+    "breadcrumb": "Fil d'Ariane"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "backToNews": "Retour aux actualités",
+    "backToProjects": "Retour aux réalisations",
+    "share": "Partager",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié",
+    "publishedOn": "Publié le",
+    "location": "Localisation",
+    "period": "Période",
+    "results": "Résultats",
+    "allCategories": "Toutes",
+    "illustration": "Illustration",
+    "englishUnavailable": "",
+    "frenchUnavailable": "Cet article n'est disponible qu'en anglais."
+  },
+  "categories": {
+    "entreprise": "Entreprise",
+    "annonces": "Annonces officielles",
+    "evenements": "Activités et événements",
+    "secteur": "Secteur minier",
+    "communiques": "Communiqués"
+  },
+  "pages": {
+    "home": {
+      "slug": "",
+      "title": "GUEM'S MINING SARL — Entreprise minière à Ouagadougou, Burkina Faso",
+      "description": "GUEM'S MINING SARL, société burkinabè basée à Ouagadougou, intervient dans l'exploitation minière et les activités d'extraction. Découvrez l'entreprise et contactez notre équipe."
+    },
+    "about": {
+      "slug": "a-propos",
+      "title": "À propos de GUEM'S MINING SARL | Entreprise minière burkinabè",
+      "description": "Présentation de GUEM'S MINING SARL : identité, domaine d'activité, vision, mission et informations institutionnelles de cette société minière implantée à Ouagadougou."
+    },
+    "activities": {
+      "slug": "activites",
+      "title": "Nos activités minières | GUEM'S MINING SARL",
+      "description": "Les activités déclarées de GUEM'S MINING SARL au Burkina Faso : exploitation minière et activités d'extraction."
+    },
+    "expertise": {
+      "slug": "expertise",
+      "title": "Expertise et engagements | GUEM'S MINING SARL",
+      "description": "L'approche professionnelle de GUEM'S MINING SARL : organisation des activités, qualité, sécurité, environnement et collaboration avec les partenaires."
+    },
+    "projects": {
+      "slug": "realisations",
+      "title": "Projets et réalisations | GUEM'S MINING SARL",
+      "description": "Les projets et réalisations de GUEM'S MINING SARL, entreprise minière basée à Ouagadougou, Burkina Faso."
+    },
+    "news": {
+      "slug": "actualites",
+      "title": "Actualités | GUEM'S MINING SARL",
+      "description": "Actualités, annonces officielles, événements et communiqués de GUEM'S MINING SARL."
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact | GUEM'S MINING SARL — Ouagadougou",
+      "description": "Contactez GUEM'S MINING SARL à Ouagadougou (Nouveau Secteur 37) : téléphone +226 76 32 87 49, WhatsApp ou formulaire de contact."
+    },
+    "legal": {
+      "slug": "mentions-legales",
+      "title": "Mentions légales et confidentialité | GUEM'S MINING SARL",
+      "description": "Mentions légales de GUEM'S MINING SARL et politique de traitement des données personnelles collectées via le site."
+    }
+  },
+  "home": {
+    "eyebrow": "Société minière burkinabè · Ouagadougou",
+    "title": "GUEM'S MINING SARL — L'expertise minière au service de l'avenir.",
+    "subtitle": "Une entreprise burkinabè engagée dans le secteur minier, avec une ambition tournée vers le développement et les opportunités du secteur.",
+    "ctaPrimary": "Découvrir nos activités",
+    "ctaSecondary": "Contacter notre équipe",
+    "facts": [
+      {
+        "label": "Siège",
+        "value": "Ouagadougou, Burkina Faso"
+      },
+      {
+        "label": "Secteur",
+        "value": "Exploitation minière"
+      },
+      {
+        "label": "Forme juridique",
+        "value": "SARL unipersonnelle"
+      }
+    ],
+    "intro": {
+      "eyebrow": "L'entreprise",
+      "title": "Une société minière implantée au cœur du Burkina Faso",
+      "text": [
+        "GUEM'S MINING SARL est une société à responsabilité limitée unipersonnelle de droit burkinabè, dont l'établissement principal est situé à Ouagadougou, dans le Nouveau Secteur 37.",
+        "Ses documents officiels la rattachent au secteur de l'exploitation minière, avec pour activité principale déclarée « autres extractions » et pour activité secondaire l'exploitation minière."
+      ],
+      "link": "Découvrir l'entreprise"
+    },
+    "activities": {
+      "eyebrow": "Activités déclarées",
+      "title": "Deux domaines d'intervention",
+      "text": "Les activités présentées ci-dessous correspondent à celles mentionnées dans les documents officiels de l'entreprise.",
+      "link": "Voir nos activités"
+    },
+    "positioning": {
+      "eyebrow": "Positionnement",
+      "title": "Un acteur du secteur minier burkinabè",
+      "text": "Le secteur minier occupe une place importante dans l'économie du Burkina Faso. GUEM'S MINING SARL s'inscrit dans ce secteur en tant qu'entreprise locale, et souhaite construire des relations de travail durables avec ses clients et partenaires, au niveau national comme international.",
+      "points": [
+        "Une entreprise de droit burkinabè, enregistrée à Ouagadougou",
+        "Un domaine d'activité clairement identifié : l'exploitation minière et l'extraction",
+        "Un interlocuteur joignable directement par téléphone et WhatsApp"
+      ]
+    },
+    "why": {
+      "eyebrow": "Pourquoi nous contacter ?",
+      "title": "Échangeons sur vos besoins",
+      "items": [
+        {
+          "icon": "handshake",
+          "title": "Partenariats",
+          "text": "Vous êtes une entreprise ou une institution du secteur minier et souhaitez étudier une collaboration."
+        },
+        {
+          "icon": "search",
+          "title": "Informations",
+          "text": "Vous souhaitez en savoir plus sur l'entreprise, ses activités ou ses projets."
+        },
+        {
+          "icon": "message",
+          "title": "Demandes commerciales",
+          "text": "Vous avez une demande précise et voulez échanger directement avec notre équipe."
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "Nos valeurs",
+      "title": "Les principes qui guident notre action",
+      "items": [
+        {
+          "icon": "briefcase",
+          "title": "Professionnalisme",
+          "text": "Aborder chaque mission avec rigueur, méthode et sens des responsabilités."
+        },
+        {
+          "icon": "eye",
+          "title": "Transparence",
+          "text": "Entretenir des relations claires et loyales avec nos clients, partenaires et interlocuteurs."
+        },
+        {
+          "icon": "shield",
+          "title": "Responsabilité",
+          "text": "Tenir compte de l'impact de nos activités sur les personnes et sur l'environnement."
+        }
+      ]
+    },
+    "hse": {
+      "eyebrow": "Sécurité et environnement",
+      "title": "Sécurité et environnement",
+      "text": ""
+    },
+    "finalCta": {
+      "title": "Un projet, une question, une proposition de partenariat ?",
+      "text": "Notre équipe est joignable à Ouagadougou par téléphone, WhatsApp ou via le formulaire de contact.",
+      "button": "Nous contacter"
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Découvrez GUEM'S MINING SARL",
+    "lead": "Une entreprise burkinabè du secteur minier, implantée à Ouagadougou.",
+    "overview": {
+      "title": "Présentation générale",
+      "text": [
+        "GUEM'S MINING SARL est une entreprise burkinabè dont le siège est établi à Ouagadougou. Elle exerce sous le nom commercial GUEM'S MINING.",
+        "Son domaine d'activité, tel qu'il figure dans ses documents officiels, relève de l'exploitation minière et des activités d'extraction."
+      ]
+    },
+    "identity": {
+      "title": "Identité de l'entreprise",
+      "rows": {
+        "legalName": "Dénomination",
+        "tradeName": "Nom commercial",
+        "legalForm": "Forme juridique",
+        "sector": "Secteur d'activité",
+        "seat": "Établissement principal",
+        "capital": "Capital social",
+        "phone": "Téléphone"
+      }
+    },
+    "purpose": {
+      "title": "Objet et domaine d'activité",
+      "text": "Les activités déclarées de l'entreprise sont les suivantes :",
+      "main": "Activité principale",
+      "secondary": "Activité secondaire"
+    },
+    "vision": {
+      "title": "Vision et ambition",
+      "text": "Devenir un acteur reconnu et fiable du secteur minier au Burkina Faso, en contribuant au développement du secteur et en saisissant les opportunités qu'il offre."
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "Mener nos activités d'exploitation et d'extraction avec professionnalisme, dans le respect de la réglementation en vigueur, et offrir à nos clients et partenaires un interlocuteur sérieux et disponible."
+    },
+    "values": {
+      "title": "Valeurs"
+    },
+    "institutional": {
+      "title": "Informations institutionnelles",
+      "text": "Les informations ci-dessus proviennent des documents administratifs de l'entreprise. Pour toute demande d'information complémentaire de nature institutionnelle, veuillez contacter directement l'entreprise."
+    }
+  },
+  "activities": {
+    "eyebrow": "Activités",
+    "title": "Nos activités minières",
+    "lead": "Les activités présentées ici sont celles mentionnées dans les documents officiels de GUEM'S MINING SARL.",
+    "items": [
+      {
+        "id": "exploitation-miniere",
+        "imageKey": "activityMining",
+        "fallback": "gradins.svg",
+        "tag": "Activité secondaire déclarée",
+        "title": "Exploitation minière",
+        "text": "L'exploitation minière constitue le secteur de rattachement de GUEM'S MINING SARL. Elle désigne l'ensemble des opérations visant à extraire des substances minérales d'un gisement, dans le cadre prévu par la réglementation minière."
+      },
+      {
+        "id": "autres-extractions",
+        "imageKey": "activityExtraction",
+        "fallback": "strates.svg",
+        "tag": "Activité principale déclarée",
+        "title": "Autres activités d'extraction",
+        "text": "L'activité principale déclarée de l'entreprise relève de la catégorie « autres extractions », qui regroupe des activités d'extraction de matériaux et de substances distinctes des grandes filières spécialisées."
+      }
+    ],
+    "more": {
+      "title": "Vous souhaitez en savoir plus ?",
+      "text": "Pour toute information détaillée sur nos activités, nos moyens et nos conditions d'intervention, notre équipe vous répond directement."
+    }
+  },
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Expertise et engagements",
+    "lead": "Notre approche professionnelle repose sur l'organisation, la rigueur et le dialogue avec nos partenaires.",
+    "sections": [
+      {
+        "icon": "layers",
+        "title": "Organisation des activités",
+        "text": "Préparer chaque intervention avec méthode : définition des besoins, planification et suivi régulier avec les parties concernées."
+      },
+      {
+        "icon": "award",
+        "title": "Qualité et professionnalisme",
+        "text": "Rechercher un travail soigné et conforme aux attentes convenues, avec une communication claire tout au long de la collaboration."
+      },
+      {
+        "icon": "handshake",
+        "title": "Collaboration avec les partenaires",
+        "text": "Construire des relations de confiance avec nos clients, partenaires et interlocuteurs institutionnels, fondées sur l'écoute et la transparence."
+      }
+    ],
+    "safety": {
+      "icon": "hardhat",
+      "title": "Sécurité des opérations",
+      "text": ""
+    },
+    "environment": {
+      "icon": "leaf",
+      "title": "Responsabilité environnementale",
+      "text": ""
+    },
+    "hseTitle": "Sécurité des opérations et responsabilité environnementale",
+    "hseFallback": "Pour toute question relative à nos pratiques en matière de sécurité des opérations et de responsabilité environnementale, nous vous invitons à contacter directement l'entreprise."
+  },
+  "projects": {
+    "eyebrow": "Réalisations",
+    "title": "Projets et réalisations",
+    "lead": "Cette page présente les projets de GUEM'S MINING SARL dont la publication a été autorisée par l'entreprise.",
+    "empty": {
+      "title": "Aucune réalisation publiée pour le moment",
+      "text": "Les projets de l'entreprise seront présentés ici prochainement. Pour toute information sur nos activités et nos références, contactez directement notre équipe."
+    }
+  },
+  "news": {
+    "eyebrow": "Actualités",
+    "title": "Actualités",
+    "lead": "Actualités de l'entreprise, annonces officielles, événements et communiqués.",
+    "filterLabel": "Filtrer par catégorie",
+    "empty": {
+      "title": "Aucune actualité publiée pour le moment",
+      "text": "Les actualités et communiqués de GUEM'S MINING SARL seront publiés sur cette page."
+    },
+    "noneInCategory": "Aucun article dans cette catégorie."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet",
+    "lead": "Contactez GUEM'S MINING SARL par téléphone, sur WhatsApp ou via le formulaire ci-dessous.",
+    "coordsTitle": "Nos coordonnées",
+    "quickTitle": "Contact direct",
+    "formTitle": "Envoyer un message",
+    "mapTitle": "Localisation",
+    "form": {
+      "name": "Nom et prénom",
+      "company": "Entreprise",
+      "optional": "facultatif",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "subject": "Objet de la demande",
+      "subjectPlaceholder": "Choisissez un objet",
+      "subjects": [
+        "Demande d'information",
+        "Proposition de partenariat",
+        "Demande commerciale",
+        "Autre demande"
+      ],
+      "message": "Message",
+      "consent": "J'accepte que les informations saisies soient utilisées par GUEM'S MINING SARL pour répondre à ma demande, conformément à la",
+      "consentLink": "politique de confidentialité",
+      "required": "Les champs marqués d'un astérisque (*) sont obligatoires.",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "honeypot": "Ne pas remplir ce champ"
+    },
+    "errors": {
+      "name": "Veuillez indiquer votre nom et prénom.",
+      "email": "Veuillez saisir une adresse e-mail valide.",
+      "phone": "Veuillez saisir un numéro de téléphone valide.",
+      "subject": "Veuillez choisir l'objet de votre demande.",
+      "message": "Veuillez saisir un message d'au moins 10 caractères.",
+      "consent": "Votre consentement est nécessaire pour traiter votre demande.",
+      "summary": "Le formulaire contient des erreurs. Veuillez les corriger."
+    },
+    "status": {
+      "sent": "Merci, votre message a bien été envoyé. Notre équipe vous répondra dans les meilleurs délais.",
+      "error": "Votre message n'a pas pu être envoyé. Veuillez réessayer ou nous contacter par téléphone au +226 76 32 87 49.",
+      "unavailable": "Le service d'envoi de messages n'est pas encore disponible. Veuillez nous contacter par téléphone ou WhatsApp au +226 76 32 87 49.",
+      "spam": "Votre message n'a pas pu être envoyé. Veuillez réessayer dans quelques instants.",
+      "rate": "Trop de messages ont été envoyés depuis votre connexion. Veuillez réessayer plus tard ou nous appeler."
+    },
+    "whatsappText": "Bonjour GUEM'S MINING, je vous contacte depuis votre site internet."
+  },
+  "legal": {
+    "title": "Mentions légales et confidentialité",
+    "publisherTitle": "Éditeur du site",
+    "privacyTitle": "Protection des données personnelles",
+    "privacy": [
+      "Les données transmises via le formulaire de contact (nom, entreprise, adresse e-mail, téléphone, objet et message) sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni vendues, ni cédées à des tiers à des fins commerciales.",
+      "Le site n'enregistre pas les messages dans une base de données : ils sont transmis par e-mail à l'adresse professionnelle de l'entreprise et conservés uniquement le temps nécessaire au traitement de votre demande. Pour la protection contre les envois abusifs, une empreinte non réversible de l'adresse IP de l'expéditeur est conservée temporairement sur le serveur (une heure au maximum).",
+      "Conformément à la réglementation burkinabè applicable en matière de protection des données à caractère personnel, vous pouvez demander l'accès, la rectification ou la suppression des données vous concernant en contactant l'entreprise par les moyens indiqués sur la page Contact.",
+      "Le site n'utilise pas de cookies publicitaires ni d'outil de mesure d'audience. Votre préférence de langue est enregistrée localement dans votre navigateur. Les polices de caractères sont chargées depuis le service Google Fonts."
+    ],
+    "ipTitle": "Propriété intellectuelle",
+    "ip": "Le nom et le logo GUEM'S MINING sont la propriété de GUEM'S MINING SARL. Les illustrations du site sont des créations graphiques abstraites et ne représentent pas des sites ou opérations réels de l'entreprise."
+  },
+  "footer": {
+    "tagline": "Société minière burkinabè basée à Ouagadougou.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "legal": "Mentions légales et confidentialité",
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "button": "Retour à l'accueil"
+  }
+}

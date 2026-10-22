@@ -1,0 +1,16 @@
+{
+  "_comment": "Fichier d'exemple ignoré par le générateur (nom commençant par « _ »). Dupliquez-le sans le « _ » pour publier une actualité réelle.",
+  "slug": "titre-de-l-actualite",
+  "date": "2026-01-15",
+  "category": "entreprise",
+  "image": "",
+  "image_alt_fr": "",
+  "image_alt_en": "",
+  "title_fr": "Titre de l'actualité",
+  "excerpt_fr": "Résumé court affiché dans la liste des actualités.",
+  "body_fr": "Premier paragraphe.\n\n## Intertitre\n\n- Point 1\n- Point 2",
+  "title_en": "",
+  "excerpt_en": "",
+  "body_en": "",
+  "draft": true
+}
