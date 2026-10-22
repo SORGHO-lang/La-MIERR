@@ -1,6 +1,6 @@
 # Site officiel de GUEM'S MINING SARL
 
-Site vitrine bilingue (français / anglais), identité noir et or, généré en pages statiques
+Site vitrine bilingue (français / anglais), identité noir et orange, généré en pages statiques
 par un petit script Node.js **sans aucune dépendance**. Le formulaire de contact est traité
 par un script PHP compatible avec les hébergements mutualisés classiques.
 
@@ -126,7 +126,7 @@ Les nouveaux contenus sont créés en **brouillon** : décocher « Brouillon » 
 
 ## Photographies
 
-Les bannières et cartes utilisent des illustrations vectorielles abstraites (noir et or) tant
+Les bannières et cartes utilisent des illustrations vectorielles abstraites (noir et orange) tant
 qu'aucune photographie n'est fournie. Pour utiliser de vraies photos :
 
 1. Déposer les fichiers (JPEG ou WebP, environ 1920 px de large pour la bannière, < 400 Ko)

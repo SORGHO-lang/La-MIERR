@@ -16,7 +16,7 @@ Ce document fait le point sur les informations utilisées dans le site. Une info
 | Établissement principal | Nouveau Secteur 37, Ouagadougou, Burkina Faso | Contact, pied de page, données structurées |
 | Téléphone | +226 76 32 87 49 | Contact, pied de page, boutons d'appel |
 | Capital social | 3 000 000 FCFA | À propos, Mentions légales |
-| Logo | Fourni (noir et orange) | En-tête, favicon, image de partage |
+| Logo | Fourni (noir et orange) — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
 
 Volontairement **non publiés** (décision explicite de l'entreprise requise) : IFU, RCCM, numéro de
 sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du gérant.
@@ -39,7 +39,6 @@ sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du
 | 12 | Date de création, historique, dirigeants, effectifs, partenaires | Non mentionnés | À ajouter après validation |
 | 13 | Réseaux sociaux officiels (Facebook, LinkedIn…) | Icônes masquées | `content/site.json` → `company.social` |
 | 14 | Hébergeur du site et responsable de publication | Absents des mentions légales | `content/i18n/*.json` → `legal` |
-| 15 | Version du logo en **noir et or** (facultatif) | Le logo fourni (noir et orange) est utilisé tel quel ; le reste du site suit la charte noir et or | `static/assets/img/` |
 
 ## 3. Points d'attention
 

@@ -161,7 +161,7 @@ ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(
     <nav class="main-nav" id="main-nav" aria-label="${esc(t.nav.mainNav)}" data-nav>
       <ul>${navLinks('nav-link')}</ul>
       <div class="nav-mobile-extra">
-        <a class="btn btn-gold" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
+        <a class="btn btn-primary" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
         <a class="nav-phone" href="${telHref}">${icon('phone')}<span>${esc(C.phone)}</span></a>
       </div>
     </nav>
@@ -170,7 +170,7 @@ ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(
         <span aria-hidden="true">${icon('globe')}</span><span class="lang-current" aria-hidden="true">${lang.toUpperCase()}</span><span aria-hidden="true">/</span><span class="lang-other">${other.toUpperCase()}</span><span class="sr-only">${esc(t.switchLabel)}</span>
       </a>
       <a class="header-phone" href="${telHref}"><span class="header-phone-icon">${icon('phone')}</span><span class="sr-only">${esc(t.topbar.ask)} ${esc(C.phone)}</span></a>
-      <a class="btn btn-gold btn-square header-cta" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
+      <a class="btn btn-primary btn-square header-cta" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)}</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-toggle data-label-open="${esc(t.nav.openMenu)}" data-label-close="${esc(t.nav.closeMenu)}">
         <span class="sr-only">${esc(t.nav.openMenu)}</span>${icon('menu', 'icon icon-open')}${icon('close', 'icon icon-close')}
       </button>
@@ -273,7 +273,7 @@ const ctaBand = (lang) => {
       <p>${esc(t.home.finalCta.text)}</p>
     </div>
     <div class="cta-actions">
-      <a class="btn btn-gold" href="${pagePath(lang, 'contact')}">${esc(t.home.finalCta.button)} ${icon('arrow')}</a>
+      <a class="btn btn-primary" href="${pagePath(lang, 'contact')}">${esc(t.home.finalCta.button)} ${icon('arrow')}</a>
       <a class="btn btn-outline-light" href="${telHref}">${icon('phone')} ${esc(C.phone)}</a>
     </div>
   </div>
@@ -304,7 +304,7 @@ function pageHome(lang) {
       <h1>${esc(h.title)}</h1>
       <p class="lead">${esc(h.subtitle)}</p>
       <div class="hero-actions">
-        <a class="btn btn-gold btn-lg btn-square" href="${pagePath(lang, 'activities')}">${esc(h.ctaPrimary)}</a>
+        <a class="btn btn-primary btn-lg btn-square" href="${pagePath(lang, 'activities')}">${esc(h.ctaPrimary)}</a>
         <a class="link-plain" href="${pagePath(lang, 'about')}">${esc(h.readMore)} ${icon('arrow')}</a>
       </div>
     </div>
@@ -336,7 +336,7 @@ function pageHome(lang) {
       <h2>${esc(h.intro.title)}</h2>
       <blockquote class="quote">${esc(h.intro.text[0])}</blockquote>
       <p class="muted">${esc(h.intro.text[1])}</p>
-      <a class="btn btn-gold btn-square" href="${pagePath(lang, 'about')}">${esc(h.intro.link)}</a>
+      <a class="btn btn-primary btn-square" href="${pagePath(lang, 'about')}">${esc(h.intro.link)}</a>
     </div>
     <div class="about-media reveal">
       <span class="vertical-badge">${esc(h.aboutBadge)}</span>
@@ -485,7 +485,7 @@ ${pageHero(a.eyebrow, a.title, a.lead)}
     <h2>${esc(a.more.title)}</h2>
     <p>${esc(a.more.text)}</p>
     <div class="cta-actions center">
-      <a class="btn btn-gold" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
+      <a class="btn btn-primary" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
       <a class="btn btn-outline" href="${telHref}">${icon('phone')} ${esc(C.phone)}</a>
     </div>
   </div>
@@ -541,7 +541,7 @@ function emptyState(lang, title, text, ic) {
   <h2>${esc(title)}</h2>
   <p>${esc(text)}</p>
   <div class="cta-actions center">
-    <a class="btn btn-gold" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
+    <a class="btn btn-primary" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
     <a class="btn btn-outline" href="${telHref}">${icon('phone')} ${esc(C.phone)}</a>
   </div>
 </div>`;
@@ -740,7 +740,7 @@ ${pageHero(c.eyebrow, c.title, c.lead)}
       </address>
       <h2 class="h3">${esc(c.quickTitle)}</h2>
       <div class="quick-actions">
-        <a class="btn btn-gold" href="${telHref}">${icon('phone')} ${esc(t.common.call)}</a>
+        <a class="btn btn-primary" href="${telHref}">${icon('phone')} ${esc(t.common.call)}</a>
         <a class="btn btn-whatsapp" href="${waHref(lang)}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')} ${esc(t.common.whatsapp)}</a>
       </div>
       ${map ? `<h2 class="h3">${esc(c.mapTitle)}</h2><div class="map"><iframe src="${esc(map)}" title="${esc(c.mapTitle)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>` : ''}
@@ -768,7 +768,7 @@ ${pageHero(c.eyebrow, c.title, c.lead)}
           <label for="f-consent">${esc(f.consent)} <a href="${pagePath(lang, 'legal')}">${esc(f.consentLink)}</a>. ${req}</label>
           <p class="field-error" id="e-consent" hidden></p>
         </div>
-        <button class="btn btn-gold btn-lg" type="submit" data-sending="${esc(f.sending)}">${esc(f.submit)} ${icon('arrow')}</button>
+        <button class="btn btn-primary btn-lg" type="submit" data-sending="${esc(f.sending)}">${esc(f.submit)} ${icon('arrow')}</button>
       </form>
       <script type="application/json" id="form-i18n">${JSON.stringify({ errors: c.errors, status: c.status }).replace(/</g, '\\u003c')}</script>
     </div>
@@ -846,7 +846,7 @@ if(l!=='fr'&&l!=='en'){l=(navigator.language||'fr').toLowerCase().indexOf('fr')=
 location.replace(l==='en'?'${pagePath('en', 'home')}':'${pagePath('fr', 'home')}');})();
 </script>
 <noscript><meta http-equiv="refresh" content="0; url=${pagePath('fr', 'home')}"></noscript>
-<style>body{font-family:system-ui,sans-serif;background:#101010;color:#fff;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#F3D77A}</style>
+<style>body{font-family:system-ui,sans-serif;background:#101010;color:#fff;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#FF9A2E}</style>
 </head>
 <body><p><a href="${pagePath('fr', 'home')}" hreflang="fr">Français</a> · <a href="${pagePath('en', 'home')}" hreflang="en">English</a></p></body>
 </html>
@@ -866,7 +866,7 @@ writeFileSync(join(DIST, '404.html'), layout({
     <p>${esc(T.fr.notFound.text)}</p>
     <p lang="en" class="en"><strong>${esc(T.en.notFound.title)}.</strong> ${esc(T.en.notFound.text)}</p>
     <div class="cta-actions center">
-      <a class="btn btn-gold" href="${pagePath('fr', 'home')}">${esc(T.fr.notFound.button)}</a>
+      <a class="btn btn-primary" href="${pagePath('fr', 'home')}">${esc(T.fr.notFound.button)}</a>
       <a class="btn btn-outline-light" href="${pagePath('en', 'home')}" lang="en" hreflang="en">${esc(T.en.notFound.button)}</a>
     </div>
   </div>
