@@ -52,17 +52,17 @@
     "home": {
       "slug": "",
       "title": "GUEM'S MINING SARL — Mining company in Ouagadougou, Burkina Faso",
-      "description": "GUEM'S MINING SARL is a Burkinabe company based in Ouagadougou, active in mining and extraction. Discover the company and get in touch with our team."
+      "description": "GUEM'S MINING, a Burkinabe company based in Ouagadougou: mining subcontracting, equipment supply and rental, mining supply and logistics."
     },
     "about": {
       "slug": "about",
       "title": "About GUEM'S MINING SARL | Burkinabe mining company",
-      "description": "About GUEM'S MINING SARL: company identity, field of activity, vision, mission and corporate information of this mining company based in Ouagadougou."
+      "description": "Who is GUEM'S MINING SARL? A Burkinabe company specialising in mining activities and related services, based in Ouagadougou."
     },
     "activities": {
       "slug": "activities",
       "title": "Our mining activities | GUEM'S MINING SARL",
-      "description": "The registered activities of GUEM'S MINING SARL in Burkina Faso: mining operations and extraction activities."
+      "description": "GUEM'S MINING activities: services for mining companies, equipment supply and rental, mining supply and logistics."
     },
     "expertise": {
       "slug": "expertise",
@@ -93,7 +93,7 @@
   "home": {
     "eyebrow": "Burkinabe mining company · Ouagadougou",
     "title": "GUEM'S MINING SARL — Mining expertise for the future.",
-    "subtitle": "A Burkinabe company committed to the mining sector, with an ambition focused on development and the opportunities the sector offers.",
+    "subtitle": "A Burkinabe company specialising in mining activities and related services: mining subcontracting, equipment supply and operational support.",
     "ctaPrimary": "Discover our activities",
     "ctaSecondary": "Contact our team",
     "facts": [
@@ -111,27 +111,27 @@
       }
     ],
     "intro": {
-      "eyebrow": "The company",
-      "title": "A mining company rooted in the heart of Burkina Faso",
+      "eyebrow": "Who are we?",
+      "title": "A partner in the mining value chain",
       "text": [
-        "GUEM'S MINING SARL is a single-member limited liability company incorporated under Burkinabe law, with its principal place of business in Ouagadougou, Nouveau Secteur 37.",
-        "According to its official documents, the company belongs to the mining sector, with “other extraction activities” as its main registered activity and mining operations as its secondary activity."
+        "GUEM'S MINING is a Burkinabe company specialising in mining activities and related services: mining subcontracting, equipment supply and operational support.",
+        "Based in Ouagadougou, our ambition is to become a reliable partner in the mining value chain in Burkina Faso and across the AES region."
       ],
       "link": "About the company"
     },
     "activities": {
-      "eyebrow": "Registered activities",
-      "title": "Two fields of activity",
-      "text": "The activities presented below are those stated in the company's official documents.",
+      "eyebrow": "Our activities",
+      "title": "Three fields of activity",
+      "text": "Services designed for mining companies and their sites.",
       "link": "See our activities"
     },
     "positioning": {
       "eyebrow": "Why choose us",
-      "title": "A player in Burkina Faso's mining sector",
-      "text": "Mining plays an important role in Burkina Faso's economy. GUEM'S MINING SARL operates in this sector as a local company and aims to build lasting working relationships with its clients and partners, both nationally and internationally.",
+      "title": "A reliable partner for your mining operations",
+      "text": "GUEM'S MINING supports mining companies at several stages of their operations: services, equipment supply and logistics support. Our ambition: to become a reliable partner in the mining value chain in Burkina Faso and across the AES region.",
       "points": [
-        "A company incorporated under Burkinabe law, registered in Ouagadougou",
-        "A clearly defined field of activity: mining and extraction",
+        "A Burkinabe company based in Ouagadougou",
+        "Mining subcontracting, equipment and logistics from a single point of contact",
         "A contact you can reach directly by phone and WhatsApp"
       ]
     },
@@ -189,8 +189,8 @@
     },
     "readMore": "Learn more",
     "heroBox": {
-      "title": "Burkinabe mining company",
-      "text": "Mining operations and extraction activities, from Ouagadougou."
+      "title": "Partner in the mining value chain",
+      "text": "Subcontracting, equipment and mining logistics, from Ouagadougou."
     },
     "strip": {
       "quick": "Quick contact",
@@ -199,33 +199,28 @@
     "aboutBadge": "Ouagadougou · Burkina Faso",
     "whyFacts": [
       {
-        "value": "2",
-        "label": "registered activities"
+        "value": "3",
+        "label": "fields of activity"
       },
       {
-        "value": "SARL",
-        "label": "company incorporated under Burkinabe law"
+        "value": "AES",
+        "label": "Burkina Faso and the AES region"
       }
     ],
     "services": {
       "eyebrow": "Our activities",
-      "title": "Clearly defined mining activities",
-      "extra": {
-        "tag": "Partners",
-        "title": "Partnerships and enquiries",
-        "text": "A collaboration proposal or a specific request? Our team will answer you directly."
-      }
+      "title": "Services at the heart of the mining value chain"
     }
   },
   "about": {
     "eyebrow": "About Us",
     "title": "Discover GUEM'S MINING SARL",
-    "lead": "A Burkinabe mining company based in Ouagadougou.",
+    "lead": "A Burkinabe company specialising in mining activities and related services.",
     "overview": {
-      "title": "Overview",
+      "title": "Who are we?",
       "text": [
-        "GUEM'S MINING SARL is a Burkinabe company headquartered in Ouagadougou. It trades under the name GUEM'S MINING.",
-        "Its field of activity, as stated in its official documents, covers mining operations and extraction activities."
+        "GUEM'S MINING is a Burkinabe company specialising in mining activities and related services: mining subcontracting, equipment supply and operational support.",
+        "Based in Ouagadougou, the company is registered as GUEM'S MINING SARL."
       ]
     },
     "identity": {
@@ -241,18 +236,18 @@
       }
     },
     "purpose": {
-      "title": "Corporate purpose and field of activity",
+      "title": "Registered activities (official documents)",
       "text": "The company's registered activities are as follows:",
       "main": "Main activity",
       "secondary": "Secondary activity"
     },
     "vision": {
       "title": "Vision and ambition",
-      "text": "To become a recognised and reliable player in Burkina Faso's mining sector, contributing to the development of the sector and seizing the opportunities it offers."
+      "text": "To become a reliable partner in the mining value chain in Burkina Faso and across the AES region (Alliance of Sahel States)."
     },
     "mission": {
       "title": "Mission",
-      "text": "To carry out our mining and extraction activities professionally and in compliance with applicable regulations, and to offer our clients and partners a serious and responsive point of contact."
+      "text": "To support mining companies through services, equipment supply and rental, and supply and logistics, professionally and in compliance with applicable regulations."
     },
     "values": {
       "title": "Values"
@@ -264,24 +259,35 @@
   },
   "activities": {
     "eyebrow": "Activities",
-    "title": "Our mining activities",
-    "lead": "The activities presented here are those stated in the official documents of GUEM'S MINING SARL.",
+    "title": "Our activities",
+    "lead": "GUEM'S MINING supports mining companies with services, equipment and logistics support.",
     "items": [
       {
-        "id": "exploitation-miniere",
-        "imageKey": "activityMining",
+        "id": "prestations-de-services",
+        "imageKey": "activityServices",
         "fallback": "gradins.svg",
-        "tag": "Registered secondary activity",
-        "title": "Mining operations",
-        "text": "Mining is the sector to which GUEM'S MINING SARL belongs. It covers all operations aimed at extracting mineral substances from a deposit, within the framework set by mining regulations."
+        "icon": "briefcase",
+        "tag": "Mining subcontracting",
+        "title": "Services for mining companies",
+        "text": "GUEM'S MINING works as a subcontractor for mining companies and supports their operations."
       },
       {
-        "id": "autres-extractions",
-        "imageKey": "activityExtraction",
+        "id": "fourniture-location-equipements",
+        "imageKey": "activityEquipment",
         "fallback": "strates.svg",
-        "tag": "Registered main activity",
-        "title": "Other extraction activities",
-        "text": "The company's main registered activity falls under the “other extraction activities” category, which covers the extraction of materials and substances outside the major specialised industries."
+        "icon": "wrench",
+        "tag": "Equipment",
+        "title": "Equipment supply and rental",
+        "text": "Supply and rental of equipment for mining activities, to meet the needs of worksites and mining sites."
+      },
+      {
+        "id": "approvisionnement-logistique",
+        "imageKey": "activityLogistics",
+        "fallback": "terrain.svg",
+        "icon": "truck",
+        "tag": "Logistics",
+        "title": "Mining supply and logistics",
+        "text": "Support for supplying mining sites and organising the logistics of operations, from origin to site."
       }
     ],
     "more": {
@@ -405,7 +411,7 @@
     "ip": "The GUEM'S MINING name and logo are the property of GUEM'S MINING SARL. The photographs and illustrations on this website are used for illustrative purposes and do not necessarily depict the company's equipment, sites or operations. Brands visible in some photographs belong to their respective owners."
   },
   "footer": {
-    "tagline": "Burkinabe mining company based in Ouagadougou.",
+    "tagline": "Mining activities and related services, from Ouagadougou.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "legal": "Legal notice and privacy",
@@ -417,7 +423,7 @@
     "button": "Back to home"
   },
   "topbar": {
-    "tagline": "Burkinabe mining company — Ouagadougou, Burkina Faso",
+    "tagline": "Mining activities and related services — Ouagadougou, Burkina Faso",
     "ask": "Any questions?",
     "contactBar": "Contact bar"
   },
@@ -425,7 +431,8 @@
     "hero": "Mining haul truck loaded with ore (illustrative photo)",
     "about": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
     "why": "Crawler hydraulic excavator (illustrative photo)",
-    "activityMining": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
-    "activityExtraction": "Backhoe loader (illustrative photo)"
+    "activityServices": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
+    "activityEquipment": "Crawler hydraulic excavator (illustrative photo)",
+    "activityLogistics": "Mining haul truck loaded with ore (illustrative photo)"
   }
 }

@@ -380,19 +380,12 @@ function pageHome(lang) {
     <div class="service-grid">
       ${t.activities.items.map((a) => `
       <article class="service reveal">
-        <span class="service-icon">${icon(a.fallback === 'gradins.svg' ? 'pickaxe' : 'layers')}</span>
+        <span class="service-icon">${icon(a.icon)}</span>
         <p class="tag">${esc(a.tag)}</p>
         <h3>${esc(a.title)}</h3>
         <p>${esc(truncate(a.text, 150))}</p>
         <a class="link-plain" href="${pagePath(lang, 'activities')}#${esc(a.id)}">${esc(h.readMore)} ${icon('arrow')}</a>
       </article>`).join('')}
-      <article class="service reveal">
-        <span class="service-icon">${icon('handshake')}</span>
-        <p class="tag">${esc(h.services.extra.tag)}</p>
-        <h3>${esc(h.services.extra.title)}</h3>
-        <p>${esc(h.services.extra.text)}</p>
-        <a class="link-plain" href="${pagePath(lang, 'contact')}">${esc(t.nav.cta)} ${icon('arrow')}</a>
-      </article>
     </div>
   </div>
 </section>

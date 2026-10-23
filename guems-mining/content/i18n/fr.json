@@ -52,17 +52,17 @@
     "home": {
       "slug": "",
       "title": "GUEM'S MINING SARL — Entreprise minière à Ouagadougou, Burkina Faso",
-      "description": "GUEM'S MINING SARL, société burkinabè basée à Ouagadougou, intervient dans l'exploitation minière et les activités d'extraction. Découvrez l'entreprise et contactez notre équipe."
+      "description": "GUEM'S MINING, entreprise burkinabè basée à Ouagadougou : sous-traitance minière, fourniture et location d'équipements, approvisionnement et logistique minière."
     },
     "about": {
       "slug": "a-propos",
       "title": "À propos de GUEM'S MINING SARL | Entreprise minière burkinabè",
-      "description": "Présentation de GUEM'S MINING SARL : identité, domaine d'activité, vision, mission et informations institutionnelles de cette société minière implantée à Ouagadougou."
+      "description": "Qui est GUEM'S MINING SARL ? Une entreprise burkinabè spécialisée dans les activités minières et services connexes, basée à Ouagadougou."
     },
     "activities": {
       "slug": "activites",
       "title": "Nos activités minières | GUEM'S MINING SARL",
-      "description": "Les activités déclarées de GUEM'S MINING SARL au Burkina Faso : exploitation minière et activités d'extraction."
+      "description": "Les activités de GUEM'S MINING : prestations de services pour sociétés minières, fourniture et location d'équipements, approvisionnement et logistique minière."
     },
     "expertise": {
       "slug": "expertise",
@@ -93,7 +93,7 @@
   "home": {
     "eyebrow": "Société minière burkinabè · Ouagadougou",
     "title": "GUEM'S MINING SARL — L'expertise minière au service de l'avenir.",
-    "subtitle": "Une entreprise burkinabè engagée dans le secteur minier, avec une ambition tournée vers le développement et les opportunités du secteur.",
+    "subtitle": "Une entreprise burkinabè spécialisée dans les activités minières et services connexes : sous-traitance minière, fourniture d'équipements et appui à l'exploitation.",
     "ctaPrimary": "Découvrir nos activités",
     "ctaSecondary": "Contacter notre équipe",
     "facts": [
@@ -111,27 +111,27 @@
       }
     ],
     "intro": {
-      "eyebrow": "L'entreprise",
-      "title": "Une société minière implantée au cœur du Burkina Faso",
+      "eyebrow": "Qui sommes-nous ?",
+      "title": "Un partenaire de la chaîne de valeur minière",
       "text": [
-        "GUEM'S MINING SARL est une société à responsabilité limitée unipersonnelle de droit burkinabè, dont l'établissement principal est situé à Ouagadougou, dans le Nouveau Secteur 37.",
-        "Ses documents officiels la rattachent au secteur de l'exploitation minière, avec pour activité principale déclarée « autres extractions » et pour activité secondaire l'exploitation minière."
+        "GUEM'S MINING est une entreprise burkinabè spécialisée dans les activités minières et services connexes : sous-traitance minière, fourniture d'équipements et appui à l'exploitation.",
+        "Basée à Ouagadougou, notre ambition est de devenir un partenaire fiable de la chaîne de valeur minière au Burkina Faso et dans l'espace AES."
       ],
       "link": "Découvrir l'entreprise"
     },
     "activities": {
-      "eyebrow": "Activités déclarées",
-      "title": "Deux domaines d'intervention",
-      "text": "Les activités présentées ci-dessous correspondent à celles mentionnées dans les documents officiels de l'entreprise.",
+      "eyebrow": "Nos activités",
+      "title": "Trois domaines d'intervention",
+      "text": "Des services pensés pour les sociétés minières et leurs sites d'exploitation.",
       "link": "Voir nos activités"
     },
     "positioning": {
       "eyebrow": "Pourquoi nous choisir",
-      "title": "Un acteur du secteur minier burkinabè",
-      "text": "Le secteur minier occupe une place importante dans l'économie du Burkina Faso. GUEM'S MINING SARL s'inscrit dans ce secteur en tant qu'entreprise locale, et souhaite construire des relations de travail durables avec ses clients et partenaires, au niveau national comme international.",
+      "title": "Un partenaire fiable pour vos opérations minières",
+      "text": "GUEM'S MINING accompagne les sociétés minières à plusieurs étapes de leurs opérations : prestations de services, mise à disposition d'équipements et appui logistique. Notre ambition : devenir un partenaire fiable de la chaîne de valeur minière au Burkina Faso et dans l'espace AES.",
       "points": [
-        "Une entreprise de droit burkinabè, enregistrée à Ouagadougou",
-        "Un domaine d'activité clairement identifié : l'exploitation minière et l'extraction",
+        "Une entreprise burkinabè basée à Ouagadougou",
+        "Sous-traitance minière, équipements et logistique réunis chez un seul interlocuteur",
         "Un interlocuteur joignable directement par téléphone et WhatsApp"
       ]
     },
@@ -189,8 +189,8 @@
     },
     "readMore": "En savoir plus",
     "heroBox": {
-      "title": "Société minière burkinabè",
-      "text": "Exploitation minière et activités d'extraction, depuis Ouagadougou."
+      "title": "Partenaire de la chaîne de valeur minière",
+      "text": "Sous-traitance, équipements et logistique minière, depuis Ouagadougou."
     },
     "strip": {
       "quick": "Contact rapide",
@@ -199,33 +199,28 @@
     "aboutBadge": "Ouagadougou · Burkina Faso",
     "whyFacts": [
       {
-        "value": "2",
-        "label": "activités déclarées"
+        "value": "3",
+        "label": "domaines d'activité"
       },
       {
-        "value": "SARL",
-        "label": "société de droit burkinabè"
+        "value": "AES",
+        "label": "Burkina Faso et espace AES"
       }
     ],
     "services": {
       "eyebrow": "Nos activités",
-      "title": "Des activités minières clairement définies",
-      "extra": {
-        "tag": "Partenaires",
-        "title": "Partenariats et demandes",
-        "text": "Une proposition de collaboration ou une demande précise ? Notre équipe vous répond directement."
-      }
+      "title": "Des services au cœur de la chaîne de valeur minière"
     }
   },
   "about": {
     "eyebrow": "À propos",
     "title": "Découvrez GUEM'S MINING SARL",
-    "lead": "Une entreprise burkinabè du secteur minier, implantée à Ouagadougou.",
+    "lead": "Une entreprise burkinabè spécialisée dans les activités minières et services connexes.",
     "overview": {
-      "title": "Présentation générale",
+      "title": "Qui sommes-nous ?",
       "text": [
-        "GUEM'S MINING SARL est une entreprise burkinabè dont le siège est établi à Ouagadougou. Elle exerce sous le nom commercial GUEM'S MINING.",
-        "Son domaine d'activité, tel qu'il figure dans ses documents officiels, relève de l'exploitation minière et des activités d'extraction."
+        "GUEM'S MINING est une entreprise burkinabè spécialisée dans les activités minières et services connexes : sous-traitance minière, fourniture d'équipements et appui à l'exploitation.",
+        "Basée à Ouagadougou, l'entreprise exerce sous la dénomination GUEM'S MINING SARL."
       ]
     },
     "identity": {
@@ -241,18 +236,18 @@
       }
     },
     "purpose": {
-      "title": "Objet et domaine d'activité",
+      "title": "Activités déclarées (documents officiels)",
       "text": "Les activités déclarées de l'entreprise sont les suivantes :",
       "main": "Activité principale",
       "secondary": "Activité secondaire"
     },
     "vision": {
       "title": "Vision et ambition",
-      "text": "Devenir un acteur reconnu et fiable du secteur minier au Burkina Faso, en contribuant au développement du secteur et en saisissant les opportunités qu'il offre."
+      "text": "Devenir un partenaire fiable de la chaîne de valeur minière au Burkina Faso et dans l'espace AES (Alliance des États du Sahel)."
     },
     "mission": {
       "title": "Mission",
-      "text": "Mener nos activités d'exploitation et d'extraction avec professionnalisme, dans le respect de la réglementation en vigueur, et offrir à nos clients et partenaires un interlocuteur sérieux et disponible."
+      "text": "Accompagner les sociétés minières par des prestations de services, la fourniture et la location d'équipements, ainsi que l'approvisionnement et la logistique, avec professionnalisme et dans le respect de la réglementation en vigueur."
     },
     "values": {
       "title": "Valeurs"
@@ -264,24 +259,35 @@
   },
   "activities": {
     "eyebrow": "Activités",
-    "title": "Nos activités minières",
-    "lead": "Les activités présentées ici sont celles mentionnées dans les documents officiels de GUEM'S MINING SARL.",
+    "title": "Nos activités",
+    "lead": "GUEM'S MINING accompagne les sociétés minières avec des services, des équipements et un appui logistique.",
     "items": [
       {
-        "id": "exploitation-miniere",
-        "imageKey": "activityMining",
+        "id": "prestations-de-services",
+        "imageKey": "activityServices",
         "fallback": "gradins.svg",
-        "tag": "Activité secondaire déclarée",
-        "title": "Exploitation minière",
-        "text": "L'exploitation minière constitue le secteur de rattachement de GUEM'S MINING SARL. Elle désigne l'ensemble des opérations visant à extraire des substances minérales d'un gisement, dans le cadre prévu par la réglementation minière."
+        "icon": "briefcase",
+        "tag": "Sous-traitance minière",
+        "title": "Prestations de services pour sociétés minières",
+        "text": "GUEM'S MINING intervient en sous-traitance auprès des sociétés minières et apporte un appui à leurs opérations d'exploitation."
       },
       {
-        "id": "autres-extractions",
-        "imageKey": "activityExtraction",
+        "id": "fourniture-location-equipements",
+        "imageKey": "activityEquipment",
         "fallback": "strates.svg",
-        "tag": "Activité principale déclarée",
-        "title": "Autres activités d'extraction",
-        "text": "L'activité principale déclarée de l'entreprise relève de la catégorie « autres extractions », qui regroupe des activités d'extraction de matériaux et de substances distinctes des grandes filières spécialisées."
+        "icon": "wrench",
+        "tag": "Équipements",
+        "title": "Fourniture et location d'équipements",
+        "text": "Fourniture et location d'équipements destinés aux activités minières, pour répondre aux besoins des chantiers et des sites d'exploitation."
+      },
+      {
+        "id": "approvisionnement-logistique",
+        "imageKey": "activityLogistics",
+        "fallback": "terrain.svg",
+        "icon": "truck",
+        "tag": "Logistique",
+        "title": "Approvisionnement et logistique minière",
+        "text": "Appui à l'approvisionnement des sites miniers et à l'organisation logistique des opérations, du point de départ jusqu'au site."
       }
     ],
     "more": {
@@ -405,7 +411,7 @@
     "ip": "Le nom et le logo GUEM'S MINING sont la propriété de GUEM'S MINING SARL. Les photographies et illustrations du site sont utilisées à titre d'illustration et ne représentent pas nécessairement le matériel, les sites ou les opérations de l'entreprise. Les marques visibles sur certaines photographies appartiennent à leurs propriétaires respectifs."
   },
   "footer": {
-    "tagline": "Société minière burkinabè basée à Ouagadougou.",
+    "tagline": "Activités minières et services connexes, depuis Ouagadougou.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "legal": "Mentions légales et confidentialité",
@@ -417,7 +423,7 @@
     "button": "Retour à l'accueil"
   },
   "topbar": {
-    "tagline": "Société minière burkinabè — Ouagadougou, Burkina Faso",
+    "tagline": "Activités minières et services connexes — Ouagadougou, Burkina Faso",
     "ask": "Une question ?",
     "contactBar": "Barre de contact"
   },
@@ -425,7 +431,8 @@
     "hero": "Camion de transport minier chargé de minerai (photo d'illustration)",
     "about": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
     "why": "Pelle hydraulique sur chenilles (photo d'illustration)",
-    "activityMining": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
-    "activityExtraction": "Tractopelle (photo d'illustration)"
+    "activityServices": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
+    "activityEquipment": "Pelle hydraulique sur chenilles (photo d'illustration)",
+    "activityLogistics": "Camion de transport minier chargé de minerai (photo d'illustration)"
   }
 }
