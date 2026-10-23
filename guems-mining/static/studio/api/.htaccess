@@ -1,4 +1,0 @@
-# Seul ai.php est exposé.
-<FilesMatch "^(?!ai\.php$).*$">
-  Require all denied
-</FilesMatch>

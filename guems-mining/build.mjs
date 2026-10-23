@@ -908,7 +908,6 @@ writeFileSync(join(DIST, 'robots.txt'), `User-agent: *
 Allow: /
 Disallow: ${BASE}admin/
 Disallow: ${BASE}contact.php
-Disallow: ${BASE}studio/
 
 Sitemap: ${abs(`${BASE}sitemap.xml`)}
 `);

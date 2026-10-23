@@ -2,7 +2,7 @@
   "name": "guems-mining-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Site vitrine bilingue (FR/EN) de GUEM'S MINING SARL et Studio de montage vidéo",
+  "description": "Site vitrine bilingue (FR/EN) de GUEM'S MINING SARL",
   "type": "module",
   "engines": {
     "node": ">=18"
@@ -10,10 +10,8 @@
   "scripts": {
     "build": "node build.mjs",
     "serve": "php -S localhost:8080 -t dist",
-    "test": "node build.mjs && node tests/check.mjs && node tests/studio-unit.mjs",
+    "test": "node build.mjs && node tests/check.mjs",
     "preview": "node build.mjs && node tools/build-preview.mjs",
-    "illustrations": "node tools/generate-illustrations.mjs",
-    "test:studio": "node tests/studio-unit.mjs",
-    "test:e2e": "node build.mjs && node tests/studio-e2e.mjs"
+    "illustrations": "node tools/generate-illustrations.mjs"
   }
 }

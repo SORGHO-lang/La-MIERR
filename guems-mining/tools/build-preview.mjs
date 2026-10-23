@@ -43,7 +43,7 @@ const walk = (d) => readdirSync(d).flatMap((f) => {
 const routeOf = (urlPath) => urlPath.replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'fr';
 
 const pages = walk(DIST)
-  .filter((f) => f.endsWith('.html') && !/\/(admin|studio)\//.test(f) && f !== join(DIST, 'index.html'))
+  .filter((f) => f.endsWith('.html') && !/\/admin\//.test(f) && f !== join(DIST, 'index.html'))
   .map((f) => {
     const rel = relative(DIST, f).split('\\').join('/');
     const route = rel === '404.html' ? '404' : routeOf(rel.replace(/index\.html$/, ''));

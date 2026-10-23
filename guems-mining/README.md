@@ -4,9 +4,6 @@ Site vitrine bilingue (français / anglais), identité noir et orange, généré
 par un petit script Node.js **sans aucune dépendance**. Le formulaire de contact est traité
 par un script PHP compatible avec les hébergements mutualisés classiques.
 
-> **Studio vidéo** : une application de montage vidéo et de motion design assistée par l'IA est servie sous
-> `/studio/`. Voir [`STUDIO.md`](STUDIO.md).
-
 > Avant la mise en ligne, lisez [`A-COMPLETER.md`](A-COMPLETER.md) : il liste les informations
 > confirmées et celles que l'entreprise doit encore fournir (e-mail, domaine, photos…).
 
