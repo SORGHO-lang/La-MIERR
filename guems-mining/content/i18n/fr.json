@@ -429,10 +429,11 @@
   },
   "photoAlt": {
     "hero": "Camion de transport minier chargé de minerai (photo d'illustration)",
-    "about": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
+    "about": "Technicienne GUEM'S MINING en équipement de protection sur un site minier",
     "why": "Pelle hydraulique sur chenilles (photo d'illustration)",
     "activityServices": "Pelle hydraulique chargeant un tombereau dans une carrière (photo d'illustration)",
     "activityEquipment": "Pelle hydraulique sur chenilles (photo d'illustration)",
-    "activityLogistics": "Camion de transport minier chargé de minerai (photo d'illustration)"
+    "activityLogistics": "Camion de transport minier chargé de minerai (photo d'illustration)",
+    "banner": "GUEMS Mining — Extraire aujourd'hui, bâtir demain : exploitation minière, équipements de pointe, sécurité et performance"
   }
 }

@@ -56,8 +56,9 @@
   "images": {
     "_comment": "Chemins vers les photographies (dans static/assets/…). Vide = illustration vectorielle. Les photos actuelles ont été fournies par l'entreprise comme images d'illustration.",
     "hero": "assets/img/photos/camion-minier.jpg",
-    "about": "assets/img/photos/pelle-chargement-carriere.jpg",
+    "about": "assets/img/photos/technicienne-guems-mining.jpg",
     "why": "assets/img/photos/pelle-hydraulique.jpg",
+    "banner": "assets/img/photos/banniere-guems-mining.jpg",
     "activityServices": "assets/img/photos/pelle-chargement-carriere.jpg",
     "activityEquipment": "assets/img/photos/tractopelle.jpg",
     "activityLogistics": "assets/img/photos/camion-minier.jpg",

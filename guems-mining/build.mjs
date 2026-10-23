@@ -374,6 +374,11 @@ function pageHome(lang) {
   </div>
 </section>
 
+${site.images.banner ? `
+<section class="promo-banner">
+  <div class="container reveal" data-reveal="zoom">${img(site.images.banner, '', photoAlt(lang, 'banner'))}</div>
+</section>` : ''}
+
 <section class="section">
   <div class="container">
     ${sectionHead(h.services.eyebrow, h.services.title, '', 'h2', true)}

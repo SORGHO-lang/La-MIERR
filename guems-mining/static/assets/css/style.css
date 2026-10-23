@@ -618,6 +618,11 @@ img.is-cutout { object-fit: contain !important; background: var(--white); paddin
 .about-media-img { aspect-ratio: 4 / 5; max-height: 560px; }
 .about-media-img img { object-position: center 40%; }
 
+.promo-banner { padding-top: clamp(56px, 8vw, 96px); }
+.promo-banner picture { display: block; }
+.promo-banner img { width: 100%; border-radius: var(--radius); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .55); }
+.about-media-img img[src*="technicienne"] { object-position: center 20%; }
+
 /* Bandeau final : pelleteuse animée */
 .cta-visual img { width: 100%; }
 @media (max-width: 860px) {

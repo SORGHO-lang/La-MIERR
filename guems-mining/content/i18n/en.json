@@ -429,10 +429,11 @@
   },
   "photoAlt": {
     "hero": "Mining haul truck loaded with ore (illustrative photo)",
-    "about": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
+    "about": "GUEM'S MINING technician wearing protective equipment on a mining site",
     "why": "Crawler hydraulic excavator (illustrative photo)",
     "activityServices": "Hydraulic excavator loading a dump truck in a quarry (illustrative photo)",
     "activityEquipment": "Crawler hydraulic excavator (illustrative photo)",
-    "activityLogistics": "Mining haul truck loaded with ore (illustrative photo)"
+    "activityLogistics": "Mining haul truck loaded with ore (illustrative photo)",
+    "banner": "GUEMS Mining — Extract today, build tomorrow: mining, state-of-the-art equipment, safety and performance"
   }
 }
