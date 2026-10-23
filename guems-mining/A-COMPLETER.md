@@ -14,7 +14,7 @@ Ce document fait le point sur les informations utilisées dans le site. Une info
 | Activité principale déclarée | Autres extractions | Accueil, À propos, Activités |
 | Activité secondaire déclarée | Exploitation minière | Accueil, À propos, Activités |
 | Établissement principal | Nouveau Secteur 37, Ouagadougou, Burkina Faso | Contact, pied de page, données structurées |
-| Téléphone | +226 76 32 87 49 | Contact, pied de page, boutons d'appel |
+| Téléphones | +226 70 54 06 04 · +226 76 19 01 81 · +226 78 76 67 26 (fournis par l'entreprise) | Contact, pied de page, en-tête, boutons d'appel |
 | Capital social | 3 000 000 FCFA | À propos, Mentions légales |
 | Logo | Fourni (noir et orange) — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
 
@@ -35,7 +35,7 @@ sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du
 |---|---|---|---|
 | 1 | **Adresse e-mail professionnelle** de réception des messages | Le formulaire affiche « service non disponible » tant qu'elle n'est pas configurée | `contact-config.php` (voir README) et `content/site.json` → `company.email` |
 | 2 | **Nom de domaine** définitif | Canoniques, sitemap et partages utilisent un domaine provisoire | `content/site.json` → `siteUrl` |
-| 3 | Confirmation que le **+226 76 32 87 49 est actif sur WhatsApp** | Le bouton WhatsApp pointe vers ce numéro | `content/site.json` → `company.whatsapp` |
+| 3 | Indiquer **quel numéro est sur WhatsApp** (actuellement le +226 70 54 06 04, par défaut) | Le bouton WhatsApp pointe vers ce numéro | `content/site.json` → `company.whatsapp` |
 | 4 | **Adresse exacte / coordonnées GPS** du siège | Pas de carte affichée tant que l'adresse n'est pas confirmée | `content/site.json` → `features.mapEmbedUrl` |
 | 5 | **Photographies** : 4 photos d'engins fournies et intégrées comme images d'illustration (marques JCB et CAT visibles). Vérifier les **droits d'utilisation** et, idéalement, les remplacer par des photos **propres à l'entreprise**, en meilleure résolution (≥ 1600 px de large pour la bannière) | Les mentions légales précisent qu'il s'agit d'illustrations | `static/assets/img/photos/` et `content/site.json` → `images` |
 | 6 | Validation des textes **mission et valeurs** (proposés à titre éditorial ; la présentation « Qui sommes-nous » et l'ambition ont été fournies par l'entreprise) | Publiés comme propositions | `content/i18n/fr.json` et `en.json` (`about.mission`, `home.values`) |

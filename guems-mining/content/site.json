@@ -34,9 +34,24 @@
       },
       "countryCode": "BF"
     },
-    "phone": "+226 76 32 87 49",
-    "phoneE164": "+22676328749",
-    "whatsapp": "22676328749",
+    "phone": "+226 70 54 06 04",
+    "phoneE164": "+22670540604",
+    "phones": [
+      {
+        "display": "+226 70 54 06 04",
+        "e164": "+22670540604"
+      },
+      {
+        "display": "+226 76 19 01 81",
+        "e164": "+22676190181"
+      },
+      {
+        "display": "+226 78 76 67 26",
+        "e164": "+22678766726"
+      }
+    ],
+    "_whatsapp": "Numéro utilisé pour le bouton WhatsApp (à confirmer).",
+    "whatsapp": "22670540604",
     "email": "",
     "foundingDate": "",
     "social": {

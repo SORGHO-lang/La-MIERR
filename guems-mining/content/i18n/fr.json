@@ -82,7 +82,7 @@
     "contact": {
       "slug": "contact",
       "title": "Contact | GUEM'S MINING SARL — Ouagadougou",
-      "description": "Contactez GUEM'S MINING SARL à Ouagadougou (Nouveau Secteur 37) : téléphone +226 76 32 87 49, WhatsApp ou formulaire de contact."
+      "description": "Contactez GUEM'S MINING SARL à Ouagadougou (Nouveau Secteur 37) : téléphone +226 70 54 06 04, 76 19 01 81 ou 78 76 67 26, WhatsApp ou formulaire de contact."
     },
     "legal": {
       "slug": "mentions-legales",
@@ -390,8 +390,8 @@
     },
     "status": {
       "sent": "Merci, votre message a bien été envoyé. Notre équipe vous répondra dans les meilleurs délais.",
-      "error": "Votre message n'a pas pu être envoyé. Veuillez réessayer ou nous contacter par téléphone au +226 76 32 87 49.",
-      "unavailable": "Le service d'envoi de messages n'est pas encore disponible. Veuillez nous contacter par téléphone ou WhatsApp au +226 76 32 87 49.",
+      "error": "Votre message n'a pas pu être envoyé. Veuillez réessayer ou nous contacter par téléphone au +226 70 54 06 04.",
+      "unavailable": "Le service d'envoi de messages n'est pas encore disponible. Veuillez nous contacter par téléphone ou WhatsApp au +226 70 54 06 04.",
       "spam": "Votre message n'a pas pu être envoyé. Veuillez réessayer dans quelques instants.",
       "rate": "Trop de messages ont été envoyés depuis votre connexion. Veuillez réessayer plus tard ou nous appeler."
     },

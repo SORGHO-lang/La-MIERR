@@ -105,8 +105,8 @@ ${esc(js)}
   }
   var app = document.getElementById('gm-app');
   var PREVIEW = {
-    fr: "Aperçu : l'envoi réel des messages sera actif une fois le site publié sur l'hébergement avec contact.php configuré. Vous pouvez nous joindre au +226 76 32 87 49.",
-    en: 'Preview: messages will be sent for real once the site is published on the hosting with contact.php configured. You can reach us on +226 76 32 87 49.'
+    fr: "Aperçu : l'envoi réel des messages sera actif une fois le site publié sur l'hébergement avec contact.php configuré. Vous pouvez nous joindre au +226 70 54 06 04.",
+    en: 'Preview: messages will be sent for real once the site is published on the hosting with contact.php configured. You can reach us on +226 70 54 06 04.'
   };
   // Dans l'aperçu, le formulaire n'a pas de serveur : on le dit clairement, sans simuler d'envoi.
   var realFetch = window.fetch;
