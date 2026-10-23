@@ -17,7 +17,7 @@ Ce document fait le point sur les informations utilisées dans le site. Une info
 | Téléphones | +226 70 54 06 04 · +226 76 19 01 81 · +226 78 76 67 26 (fournis par l'entreprise) | Contact, pied de page, en-tête, boutons d'appel |
 | WhatsApp | +226 70 54 06 04 (confirmé par l'entreprise) | Bouton WhatsApp, barre du haut, contact |
 | Capital social | 3 000 000 FCFA | À propos, Mentions légales |
-| Logo | Fourni (noir et orange) — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
+| Logo | Fourni (noir et orange), confirmé comme logo du site — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
 
 Volontairement **non publiés** (décision explicite de l'entreprise requise) : IFU, RCCM, numéro de
 sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du gérant.

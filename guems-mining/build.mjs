@@ -209,7 +209,7 @@ function footer(lang) {
   return `<footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <p class="wordmark">GUEM<span>'</span>S <strong>MINING</strong></p>
+      <a class="footer-logo" href="${pagePath(lang, 'home')}"><picture><source srcset="${asset('assets/img/logo-guems-mining-960.webp')}" type="image/webp"><img src="${asset('assets/img/logo-guems-mining-480.png')}" alt="${esc(T[lang].logoAlt)}" width="480" height="307" loading="lazy" decoding="async"></picture></a>
       <p>${esc(t.footer.tagline)}</p>
       ${social.length ? `<ul class="social">${social.map(([k, v]) => `<li><a href="${esc(v)}" target="_blank" rel="noopener noreferrer" aria-label="${k}">${icon(k)}</a></li>`).join('')}</ul>` : ''}
     </div>
@@ -450,6 +450,7 @@ ${pageHero(a.eyebrow, a.title, a.lead)}
     <div class="reveal">
       <h2>${esc(a.overview.title)}</h2>
       ${a.overview.text.map((p) => `<p>${esc(p)}</p>`).join('')}
+      <figure class="logo-showcase"><picture><source srcset="${asset('assets/img/logo-guems-mining-960.webp')}" type="image/webp"><img src="${asset('assets/img/logo-guems-mining-480.png')}" alt="${esc(T[lang].logoAlt)}" width="480" height="307" loading="lazy" decoding="async"></picture><figcaption>${esc(T[lang].logoCaption)}</figcaption></figure>
     </div>
     <div class="reveal">
       <h2 class="h3">${esc(a.identity.title)}</h2>
