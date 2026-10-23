@@ -21,6 +21,9 @@ AddDefaultCharset UTF-8
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  <FilesMatch "\.(mjs)$">
+    Header set Content-Type "text/javascript"
+  </FilesMatch>
   <FilesMatch "\.(css|js|svg|png|jpe?g|webp|ico|woff2?)$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
@@ -34,4 +37,5 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 AddType image/webp .webp
+AddType text/javascript .mjs
 AddType application/manifest+json .webmanifest

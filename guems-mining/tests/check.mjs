@@ -18,7 +18,7 @@ const walk = (d) => readdirSync(d).flatMap((f) => {
   const p = join(d, f);
   return statSync(p).isDirectory() ? walk(p) : [p];
 });
-const htmlFiles = walk(DIST).filter((f) => f.endsWith('.html') && !f.includes(`${'/'}admin${'/'}`));
+const htmlFiles = walk(DIST).filter((f) => f.endsWith('.html') && !/\/(admin|studio)\//.test(f));
 
 function resolveLocal(url) {
   const clean = url.split('#')[0].split('?')[0];
