@@ -30,8 +30,9 @@ foreach ($candidates as $file) {
     }
 }
 $config += [
-    'to' => '',
-    'from' => '',
+    // Adresses fournies par l'entreprise ; un fichier contact-config.php peut les remplacer.
+    'to' => 'infos@guemsmining.com',
+    'from' => 'no-reply@guemsmining.com',
     'subject_prefix' => "[Site GUEM'S MINING]",
     'allowed_hosts' => [],
     'rate_limit' => 5,

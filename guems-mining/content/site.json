@@ -1,6 +1,6 @@
 {
   "_comment": "Configuration centrale. Les champs vides sont volontairement omis de la version publique (voir A-COMPLETER.md).",
-  "siteUrl": "https://www.example.com",
+  "siteUrl": "https://guemsmining.com",
   "basePath": "/",
   "company": {
     "legalName": "GUEM'S MINING SARL",
@@ -52,7 +52,13 @@
     ],
     "_whatsapp": "Numéro WhatsApp confirmé par l'entreprise : +226 70 54 06 04.",
     "whatsapp": "22670540604",
-    "email": "",
+    "_email": "Adresses fournies par l'entreprise. « email » est l'adresse principale (en-tête, données structurées) ; « emails » liste toutes les adresses affichées sur le site.",
+    "email": "infos@guemsmining.com",
+    "emails": [
+      { "address": "infos@guemsmining.com", "label": { "fr": "Informations", "en": "General enquiries" } },
+      { "address": "direction@guemsmining.com", "label": { "fr": "Direction", "en": "Management" } },
+      { "address": "compta@guemsmining.com", "label": { "fr": "Comptabilité", "en": "Accounting" } }
+    ],
     "foundingDate": "",
     "social": {
       "facebook": "",

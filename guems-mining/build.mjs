@@ -73,6 +73,9 @@ const telHref = `tel:${C.phoneE164}`;
 const phones = C.phones?.length ? C.phones : [{ display: C.phone, e164: C.phoneE164 }];
 // Tous les numéros, chacun cliquable, séparés par `sep`.
 const phoneLinks = (sep = '<br>') => phones.map((n) => `<a href="tel:${esc(n.e164)}">${esc(n.display)}</a>`).join(sep);
+const emails = C.emails?.length ? C.emails : (C.email ? [{ address: C.email, label: {} }] : []);
+// Toutes les adresses e-mail, chacune cliquable, avec leur service.
+const emailLinks = (lang, sep = '<br>') => emails.map((m) => `${m.label?.[lang] ? `${esc(m.label[lang])} : ` : ''}<a href="mailto:${esc(m.address)}">${esc(m.address)}</a>`).join(sep);
 const waHref = (lang) => `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(T[lang].contact.whatsappText)}`;
 
 // Image avec repli sur une illustration ; version WebP servie en priorité lorsqu'elle existe.
@@ -223,7 +226,7 @@ function footer(lang) {
         <p>${icon('pin')}<span>${esc(C.legalName)}<br>${esc(C.address.street)}, ${esc(C.address.city)}<br>${esc(C.address.country[lang])}</span></p>
         <p>${icon('phone')}<span>${phoneLinks()}</span></p>
         <p>${icon('whatsapp')}<a href="${waHref(lang)}" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-        ${C.email ? `<p>${icon('mail')}<a href="mailto:${esc(C.email)}">${esc(C.email)}</a></p>` : ''}
+        ${emails.length ? `<p>${icon('mail')}<span>${emailLinks(lang)}</span></p>` : ''}
       </address>
     </div>
   </div>
@@ -437,6 +440,7 @@ function identityTable(lang) {
     [r.seat, `${C.address.street}, ${C.address.city}, ${C.address.country[lang]}`],
     [r.capital, C.capital[lang]],
     [r.phone, phones.map((n) => n.display).join(' / ')],
+    ['E-mail', emails.map((m) => m.address).join(' / ')],
   ].filter(([, v]) => v);
   return `<dl class="id-table">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
 }
@@ -754,7 +758,7 @@ ${pageHero(c.eyebrow, c.title, c.lead)}
         <p class="contact-line">${icon('building')}<span><strong>${esc(C.legalName)}</strong></span></p>
         <p class="contact-line">${icon('pin')}<span>${esc(C.address.city)}, ${esc(C.address.street)}<br>${esc(C.address.country[lang])}</span></p>
         <p class="contact-line">${icon('phone')}<span>${esc(t.common.phone)} :<br>${phoneLinks()}</span></p>
-        ${C.email ? `<p class="contact-line">${icon('mail')}<span><a href="mailto:${esc(C.email)}">${esc(C.email)}</a></span></p>` : ''}
+        ${emails.length ? `<p class="contact-line">${icon('mail')}<span>E-mail :<br>${emailLinks(lang)}</span></p>` : ''}
       </address>
       <h2 class="h3">${esc(c.quickTitle)}</h2>
       <div class="quick-actions">

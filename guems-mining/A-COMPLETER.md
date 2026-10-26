@@ -16,6 +16,8 @@ Ce document fait le point sur les informations utilisées dans le site. Une info
 | Établissement principal | Nouveau Secteur 37, Ouagadougou, Burkina Faso | Contact, pied de page, données structurées |
 | Téléphones | +226 70 54 06 04 · +226 76 19 01 81 · +226 78 76 67 26 (fournis par l'entreprise) | Contact, pied de page, en-tête, boutons d'appel |
 | WhatsApp | +226 70 54 06 04 (confirmé par l'entreprise) | Bouton WhatsApp, barre du haut, contact |
+| E-mails | infos@guemsmining.com (principale, reçoit le formulaire) · direction@guemsmining.com · compta@guemsmining.com (fournis par l'entreprise ; « infos » écrit « infosguemsminig.com » dans le message, corrigé en infos@guemsmining.com — à confirmer) | Barre du haut (infos), contact, pied de page, mentions légales, formulaire |
+| Nom de domaine | guemsmining.com (déduit des adresses e-mail — à confirmer) | Canoniques, sitemap, partages |
 | Capital social | 3 000 000 FCFA | À propos, Mentions légales |
 | Logo | Fourni (noir et orange), confirmé comme logo du site — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
 
@@ -34,8 +36,6 @@ sécurité sociale (CNSS), signatures, identité et coordonnées personnelles du
 
 | # | Information | Effet sur le site | Où la renseigner |
 |---|---|---|---|
-| 1 | **Adresse e-mail professionnelle** de réception des messages | Le formulaire affiche « service non disponible » tant qu'elle n'est pas configurée | `contact-config.php` (voir README) et `content/site.json` → `company.email` |
-| 2 | **Nom de domaine** définitif | Canoniques, sitemap et partages utilisent un domaine provisoire | `content/site.json` → `siteUrl` |
 | 4 | **Adresse exacte / coordonnées GPS** du siège | Pas de carte affichée tant que l'adresse n'est pas confirmée | `content/site.json` → `features.mapEmbedUrl` |
 | 5 | **Photographies** : 4 photos d'engins fournies et intégrées comme images d'illustration (marques JCB et CAT visibles). Vérifier les **droits d'utilisation** et, idéalement, les remplacer par des photos **propres à l'entreprise**, en meilleure résolution (≥ 1600 px de large pour la bannière) | Les mentions légales précisent qu'il s'agit d'illustrations | `static/assets/img/photos/` et `content/site.json` → `images` |
 | 6 | Validation des textes **mission et valeurs** (proposés à titre éditorial ; la présentation « Qui sommes-nous » et l'ambition ont été fournies par l'entreprise) | Publiés comme propositions | `content/i18n/fr.json` et `en.json` (`about.mission`, `home.values`) |
