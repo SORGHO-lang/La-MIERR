@@ -16,7 +16,7 @@ Ce document fait le point sur les informations utilisées dans le site. Une info
 | Établissement principal | Nouveau Secteur 37, Ouagadougou, Burkina Faso | Contact, pied de page, données structurées |
 | Téléphones | +226 70 54 06 04 · +226 76 19 01 81 · +226 78 76 67 26 (fournis par l'entreprise) | Contact, pied de page, en-tête, boutons d'appel |
 | WhatsApp | +226 70 54 06 04 (confirmé par l'entreprise) | Bouton WhatsApp, barre du haut, contact |
-| E-mails | infos@guemsmining.com (principale, reçoit le formulaire) · direction@guemsmining.com · compta@guemsmining.com (fournis par l'entreprise ; « infos » écrit « infosguemsminig.com » dans le message, corrigé en infos@guemsmining.com — à confirmer) | Barre du haut (infos), contact, pied de page, mentions légales, formulaire |
+| E-mails | infos@guemsmining.com (principale, reçoit le formulaire) · direction@guemsmining.com · compta@guemsmining.com (fournis et confirmés par l'entreprise) | Barre du haut (infos), contact, pied de page, mentions légales, formulaire |
 | Nom de domaine | guemsmining.com (déduit des adresses e-mail — à confirmer) | Canoniques, sitemap, partages |
 | Capital social | 3 000 000 FCFA | À propos, Mentions légales |
 | Logo | Fourni (noir et orange), confirmé comme logo du site — ses couleurs servent de charte au site | En-tête, favicon, image de partage, couleurs |
