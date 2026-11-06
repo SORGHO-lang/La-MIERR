@@ -20,7 +20,7 @@ return [
     'min_seconds' => 3,
     // Envoi par SMTP authentifié (recommandé sur Hostinger : beaucoup plus fiable que mail()).
     // Utilisateur = l'adresse d'envoi, mot de passe = celui de cette boîte e-mail Hostinger.
-    // Ne mettez JAMAIS ce fichier dans un dépôt public ni dans le dossier public_html.
+    // Ne mettez JAMAIS ce fichier dans un dépôt public ; placez-le de préférence au-dessus de public_html.
     'smtp' => [
         'host' => 'smtp.hostinger.com',
         'port' => 465,
