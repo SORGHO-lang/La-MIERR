@@ -9,7 +9,7 @@ return [
     // Adresse professionnelle qui recevra les messages (OBLIGATOIRE).
     'to' => 'direction@guemsmining.com',
     // Adresse d'expédition appartenant au domaine du site (ex. no-reply@votre-domaine.bf).
-    'from' => 'no-reply@guemsmining.com',
+    'from' => 'direction@guemsmining.com',
     'subject_prefix' => "[Site GUEM'S MINING]",
     // Domaines supplémentaires autorisés à soumettre le formulaire (facultatif).
     'allowed_hosts' => [],
