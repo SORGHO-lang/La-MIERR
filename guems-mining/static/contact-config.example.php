@@ -9,7 +9,7 @@ return [
     // Adresse professionnelle qui recevra les messages (OBLIGATOIRE).
     'to' => 'direction@guemsmining.com',
     // Adresse d'expédition appartenant au domaine du site (ex. no-reply@votre-domaine.bf).
-    'from' => 'direction@guemsmining.com',
+    'from' => 'infos@guemsmining.com',
     'subject_prefix' => "[Site GUEM'S MINING]",
     // Domaines supplémentaires autorisés à soumettre le formulaire (facultatif).
     'allowed_hosts' => [],
@@ -19,13 +19,13 @@ return [
     // Délai minimal (secondes) entre l'affichage du formulaire et l'envoi.
     'min_seconds' => 3,
     // Envoi par SMTP authentifié (recommandé sur Hostinger : beaucoup plus fiable que mail()).
-    // Utilisateur = l'adresse d'envoi, mot de passe = celui de cette boîte e-mail Hostinger.
+    // Utilisateur = l'adresse d'expédition (infos@), mot de passe = celui de cette boîte e-mail Hostinger.
     // Ne mettez JAMAIS ce fichier dans un dépôt public ; placez-le de préférence au-dessus de public_html.
     'smtp' => [
         'host' => 'smtp.hostinger.com',
         'port' => 465,
         'secure' => 'ssl',
-        'user' => 'direction@guemsmining.com',
+        'user' => 'infos@guemsmining.com',
         'pass' => '', // ← à renseigner sur l'hébergement uniquement
     ],
 ];
