@@ -10,6 +10,9 @@
  *   2. ../contact-config.php (recommandé : hors du dossier public) ;
  *   3. ./contact-config.php
  * Modèle : contact-config.example.php
+ *
+ * Envoi : par SMTP authentifié (recommandé, ex. smtp.hostinger.com) dès que le mot de passe
+ * SMTP est renseigné dans contact-config.php ; sinon par la fonction mail() de PHP.
  */
 
 declare(strict_types=1);
@@ -38,6 +41,15 @@ $config += [
     'rate_limit' => 5,
     'rate_window' => 3600,
     'min_seconds' => 3,
+    'smtp' => [],
+];
+$config['smtp'] = (array) $config['smtp'] + [
+    'host' => 'smtp.hostinger.com',
+    'port' => 465,
+    'secure' => 'ssl', // ssl (port 465), tls (STARTTLS, port 587) ou none
+    'user' => '',
+    'pass' => '',
+    'timeout' => 15,
 ];
 
 $lang = (($_POST['lang'] ?? '') === 'en') ? 'en' : 'fr';
@@ -166,13 +178,14 @@ $headers = [
     'X-Mailer: GUEMS-MINING-Site',
 ];
 
-$sent = @mail(
-    $to,
-    $encode(trim($config['subject_prefix'] . ' ' . $subject . ' — ' . $name)),
-    $body,
-    implode("\r\n", $headers),
-    filter_var($from, FILTER_VALIDATE_EMAIL) ? '-f' . $from : ''
-);
+$subjectLine = $encode(trim($config['subject_prefix'] . ' ' . $subject . ' — ' . $name));
+$smtp = $config['smtp'];
+if ($smtp['user'] !== '' && $smtp['pass'] !== '') {
+    $sent = smtp_send($smtp, $from, $to, $subjectLine, $body, $headers);
+} else {
+    $sent = @mail($to, $subjectLine, $body, implode("\r\n", $headers), filter_var($from, FILTER_VALIDATE_EMAIL) ? '-f' . $from : '');
+    if (!$sent) { error_log('[contact] mail() a échoué'); }
+}
 
 if (!$sent) {
     respond(false, 'error', 502, $lang, $wantsJson);
@@ -181,3 +194,62 @@ if (!$sent) {
 $hits[] = $now;
 @file_put_contents($rlFile, implode(',', $hits), LOCK_EX);
 respond(true, 'sent', 200, $lang, $wantsJson);
+
+/**
+ * Envoi SMTP minimal avec authentification (AUTH LOGIN), sans dépendance.
+ * Les erreurs sont écrites dans le journal PHP, jamais affichées au visiteur.
+ */
+function smtp_send(array $c, string $from, string $to, string $subject, string $body, array $headers): bool
+{
+    $secure = strtolower((string) $c['secure']);
+    $target = ($secure === 'ssl' ? 'ssl://' : 'tcp://') . $c['host'] . ':' . (int) $c['port'];
+    $fp = @stream_socket_client($target, $errno, $errstr, (int) $c['timeout']);
+    if (!$fp) { error_log("[contact] connexion SMTP impossible : {$errstr} ({$errno})"); return false; }
+    stream_set_timeout($fp, (int) $c['timeout']);
+    $read = static function () use ($fp): string {
+        $out = '';
+        while (($line = fgets($fp, 1024)) !== false) {
+            $out .= $line;
+            if (strlen($line) < 4 || $line[3] === ' ') { break; }
+        }
+        return $out;
+    };
+    $cmd = static function (?string $line, int $expect) use ($fp, $read): bool {
+        if ($line !== null) { fwrite($fp, $line . "\r\n"); }
+        $reply = $read();
+        if ((int) substr($reply, 0, 3) !== $expect) {
+            $shown = ($line !== null && str_starts_with($line, 'AUTH')) ? 'AUTH' : (string) $line;
+            error_log('[contact] SMTP « ' . preg_replace('/^(.{0,40}).*$/s', '$1', $shown) . ' » → ' . trim($reply));
+            return false;
+        }
+        return true;
+    };
+    $ehlo = 'EHLO ' . (preg_replace('/^.*@/', '', $from) ?: 'localhost');
+    $ok = $cmd(null, 220) && $cmd($ehlo, 250);
+    if ($ok && $secure === 'tls') {
+        $ok = $cmd('STARTTLS', 220)
+            && stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)
+            && $cmd($ehlo, 250);
+    }
+    $ok = $ok
+        && $cmd('AUTH LOGIN', 334)
+        && $cmd(base64_encode((string) $c['user']), 334)
+        && $cmd(base64_encode((string) $c['pass']), 235)
+        && $cmd("MAIL FROM:<{$from}>", 250)
+        && $cmd("RCPT TO:<{$to}>", 250)
+        && $cmd('DATA', 354);
+    if ($ok) {
+        $msg = implode("\r\n", array_merge([
+            "To: <{$to}>",
+            "Subject: {$subject}",
+            'Date: ' . date('r'),
+            'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . (preg_replace('/^.*@/', '', $from) ?: 'localhost') . '>',
+        ], $headers)) . "\r\n\r\n" . str_replace("\n", "\r\n", $body);
+        // Un point en début de ligne doit être doublé (RFC 5321).
+        $msg = preg_replace('/^\./m', '..', $msg);
+        $ok = $cmd($msg . "\r\n.", 250);
+    }
+    @fwrite($fp, "QUIT\r\n");
+    fclose($fp);
+    return $ok;
+}

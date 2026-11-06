@@ -84,9 +84,12 @@ confirmation ne s'affiche que si le serveur confirme l'envoi de l'e-mail.
 
 1. Copier `contact-config.example.php` en `contact-config.php`, **un niveau au-dessus** du
    dossier public (ex. `/home/compte/contact-config.php` si le site est dans `/home/compte/public_html/`).
-2. Renseigner `to` (adresse professionnelle de réception) et `from` (adresse du domaine du site,
-   ex. `no-reply@mon-domaine.bf`, pour limiter le classement en indésirables).
-3. Tester un envoi depuis la page Contact.
+2. Par défaut, les messages sont envoyés à `direction@guemsmining.com`, au nom de cette même adresse.
+3. **Recommandé (Hostinger) : envoi SMTP authentifié.** Renseigner dans `smtp` le mot de passe de la
+   boîte `direction@guemsmining.com` (serveur `smtp.hostinger.com`, port 465, SSL). Sans mot de passe,
+   le script utilise `mail()` de PHP, moins fiable (messages souvent bloqués ou classés en indésirables).
+4. Tester un envoi depuis la page Contact. En cas d'échec, la cause est écrite dans le journal
+   d'erreurs PHP (lignes `[contact]`), jamais affichée au visiteur.
 
 Tant que `to` est vide, le formulaire répond « service non disponible » et invite à appeler.
 

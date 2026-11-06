@@ -18,4 +18,14 @@ return [
     'rate_window' => 3600,
     // Délai minimal (secondes) entre l'affichage du formulaire et l'envoi.
     'min_seconds' => 3,
+    // Envoi par SMTP authentifié (recommandé sur Hostinger : beaucoup plus fiable que mail()).
+    // Utilisateur = l'adresse d'envoi, mot de passe = celui de cette boîte e-mail Hostinger.
+    // Ne mettez JAMAIS ce fichier dans un dépôt public ni dans le dossier public_html.
+    'smtp' => [
+        'host' => 'smtp.hostinger.com',
+        'port' => 465,
+        'secure' => 'ssl',
+        'user' => 'direction@guemsmining.com',
+        'pass' => '', // ← à renseigner sur l'hébergement uniquement
+    ],
 ];
